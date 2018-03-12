@@ -10,6 +10,6 @@
       
      <typeAliases>  
          <!--这里给实体类取别名，方便在mapper配置文件中使用--> 
-         <package name="com.financial.entity"/>
+         <package name="com.iwjw.entity"/>
      </typeAliases> 
 </configuration>  
