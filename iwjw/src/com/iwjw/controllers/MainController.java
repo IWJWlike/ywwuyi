@@ -18,4 +18,9 @@ public class MainController {
     public String goDemo(){
         return "demo";
     }
+//q去详情页
+    @RequestMapping("/goSale")
+    public  String goSale(){return "sale";}
 }
+
+
