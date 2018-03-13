@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="../../statics/css/common_72.css">
     <link rel="stylesheet" href="../../statics/css/index_74.css">
     <link rel="canonical" href="https://www.iwjw.com/">
+
     <script type="text/javascript">
         $(document).ready(function(){
             $('#one').click(function(){
@@ -73,7 +74,7 @@
 <!--日志提交功能-->
 
 <div id="iwjw" class="">
-    <div class="iwjw-wrap">
+    <div class="iwjw-wrap" >
         <div class="mod-header " id="Top">
             <dl class="header-wrap clearfix">
                 <dt class="header-left clearfix">
@@ -236,7 +237,7 @@
                 </div>
             </div>
             <div class="caichan-wrap">
-                <div class="index-inner index-caichan clearfix">
+                <div class="index-inner index-caichan clearfix" style="height: 425px;">
                     <div class="caichan-l">
                         <a class="caichan-imgbox point-link-cc" data-cid="390" data-pos="1" href="https://www.iwjw.com/caichan/390/" target="_blank">
                             <img src="../../statics/images/video_img/d972062ea1d842c0aa5596eeba92ad78.jpg" alt="">
@@ -315,7 +316,7 @@
 
 
             <div class="index-like" data-provinceid="40000">
-                <div class="index-inner index-like-inner">
+                <div class="index-inner index-like-inner" style="height: 300px;">
                     <div class="index-like-t clearfix">
                         <h5 class="index-like-h5">猜你喜欢</h5>
                         <a href="javascript:void(0);" class="index-like-tab active" data-housetype="2">二手房</a>
@@ -334,7 +335,7 @@
                 </div>
             </div>
 
-            <div class="index-app-w">
+            <div class="index-app-w" style="height: 380px;">
                 <div class="index-inner">
                     <div class="index-app">
                         <h3 class="index-app-h3"><strong>扫一扫</strong> 下载爱屋吉屋APP</h3>
@@ -416,7 +417,7 @@
     </div>
 </div>
 
-<script src="./js/gt.js.下载"></script>
+<script src="../../statics/js/gt.js"></script>
 
 <script type="text/javascript">
     var _vds = _vds || [];
@@ -436,13 +437,13 @@
         })();
     })();
 </script><!--[if IE 8]> <script src='./js/es5-shim-sham_5.5.js'></script><![endif]-->
-<script src="./js/common_72.js.下载"></script>
-<script src="./js/index_74.js.下载"></script>
+<script src="../../statics/js/common_72.js"></script>
+<script src="../../statics/js/index_74.js"></script>
 <script src="https://www.iwjw.com/" async=""></script>
-<div class="mod-footer ">
-    <div class="footer-inner">
+<div class="mod-footer " style="height: 98px">
+    <div class="footer-inner" style="height: 100px">
         <div class="footer-top clearfix">
-            <div class="footer-t-l">
+            <div class="footer-t-l" >
                 <div class="footer-t-nav">
                     <a href="https://www.iwjw.com/about/" rel="nofollow" class="footer-nav-item first">关于我们
                         <i class="footer-point clearfix">
@@ -515,7 +516,7 @@
             </div>
         </div>
     </div>
-    <div class="footer-bottom">
+    <div class="footer-bottom" style="height: 100px">
         <div class="footer-inner">
             <div class="footer-b-link">
                 <span>友情链接：</span>
