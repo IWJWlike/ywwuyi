@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <a href="main/goSale">sssss</a>
   </body>
 </html>

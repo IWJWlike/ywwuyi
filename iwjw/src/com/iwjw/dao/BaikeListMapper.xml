@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iwjw.dao.BaikeListMapper">
+
+    <select id="getBaikeList" resultType="BaikeList">
+    SELECT * FROM baikelist;
+    </select>
+
+    <select id="getBaikeListByPlate" resultType="BaikeList">
+        SELECT * FROM baikelist WHERE plateId = #{plateId};
+    </select>
+
+
+</mapper>
+ 
