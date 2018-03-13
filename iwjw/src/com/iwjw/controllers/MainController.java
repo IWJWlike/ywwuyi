@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainController {
     @RequestMapping("/test")
     public String goTest(){
-        return "welcome";
+        return "gfgl";
     }
     @RequestMapping("/home")
     public String goLogin(){
