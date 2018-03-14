@@ -11,7 +11,6 @@
 <head>
     <script type="text/javascript" src="../../statics/js/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/jquery-1.8.3.min.js"></script>
-    c
     <title>注册页面</title>
     <script type="text/javascript">
 

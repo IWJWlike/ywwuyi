@@ -2,7 +2,9 @@ package com.iwjw.test;
 
 
 import com.iwjw.entity.BaikeList;
+import com.iwjw.entity.PlateInfo;
 import com.iwjw.service.BaikeListService;
+import com.iwjw.service.PlateInfoService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -37,10 +39,8 @@ public class Test {
         }*/
 
         ApplicationContext act = new ClassPathXmlApplicationContext("applicationContext-mybatis.xml");
-        BaikeListService baikeListService = (BaikeListService) act.getBean("BaikeListServiceImpl");
-        List<BaikeList> lists = baikeListService.getBaikeList();
-        for (BaikeList list:lists) {
-            System.out.println(list.getTitle());
-        }
+        PlateInfoService baikeListService = (PlateInfoService) act.getBean("plateInfoServiceImpl");
+        PlateInfo lists = baikeListService.getTitleNum("热点楼市");
+        System.out.println(lists.getPlateId());
     }
 }
