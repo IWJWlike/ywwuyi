@@ -15,6 +15,6 @@ public interface BaikeListMapper {
     //全查
     List<BaikeList> getBaikeList();
     //Ajax查
-    List<BaikeList> getBaikeListByPlate(@Param("plateId")String platId);
+    List<BaikeList> getBaikeListByPlate(@Param("plateId")String plateId);
 
 }
