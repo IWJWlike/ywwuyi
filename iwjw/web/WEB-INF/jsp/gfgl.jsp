@@ -138,12 +138,14 @@
             <div class="baike-wrap clearfix">
                 <div class="left f-l">
                     <div class="head-banner clearfix ">
+
+
                         <div class="slide-wrap f-l">
                             <ul class="slide-ul clearfix">
                                 <li class="slide-li f-l">
                                     <a class="banner1-a" data-logid="292"
                                        href="javascript:void(0)" target="_blank">
-                                        <img src="../../statics/images/picture/banner1_default_1.png" class="slide-img"
+                                        <img src="../../statics/images/picture/fc835fe0175d4a6189ba034e71a4f570.jpg" class="slide-img"
                                              data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/2/20/fc835fe0175d4a6189ba034e71a4f570"/>
                                         <div class="title-bg"><p class="banner-title bold">那些年一咬牙一跺脚买房的人，现在过的怎么样？</p>
                                         </div>
@@ -152,7 +154,7 @@
                                 <li class="slide-li f-l">
                                     <a class="banner1-a" data-logid="296"
                                        href="javascript:void(0)" target="_blank">
-                                        <img src="../../statics/images/picture/banner1_default_1.png" class="slide-img"
+                                        <img src="../../statics/images/picture/284f3cb17d4542a2960aa4b51921847c.jpg" class="slide-img"
                                              data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/3/13/284f3cb17d4542a2960aa4b51921847c"/>
                                         <div class="title-bg"><p class="banner-title bold">楼层越高噪声越大？错！中间楼层才最吵！</p></div>
                                     </a>
@@ -160,7 +162,7 @@
                                 <li class="slide-li f-l">
                                     <a class="banner1-a" data-logid="295"
                                        href="javascript:void(0)" target="_blank">
-                                        <img src="../../statics/images/picture/banner1_default_1.png" class="slide-img"
+                                        <img src="../../statics/images/picture/47066f86555741839fa282f7ef2e6065.jpg" class="slide-img"
                                              data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/3/8/47066f86555741839fa282f7ef2e6065"/>
                                         <div class="title-bg"><p class="banner-title bold">零公摊都是在骗人，每平米都要花钱买！</p></div>
                                     </a>
@@ -168,7 +170,7 @@
                                 <li class="slide-li f-l">
                                     <a class="banner1-a" data-logid="292"
                                        href="javascript:void(0)" target="_blank">
-                                        <img src="../../statics/images/picture/banner1_default_1.png" class="slide-img"
+                                        <img src="../../statics/images/picture/fc835fe0175d4a6189ba034e71a4f570.jpg" class="slide-img"
                                              data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/2/20/fc835fe0175d4a6189ba034e71a4f570"/>
                                         <div class="title-bg"><p class="banner-title bold">那些年一咬牙一跺脚买房的人，现在过的怎么样？</p>
                                         </div>
@@ -177,25 +179,26 @@
                                 <li class="slide-li f-l">
                                     <a class="banner1-a" data-logid="296"
                                        href="javascript:void(0)" target="_blank">
-                                        <img src="../../statics/images/picture/banner1_default_1.png" class="slide-img"
+                                        <img src="../../statics/images/picture/47066f86555741839fa282f7ef2e6065.jpg" class="slide-img"
                                              data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/3/13/284f3cb17d4542a2960aa4b51921847c"/>
                                         <div class="title-bg"><p class="banner-title bold">楼层越高噪声越大？错！中间楼层才最吵！</p></div>
                                     </a>
                                 </li>
 
                             </ul>
-                            <a class="arrow-common arr-left iconfont if-arrow-left bold"></a>
-                            <a class="arrow-common arr-right iconfont if-arrow-right bold"></a>
+                            <a class="arrow-common arr-left iconfont if-arrow-left bold">hhhhhh</a>
+                            <a class="arrow-common arr-right iconfont if-arrow-right bold">ggggggggg</a>
                             <div class="dots-wrap clearfix">
                                 <a class="dots-a f-l active"></a>
                                 <a class="dots-a f-l "></a>
                                 <a class="dots-a f-l "></a>
                             </div>
                         </div>
+
                         <div class="banner-right f-l">
                             <a class="banner-2" href="javascript:void(0)" target="_blank"
                                data-logid="288">
-                                <img src="../../statics/images/picture/banner23_default_1.png" class="banner-img"
+                                <img src="../../statics/images/picture/bf72657bf41d49d0a678f04eec340c69.jpg" class="banner-img"
                                      data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/2/15/bf72657bf41d49d0a678f04eec340c69"
                                      data-need-resize="auto"/>
                                 <div class="banner23-bg">
@@ -204,7 +207,7 @@
                             </a>
                             <a class="banner-3" href="javascript:void(0)" target="_blank"
                                data-logid="289">
-                                <img src="../../statics/images/picture/banner23_default_1.png" class="banner-img"
+                                <img src="../../statics/images/picture/ad332f1611624cd393dd770fc18da959.jpg" class="banner-img"
                                      data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/2/8/ad332f1611624cd393dd770fc18da959"
                                      data-need-resize="auto"/>
                                 <div class="banner23-bg">
@@ -213,7 +216,66 @@
                             </a>
                         </div>
                     </div>
-                    <div class="baike-content" id="baike-content">
+                    <div class="baike-content" id="baike-content"><div data-reactid=".0">
+                        <ul class="baike-nav clearfix" data-reactid=".0.0">
+                            <li class="nav-li f-l active" data-reactid=".0.0.$0"><a class="nav-a"
+                                                                                    data-reactid=".0.0.$0.0">全部文章</a>
+                            </li>
+                            <li class="nav-li f-l" data-reactid=".0.0.$1"><a class="nav-a"
+                                                                             data-reactid=".0.0.$1.0">热点楼市</a></li>
+                            <li class="nav-li f-l" data-reactid=".0.0.$2"><a class="nav-a"
+                                                                             data-reactid=".0.0.$2.0">最新政策</a></li>
+                            <li class="nav-li f-l" data-reactid=".0.0.$3"><a class="nav-a"
+                                                                             data-reactid=".0.0.$3.0">购房须知</a></li>
+                            <li class="nav-li f-l" data-reactid=".0.0.$4"><a class="nav-a"
+                                                                             data-reactid=".0.0.$4.0">选房攻略</a></li>
+                            <li class="nav-li f-l" data-reactid=".0.0.$5"><a class="nav-a"
+                                                                             data-reactid=".0.0.$5.0">签约要点</a></li>
+                            <li class="nav-li f-l" data-reactid=".0.0.$6"><a class="nav-a"
+                                                                             data-reactid=".0.0.$6.0">贷款指南</a></li>
+                            <li class="nav-li f-l" data-reactid=".0.0.$7"><a class="nav-a"
+                                                                             data-reactid=".0.0.$7.0">缴税过户</a></li>
+                            <li class="nav-li f-l" data-reactid=".0.0.$8"><a class="nav-a"
+                                                                             data-reactid=".0.0.$8.0">典型案例</a></li>
+                        </ul>
+                        <ul class="baike-list" data-reactid=".0.1">
+                            <li class="list-li clearfix" data-reactid=".0.1.$0">
+                                <div class="list-left f-l" data-reactid=".0.1.$0.0"><h4 data-reactid=".0.1.$0.0.0"><a
+                                        class="list-title bold" href="https://www.iwjw.com/baike/2110/" target="_blank"
+                                        data-reactid=".0.1.$0.0.0.0">热点城市房价持续降温：很多人等降价</a></h4>
+                                    <div class="list-desc" data-reactid=".0.1.$0.0.1">
+                                        由于目前调控政策收紧，让一些投资投机需求的热钱逐渐退出房地产领域，购房者变得更加冷静和理性。
+                                    </div>
+                                    <div class="classify-date" data-reactid=".0.1.$0.0.2"><span class="classify"
+                                                                                                data-reactid=".0.1.$0.0.2.0">热点楼市</span><span
+                                            class="pub-date pad-left" data-reactid=".0.1.$0.0.2.1">2017-10-13</span>
+                                    </div>
+                                </div>
+
+                                <a class="list-right f-l" href="https://www.iwjw.com/baike/2110/" target="_blank"
+                                   data-reactid=".0.1.$0.1"><img
+                                        src="../../statics/images/picture/fde82646dad344d78eecf400d79924c6.jpg" class="list-img"
+                                        data-reactid=".0.1.$0.1.$//files=1iwjw=1com/directwaterbucket/newPurchaseEncy/2017/10/13/fde82646dad344d78eecf400d79924c6"></a>
+                            </li>
+                            <li class="list-li clearfix" data-reactid=".0.1.$1">
+                                <div class="list-left f-l" data-reactid=".0.1.$1.0"><h4 data-reactid=".0.1.$1.0.0"><a
+                                        class="list-title bold" href="https://www.iwjw.com/baike/2109/" target="_blank"
+                                        data-reactid=".0.1.$1.0.0.0">楼市十一遇冷 体现“房住不炒”政策导向</a></h4>
+                                    <div class="list-desc" data-reactid=".0.1.$1.0.1">
+                                        数据显示，国庆8天长假北京合计新建住宅签约222套，二手房住宅33套。其中，北京新建住宅前7天网签116套，二手房网签27套，均是2009年来的...
+                                    </div>
+                                    <div class="classify-date" data-reactid=".0.1.$1.0.2"><span class="classify"
+                                                                                                data-reactid=".0.1.$1.0.2.0">热点楼市</span><span
+                                            class="pub-date pad-left" data-reactid=".0.1.$1.0.2.1">2017-10-13</span>
+                                    </div>
+                                </div>
+                                <a class="list-right f-l" href="https://www.iwjw.com/baike/2109/" target="_blank"
+                                   data-reactid=".0.1.$1.1"><img src="../../statics/images/picture/e42ba18290cc4ab2a03c96e6c268d4e1.jpg" class="list-img"
+                                        data-reactid=".0.1.$1.1.$//files=1iwjw=1com/directwaterbucket/newPurchaseEncy/2017/10/13/e42ba18290cc4ab2a03c96e6c268d4e1"></a>
+                            </li>
+
+                        </ul>
+                    </div>
                     </div>
                 </div>
 
