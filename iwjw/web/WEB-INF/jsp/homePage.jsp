@@ -151,8 +151,8 @@
                                     <input type="hidden" name="t" value="1">
                                     <label class="search-label">
                                         <em class="iconfont fo-search"><!--혳--></em>
-                                        <div class="index-kw-wrap">
-                                            <input type="text" class="kw-input" name="kw" placeholder="请输入小区、地铁、区域板块…" maxlength="50" autocomplete="off" autofocus=""><i class="iconfont search-close" title="清除内容">홈</i>
+                                        <div class="index-kw-wrap" >
+                                            <input type="text" class="kw-input" name="kw" placeholder="请输入小区、地铁、区域板块…" maxlength="50" autocomplete="off" autofocus="" style="width: 488px;height: 48px"><i class="iconfont search-close" title="清除内容">홈</i>
                                         </div>
                                     </label>
                                     <button type="submit" class="btn-map">搜索</button>
