@@ -232,8 +232,8 @@
                                 </li>
 
                             </ul>
-                            <a class="arrow-common arr-left iconfont if-arrow-left bold">hhhhhh</a>
-                            <a class="arrow-common arr-right iconfont if-arrow-right bold">ggggggggg</a>
+                            <a class="arrow-common arr-left iconfont<%-- if-arrow-left--%> bold">&#139</a>
+                            <a class="arrow-common arr-right iconfont<%-- if-arrow-right--%> bold">&#155</a>
                             <div class="dots-wrap clearfix">
                                 <a class="dots-a f-l active"></a>
                                 <a class="dots-a f-l "></a>

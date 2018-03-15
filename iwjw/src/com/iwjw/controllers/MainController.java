@@ -65,6 +65,9 @@ public class MainController {
         model.addAttribute("vistor",vistor);
         return "homePage";
     }
+
+    @RequestMapping("/goGfgl")
+    public String goGfgl(){return "gfgl";}
 }
 
 

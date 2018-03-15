@@ -192,7 +192,7 @@
                                                 <em class="iconfont if-mobile"></em>
                                             </div>
                                             <div class="input-wrap">
-                                                <input class="login-input" type="tel" name="mobile" maxlength="13" placeholder="输入手机号码" tabindex="1" autocomplete="off">
+                                                <input id="uPhone" class="login-input" type="tel" name="mobile" maxlength="13" placeholder="输入手机号码" tabindex="1" autocomplete="off">
                                                 <!-- <button class="send-btn" type="button" disabled>发送验证码</button> -->
                                             </div>
                                         </div>
@@ -203,17 +203,53 @@
                                         <div class="geetest-wrap">
                                             <p class="geetest-tip">拖动滑块完成验证</p>
                                             <div id="geetest-container" class="geetest-container">
-                                                <div class="gt_holder gt_float" style="touch-action: none;">
-
+                                                <div id="holder" class="gt_holder gt_float" style="touch-action: none;">
                                                     <div id="slider1" class="slider1 slider-control"></div>
                                                     <script type="text/javascript">
+                                                        var flag = 120;
                                                         $("#slider1").slider({
                                                             callback: function(result) {
                                                                 if (result){
-                                                                    alert("1111")
+                                                                    if ((/^1[3|4|5|8][0-9]\d{4,8}$/.test($("#uPhone").val()))){
+                                                                        $("#holder").html("<div class='input-wrap'>"
+                                                                            +"<input id='codeInput'  class='login-input' type='tel' maxlength='4'name='code'autocomplete='off' placeholder='填写验证码' tabindex='2'>"
+                                                                            +"<button id='send-code-btn' class='send-btn'type='button'>发送验证码</button></div>")
+                                                                        $("#uPhone").attr("disabled",true)
+                                                                        <%--$.post("${pageContext.request.contextPath}/login/gotoSendCode", "uPhone="+$("#uPhone").val(), sendBack());--%>
+                                                                        }else {
+                                                                        $("#slider1").slider("restore");
+                                                                        alert("请输入正确手机号")
+                                                                    }
                                                                 }
                                                             }
                                                         });
+                                                        function sendBack() {
+                                                            if (flag < 120){
+                                                                return;
+                                                            }
+                                                        timer();
+                                                        }
+                                                        function timer() {
+                                                            flag--;
+                                                            $("#send-code-btn").html(flag+"秒以后重新获取！");
+                                                            $("#send-code-btn").attr("disabled", true);
+                                                            if(flag == 0){
+                                                                $("#send-code-btn").html("发送验证码");
+                                                                $("#send-code-btn").removeAttr("disabled");
+                                                                flag=120;
+                                                            }else {
+                                                                setTimeout("timer()",1000);
+                                                            }
+                                                        }
+
+                                                        $("#codeInput").onblur(function () {
+
+                                                            console.log($("#codeInput").val())
+                                                            if ($("#codeInput").val().length()>=4){
+                                                                alert($("#codeInput").val())
+                                                                $(".dialog-login-btn").removeAttr("disabled")
+                                                            }
+                                                        })
                                                     </script>
                                                 </div>
                                             </div>
@@ -403,7 +439,7 @@
 
             <!-- to top -->
             <div class="suspend-div suspend-top" style="display: block;">
-                <a class="to-top" href="https://www.iwjw.com/#iwjw">
+                <a class="to-top" href="javascript:scroll(0,0)<%--https://www.iwjw.com/#iwjw--%>">
                     <em class="iconfont"></em>
                 </a>
                 <em class="text">回到顶部
