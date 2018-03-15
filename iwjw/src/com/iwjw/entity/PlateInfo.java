@@ -1,19 +1,25 @@
 package com.iwjw.entity;
 
-/**
- * 新闻资讯类型
- */
-public class PlateInfo {
+import java.io.Serializable;
 
-    private int plateId;//类型
-    private String plateName;//类型名称
+public class PlateInfo implements Serializable{
 
+    private String plateId;
+    private String plateName;
 
-    public int getPlateId() { return plateId; }
+    public String getPlateId() {
+        return plateId;
+    }
 
-    public void setPlateId(int plateId) { this.plateId = plateId; }
+    public void setPlateId(String plateId) {
+        this.plateId = plateId;
+    }
 
-    public String getPlateName() { return plateName; }
+    public String getPlateName() {
+        return plateName;
+    }
 
-    public void setPlateName(String plateName) { this.plateName = plateName; }
+    public void setPlateName(String plateName) {
+        this.plateName = plateName;
+    }
 }

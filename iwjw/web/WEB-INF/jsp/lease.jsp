@@ -60,7 +60,7 @@
         var _hmt = _hmt || [];
     </script>
 </head>
-<body>
+<body style="background-color: white">
 
 
 <!--日志提交功能-->
@@ -112,7 +112,7 @@
         <div class="header"><div class="wrap"><div class="nav"><ul><li><a href="https://gz.lianjia.com/yezhu/maifang/">我要卖房</a></li><li><a href="http://localhost:63342/AiWu_demo_lease/%E7%88%B1%E5%B1%8B%E5%90%89%E5%B1%8B-%E4%B9%B0%E6%88%BF%E5%85%88%E7%9C%8B%E8%A7%86%E9%A2%91%EF%BC%8C%E3%80%8C%E7%9C%9F%E5%AE%9E%E7%9C%81%E5%8A%9B%E3%80%8D%E7%9A%84%E6%88%BF%E4%BA%A7%E4%B8%AD%E4%BB%8B!.html?_ijt=l83ehajm771f54na5ttotmkl4f" class="active">我要出租</a></li></ul></div></div></div>
 
         <!--<div class="g-main"><div class="m-jumbotron"><div class="tit">发布出租房源</div><div class="sub-tit">8000+全国链家门店·10万+全国经纪人·链家倾情服务15年+</div></div>--><div class="m-form">
-        <div class="box-l m-entry">
+        <div class="box-l m-entry" style="height: 480px">
             <dl class="compact">
                 <dt>小区所在城市</dt>
                 <dd>
@@ -121,26 +121,26 @@
             </dl>
             <dl>
                 <dt>小区</dt>
-                <dd class="wrap-sug">
-                    <div class="u-sug" id="u-sug">
-                        <input class="sugInput" name="resblock" type="text" autocomplete="off" placeholder="请输入小区名">
+                <dd class="wrap-sug" style="height: 40px">
+                    <div class="u-sug" id="u-sug" style="height: 40px">
+                        <input class="sugInput" name="resblock" type="text" autocomplete="off" placeholder="请输入小区名" style="height: 40px">
                         <ul></ul>
                     </div>
                 </dd>
             </dl>
-            <dl>
+            <dl style="height: 40px">
                 <dt>房屋地址</dt>
                 <dd>
-                    <div class="u-select u-select-build" name="building">
-                        <input placeholder="楼栋号" class="u-select-selected" type="text" value="">
+                    <div class="u-select u-select-build" name="building" style="width: 126px;height: 30px">
+                        <input placeholder="楼栋号" class="u-select-selected" type="text" value="" style="width: 152px">
                         <ul class="u-select-options hide"></ul>
                     </div>
-                    <div class="u-select u-select-build" name="unit">
-                        <input placeholder="单元号" class="u-select-selected" type="text" value="">
+                    <div class="u-select u-select-build" name="unit" style="width: 126px;height: 30px">
+                        <input placeholder="单元号" class="u-select-selected" type="text" value="" style="width: 152px">
                         <ul class="u-select-options hide"></ul>
                     </div>
-                    <div class="u-select u-select-build" name="house">
-                        <input placeholder="门牌号" class="u-select-selected" type="text" value="">
+                    <div class="u-select u-select-build" name="house" style="width: 126px;height: 30px">
+                        <input placeholder="门牌号" class="u-select-selected" type="text" value="" style="width: 152px">
                         <ul class="u-select-options hide"></ul>
                     </div>
                 </dd>
@@ -148,26 +148,26 @@
             <dl>
                 <dt>期望租金</dt>
                 <dd>
-                    <input name="expect_price" value="" type="text" placeholder="请输入您期望租出的价格" autocomplete="off" style="width: 210px;">
-                    <div class="unit fl">元/月</div>
+                    <input name="expect_price" value="" type="text" placeholder="请输入您期望租出的价格" autocomplete="off" style="width: 210px;height: 40px">
+                    <div class="unit fl" style="width: 34.63px">元/月</div>
                 </dd>
             </dl>
             <dl>
                 <dt>称呼</dt>
-                <dd>
-                    <input name="owner_name" value="" type="text" placeholder="我们应该如何称呼您" autocomplete="off" style="width: 250px;">
+                <dd style="height: 40px">
+                    <input name="owner_name" value="" type="text" placeholder="我们应该如何称呼您" autocomplete="off" style="width: 250px;height: 40px">
                 </dd>
             </dl>
             <dl>
                 <dt>手机号码</dt>
-                <dd>
-                    <input name="owner_mobile" value="" type="text" placeholder="您的联系方式，方便我们及时与您联系" autocomplete="off" style="width: 250px;">
+                <dd style="height: 40px">
+                    <input name="owner_mobile" value="" type="text" placeholder="您的联系方式，方便我们及时与您联系" autocomplete="off" style="width: 250px;height: 40px">
                 </dd>
             </dl>
             <dl>
                 <dt>图形验证码</dt>
                 <dd>
-                    <input name="verify_code" value="" type="text" placeholder="请输入图形验证码中的结果" autocomplete="off" style="width: 170px;">
+                    <input name="verify_code" value="" type="text" placeholder="请输入图形验证码中的结果" autocomplete="off" style="width: 170px;height: 40px">
                     <!-- <div class="btn-getcode-voice">获取语音验证码</div> -->
                     <!-- <div class="btn-getcode-sms">获取短信验证码</div> -->
                     <div class="btn-getcode-sms"><img src="../../statics/images/GeneratePictureUpgrade.png" style="width:100%;height:100%;"></div>

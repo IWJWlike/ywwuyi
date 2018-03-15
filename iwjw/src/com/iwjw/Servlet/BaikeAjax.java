@@ -1,10 +1,13 @@
-package com.iwjw.controllers;
+package com.iwjw.Servlet;
 
 import com.alibaba.fastjson.JSON;
 import com.iwjw.entity.BaikeList;
 import com.iwjw.service.BaikeListService;
+import com.iwjw.service.PlateInfoService;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletException;
@@ -15,27 +18,32 @@ import java.io.IOException;
 import java.util.List;
 import java.io.PrintWriter;
 
-@Controller
-@RequestMapping("/baike")
-public class BaikeController extends HttpServlet{
+
+public class BaikeAjax extends HttpServlet{
     @Resource
     BaikeListService baikeListService;
+    @Resource
+    PlateInfoService PlateInfoService;
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
-        String plateId = req.getParameter("plateId");
-        List<BaikeList> lists = baikeListService.getBaikeListByPlate(plateId);
+        String title = "";
+        String plateName = req.getParameter("plateName");
+        if (plateName.equals("全部文章")){
+            title = "0";
+        }
+        else{
+            title = PlateInfoService.getTitleNum(plateName).getPlateId();
+        }
         resp.setContentType("text/html;charset=UTF-8");
         PrintWriter out = resp.getWriter();
-        String listString = JSON.toJSONString(lists);
-        out.print(listString);
+        out.print(title);
         out.flush();
         out.close();
     }
 
     @Override
+    @ResponseBody
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        this.doGet(req, resp);
     }
 }

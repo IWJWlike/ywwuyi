@@ -1,19 +1,11 @@
 package com.iwjw.entity;
 
-/**
- * 用户
- */
-public class User {
-private int uid;//用户id
-private String uPhone;//用户号码
+import java.io.Serializable;
 
-    public int getUid() {
-        return uid;
-    }
+public class User implements Serializable{
 
-    public void setUid(int uid) {
-        this.uid = uid;
-    }
+    private String uPhone;
+    private String uid;
 
     public String getuPhone() {
         return uPhone;
@@ -21,5 +13,13 @@ private String uPhone;//用户号码
 
     public void setuPhone(String uPhone) {
         this.uPhone = uPhone;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 }
