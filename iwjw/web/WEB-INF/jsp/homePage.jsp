@@ -403,7 +403,7 @@
 
             <!-- to top -->
             <div class="suspend-div suspend-top" style="display: block;">
-                <a class="to-top" href="https://www.iwjw.com/#iwjw">
+                <a class="to-top" href="javascript:scroll(0,0)<%--https://www.iwjw.com/#iwjw--%>">
                     <em class="iconfont"></em>
                 </a>
                 <em class="text">回到顶部

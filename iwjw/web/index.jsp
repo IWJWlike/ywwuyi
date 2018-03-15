@@ -14,5 +14,6 @@
   <a href="main/home" target="_blank">首页</a>
   <a href="main/goSale" target="_blank">详情页</a>
   <a href="lease/test" target="_blank">租房</a>
+  <a href="main/goGfgl" target="_blank">购房攻略</a>
   </body>
 </html>
