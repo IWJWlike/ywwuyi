@@ -4595,7 +4595,7 @@ a, a:active, a:hover, a:visited {
     top: 5px
 }
 
-.same-district .right {
+.same-district .right-for-ss {
     min-height: 217px
 }
 
@@ -4749,7 +4749,7 @@ a, a:active, a:hover, a:visited {
     font-size: 18px
 }
 
-.right .view-all {
+.right-for-ss .view-all {
     text-align: right;
     padding-top: 16px;
     border-top: 1px solid #f2f2f2
@@ -5056,7 +5056,7 @@ a, a:active, a:hover, a:visited {
     float: left
 }
 
-.sale-detail-wrapper .detail-basic > .right {
+.sale-detail-wrapper .detail-basic > .right-for-ss {
     float: right;
     padding-left: 32px;
     padding-top: 32px;

@@ -1,7 +1,9 @@
 package com.iwjw.controllers;
 
 import com.iwjw.entity.BaikeList;
+import com.iwjw.entity.HouseImage;
 import com.iwjw.service.BaikeListService;
+import com.iwjw.service.HouseImgListService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +19,8 @@ public class MainController {
 
     @Resource
     BaikeListService baikeListService;
+    @Resource
+    HouseImgListService houseImgListService;
 
     @RequestMapping("/test")
     public String goTest(Model model){
@@ -32,9 +36,8 @@ public class MainController {
     public String goDemo(){
         return "demo";
     }
-//q去详情页
-    @RequestMapping("/goSale")
-    public  String goSale(){return "sale";}
+
+
 }
 
 

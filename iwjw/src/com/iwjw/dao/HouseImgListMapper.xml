@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iwjw.dao.HouseImgListMapper">
+
+
+    <!--根据房id获取图片-->
+    <select id="getHouseImgList" resultType="HouseImage">
+    SELECT imgUrl FROM houseimage where houseid=#{houseid} and houseImgNo="1";
+    </select>
+
+    <!--根据房id获取图片-->
+    <select id="getHouseImgList2" resultType="HouseImage">
+        SELECT imgUrl FROM houseimage where houseid=#{houseid} and houseImgNo="2";
+    </select>
+
+   <!-- 根据房id查询房子具体信息-->
+    <select id="getHouseById" resultType="Secondary">
+        SELECT * from secondary where houseid=#{houseid};
+    </select>
+
+    <!--根据小区id查询所在小区信息-->
+    <select id="getEstateByHouseId" resultType="Estate">
+        SELECT * from estate e,secondary s where e.estateId =s.estateId and s.houseid=#{houseid};
+    </select>
+    
+    <!--根据房子id查询房子朝向-->
+    <select id="getHouseFaceByHouseId" resultType="String">
+        SELECT faceName from houseFace h,secondary s where s.houseFace=h.faceId and s.houseid=#{houseid};
+    </select>
+    
+
+
+
+
+</mapper>
+ 

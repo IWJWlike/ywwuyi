@@ -6,9 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script charset="utf-8" src="../../statics/js/v.js"></script>
     <script src="../../statics/js/hm.js" async=""></script>
 
@@ -29,7 +30,7 @@
     <link rel="stylesheet" href="../../statics/css/sale_css.css">
     <!--<link rel="canonical" href="https://www.iwjw.com/sale/wZuQb7LgUIM/">-->
     <link type="text/css" rel="stylesheet" href="../../statics/css/sale_imgcss.css">
-    <link rel="stylesheet" type="text/css" href="../../statics/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../../statics/css/normalize.css"/>
 
     <script src="../../statics/js/jquery-1.9.1.min.js"></script>
     <script src="../../statics/js/index.js"></script>
@@ -284,7 +285,8 @@
                                                                                             href="https://www.iwjw.com/sale/guangzhou/">广州二手房</a>
                     &gt; <a class="mod-detail-nav-a" href="https://www.iwjw.com/sale/guangzhou/g1id40001/">白云二手房</a>
                     &gt; <a class="mod-detail-nav-a" href="https://www.iwjw.com/sale/guangzhou/g2id40027/">白云大道南二手房</a>
-                    &gt; <span class="cl-333">白兰花园高楼层1室46平朝东北</span>
+                    &gt; <span
+                        class="cl-333">${estate.estateName}${secondary.houseRoom}室${secondary.houseMiles}平朝${houseFace}</span>
                     <div class="mod-detail-nav-tips">
                         <form method="get" action="https://www.iwjw.com/sale/guangzhou/" data-housetype="2"
                               data-provinceid="40000" class="mod-search">
@@ -309,31 +311,29 @@
 
             <div class="sale-detail-wrapper" flag="3">
                 <div class="detail-layout">
-                    <div class="detail-basic clearfix" id="j-house-info" >
-                        <div id="j-img-slide" class="slide sale-slide" onselectstart="return false;" >
-                            <div id="reactSlideWrap" class="sale-img-slide" >
+                    <div class="detail-basic clearfix" id="j-house-info">
+                        <div id="j-img-slide" class="slide sale-slide" onselectstart="return false;">
+                            <div id="reactSlideWrap" class="sale-img-slide">
                                 <div data-reactid=".2">
                                     <div class="slidems-wrap" data-reactid=".2.0">
                                         <div class="medium-img-wrap" data-reactid=".2.0.0">
-                                            <!--<div class="player-wrap" data-reactid=".2.0.0.0"
-                                                 style="z-index: -1; height: 0.1px;">
-                                            </div>-->
+
                                             <!-- 5555555555555555555555555555555555555555555555555555555555-->
 
-                                            <div class="box" >
-
+                                            <%--轮播图--%>
+                                            <div class="box">
 
                                                 <!-- 存放大图的容器-->
-                                                <div class="all" >
+                                                <div class="all">
                                                     <div class="top-img" id="image_container" class="container">
                                                         <div class="activeimg" class="flex">
-                                                            <span><video src='../../statics/video/video1.mp4' controls loop="loop"
+                                                            <span><video src='../../statics/video/video1.mp4' controls
+                                                                         loop="loop"
                                                                          preload="auto"
                                                                          style="width: 500px;height: 300px"></video></span>
-                                                            <img src="../../statics/images/photo2_thumb.jpg">
-                                                            <img src="../../statics/images/photo3_thumb.jpg">
-                                                            <img src="../../statics/images/photo7_thumb.jpg">
-                                                            <img src="../../statics/images/photo3_thumb.jpg">
+                                                            <c:forEach items="${imgLists}" var="img" varStatus="status">
+                                                                <img src="${img.imgUrl}">
+                                                            </c:forEach>
                                                         </div>
                                                         <div class="left"
                                                              style="width: 40px;height: 100px;margin-top: 100px;opacity: 0.5;float: left">
@@ -372,13 +372,12 @@
                             </div>
                             <div class="video-weapp-banner"></div>
                         </div>
-                        <div class="detail-infos right" >
+                        <div class="detail-infos" style="float: right;padding-left: 32px;padding-top: 32px;width: 417px; height: 466px">
                             <div class="detail-groups">
                                 <div class="detail-title">
-                                    <div class="main-title text-ellipsis" title="白兰花园">
-                                        白兰花园
+                                    <div class="main-title text-ellipsis" title="${estate.estateName}">
+                                        ${estate.estateName}
                                     </div>
-
                                     <p class="sub-title">
                                         <span class="word">挂牌606天</span>
                                         <span class="word">浏览179次</span>
@@ -392,10 +391,10 @@
                                     <div class="cell price-cell">
                                         <div class="content-wrapper">
                                             <div class="text-ellipsis">
-                                                <i class="num">80</i>万
+                                                <i class="num">${secondary.housePrice*secondary.houseMiles}</i>万
                                             </div>
                                             <div class="sub-info">
-                                                1.7万/平
+                                                ${secondary.housePrice}万/平
                                                 <i class="sub-border"></i>
                                                 普装
                                             </div>
@@ -405,14 +404,14 @@
                                     <div class="cell room-cell">
                                         <div class="content-wrapper">
                                             <div class="text-ellipsis">
-                                                <i class="num">1</i>室<!--
-         --><i class="num">1</i>厅<!--
-         --><i class="num">1</i>卫
+                                                <i class="num">${secondary.houseRoom}</i>室<!--
+         --><i class="num">${secondary.houseDiv}</i>厅<!--
+         --><i class="num">${secondary.houseBath}</i>卫
                                             </div>
                                             <div class="sub-info">
-                                                高层 / 共9层
+                                                高层 / 共${secondary.totalFloor}层
                                                 <i class="sub-border"></i>
-                                                朝东北
+                                                朝${houseFace}
                                             </div>
                                         </div>
                                     </div>
@@ -420,10 +419,10 @@
                                     <div class="cell space-cell">
                                         <div class="content-wrapper">
                                             <div class="text-ellipsis">
-                                                <i class="num">46</i>m²
+                                                <i class="num">${secondary.houseMiles}</i>m²
                                             </div>
                                             <div class="sub-info">
-                                                1994年建
+                                                ${estate.buildAge}年建
                                                 每层6户
                                             </div>
                                         </div>
@@ -438,7 +437,8 @@
         [ 白云-白云大道南 ]
         </a>
         <a href="https://www.iwjw.com/sale/wZuQb7LgUIM/?from=040203&amp;p=40000#j-house-around"
-           class="hover-none-decoration house-position text-underline-hover" title="白兰花园">白兰花园</a></span>
+           class="hover-none-decoration house-position text-underline-hover"
+           title="${estate.estateName}">${estate.estateName}</a></span>
                                         <a href="https://www.iwjw.com/sale/map/?kw=%E7%99%BD%E5%85%B0%E8%8A%B1%E5%9B%AD"
                                            target="_blank" class="sale-change-map"><i class="iconfont if-area"></i>周边房源</a>
                                     </li>
@@ -460,7 +460,7 @@
                                         <div class="f-l" data-reactid=".1.0.0">
                                             <div class="agent-info-wrapper primary-agent-info" data-reactid=".1.0.0.0">
                                                 <div class="agent-avatar" data-reactid=".1.0.0.0.0"><img
-                                                        src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/e0d79c846dcd4807a23d04e53b5788b9"
+                                                        src="../../statics/images/seller/seller1.jpg"
                                                         data-reactid=".1.0.0.0.0.0"></div>
                                                 <div class="agent-info" data-reactid=".1.0.0.0.1">
                                                     <div class="agent-name" data-reactid=".1.0.0.0.1.0"><span
@@ -627,7 +627,7 @@
                                                 <div class="house-pics-list clearfix" data-reactid=".0.0.0.0.1.0.1.0.1">
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/layout/ea6adbb13e7b439e9bc17584ebd02d77=1s=1iwjw">
-                                                        <img src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/ea6adbb13e7b439e9bc17584ebd02d77.s.iwjw"
+                                                        <img src="${imgLists2.get(0).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/layout/ea6adbb13e7b439e9bc17584ebd02d77=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -637,7 +637,7 @@
                                                     </div>
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/f8c815ff12594ec1b595a98fcd3e9190=1s=1iwjw">
-                                                        <img src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/f8c815ff12594ec1b595a98fcd3e9190.s.iwjw"
+                                                        <img src="${imgLists2.get(1).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/f8c815ff12594ec1b595a98fcd3e9190=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -647,7 +647,7 @@
                                                     </div>
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/9e132e6af33445dcbbf707a7c063beea=1s=1iwjw">
-                                                        <img src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/9e132e6af33445dcbbf707a7c063beea.s.iwjw"
+                                                        <img src="${imgLists2.get(2).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/9e132e6af33445dcbbf707a7c063beea=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -657,7 +657,7 @@
                                                     </div>
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/3e33864f9b1348edaac2146b794c891e=1s=1iwjw">
-                                                        <img src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/3e33864f9b1348edaac2146b794c891e.s.iwjw"
+                                                        <img src="${imgLists2.get(3).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/3e33864f9b1348edaac2146b794c891e=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -667,7 +667,7 @@
                                                     </div>
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/04c04f0ed6054c6d924e4eea2d28e045=1s=1iwjw">
-                                                        <img src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/04c04f0ed6054c6d924e4eea2d28e045.s.iwjw"
+                                                        <img src="${imgLists2.get(4).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/04c04f0ed6054c6d924e4eea2d28e045=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -677,7 +677,7 @@
                                                     </div>
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/6cc4c7caf84e4befbd88a7365a42fb28=1s=1iwjw">
-                                                        <img src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/6cc4c7caf84e4befbd88a7365a42fb28.s.iwjw"
+                                                        <img src="${imgLists2.get(5).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/6cc4c7caf84e4befbd88a7365a42fb28=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -1299,7 +1299,7 @@
                                                              data-reactid=".0.0.0.0.1.1.0.0.$0.0.0">
                                                             <div class="agent-avatar"
                                                                  data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.0"><img
-                                                                    src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/e0d79c846dcd4807a23d04e53b5788b9"
+                                                                    src="../../statics/images/seller/seller1.jpg"
                                                                     data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.0.0"></div>
                                                             <div class="agent-info"
                                                                  data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1">
@@ -1342,35 +1342,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="f-r item-acts" data-reactid=".0.0.0.0.1.1.0.0.$0.1">
-                                                        <span class="act-item qrcode-popov-wrp" tabindex="-1"
-                                                              data-reactid=".0.0.0.0.1.1.0.0.$0.1.0"><i
-                                                                class="iconfont act-icon if-chatnavcall"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$0.1.0.0"></i><div
-                                                                class="qrcode-popov popov-bottom" hidden=""
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$0.1.0.1"><div
-                                                                class="qrcode-img-wrp"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$0.1.0.1.0"><img
-                                                                src="https://www.iwjw.com/sale/wZuQb7LgUIM/?from=040203&amp;p=40000"
-                                                                alt="" class="qrcode-img"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$0.1.0.1.0.0"></div><p
-                                                                class="popov-text"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$0.1.0.1.1">微信扫码拨号</p><div
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$0.1.0.1.2"><span
-                                                                class="agent-phone"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$0.1.0.1.2.0">186 2014 6206</span></div></div><div
-                                                                class="j-tooltip act-tootip"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$0.1.0.2"><span
-                                                                class="j-tooltip-text"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$0.1.0.2.0">电话咨询</span></div></span><span
-                                                            class="act-item" data-reactid=".0.0.0.0.1.1.0.0.$0.1.1"><i
-                                                            class="iconfont act-icon if-im-message"
-                                                            data-reactid=".0.0.0.0.1.1.0.0.$0.1.1.0"></i><div
-                                                            class="j-tooltip act-tootip"
-                                                            data-reactid=".0.0.0.0.1.1.0.0.$0.1.1.1"><span
-                                                            class="j-tooltip-text"
-                                                            data-reactid=".0.0.0.0.1.1.0.0.$0.1.1.1.0">微聊咨询</span></div></span>
-                                                    </div>
+
                                                 </li>
                                                 <li class="agent-item clearfix" data-reactid=".0.0.0.0.1.1.0.0.$1">
                                                     <div class="f-l" data-reactid=".0.0.0.0.1.1.0.0.$1.0">
@@ -1378,7 +1350,7 @@
                                                              data-reactid=".0.0.0.0.1.1.0.0.$1.0.0">
                                                             <div class="agent-avatar"
                                                                  data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.0"><img
-                                                                    src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/e8b99deccb01465699311f21731c5edb.iwjw"
+                                                                    src="../../statics/images/seller/seller3.jpg"
                                                                     data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.0.0"></div>
                                                             <div class="agent-info"
                                                                  data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1">
@@ -1410,42 +1382,12 @@
                                                                         data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$4"><i
                                                                         class="score-star iconfont if-star active"
                                                                         data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$4.0"></i></span><span
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.1"> 评分 5</span>
-                                                                </div>
+                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.1"> 评分 5</span></div>
                                                                 <div class="recommend-reason"
                                                                      data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.2">历史带看1次
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="f-r item-acts" data-reactid=".0.0.0.0.1.1.0.0.$1.1">
-                                                        <span class="act-item qrcode-popov-wrp" tabindex="-1"
-                                                              data-reactid=".0.0.0.0.1.1.0.0.$1.1.0"><i
-                                                                class="iconfont act-icon if-chatnavcall"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$1.1.0.0"></i><div
-                                                                class="qrcode-popov popov-bottom" hidden=""
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$1.1.0.1"><div
-                                                                class="qrcode-img-wrp"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$1.1.0.1.0"><img
-                                                                src="https://www.iwjw.com/sale/wZuQb7LgUIM/?from=040203&amp;p=40000"
-                                                                alt="" class="qrcode-img"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$1.1.0.1.0.0"></div><p
-                                                                class="popov-text"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$1.1.0.1.1">微信扫码拨号</p><div
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$1.1.0.1.2"><span
-                                                                class="agent-phone"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$1.1.0.1.2.0">186 6557 3814</span></div></div><div
-                                                                class="j-tooltip act-tootip"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$1.1.0.2"><span
-                                                                class="j-tooltip-text"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$1.1.0.2.0">电话咨询</span></div></span><span
-                                                            class="act-item" data-reactid=".0.0.0.0.1.1.0.0.$1.1.1"><i
-                                                            class="iconfont act-icon if-im-message"
-                                                            data-reactid=".0.0.0.0.1.1.0.0.$1.1.1.0"></i><div
-                                                            class="j-tooltip act-tootip"
-                                                            data-reactid=".0.0.0.0.1.1.0.0.$1.1.1.1"><span
-                                                            class="j-tooltip-text"
-                                                            data-reactid=".0.0.0.0.1.1.0.0.$1.1.1.1.0">微聊咨询</span></div></span>
                                                     </div>
                                                 </li>
                                                 <li class="agent-item clearfix" data-reactid=".0.0.0.0.1.1.0.0.$2">
@@ -1454,7 +1396,7 @@
                                                              data-reactid=".0.0.0.0.1.1.0.0.$2.0.0">
                                                             <div class="agent-avatar"
                                                                  data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.0"><img
-                                                                    src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/agent_9Sm5LCf.png"
+                                                                    src="../../statics/images/seller/seller2.jpg"
                                                                     data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.0.0"></div>
                                                             <div class="agent-info"
                                                                  data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1">
@@ -1494,35 +1436,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="f-r item-acts" data-reactid=".0.0.0.0.1.1.0.0.$2.1">
-                                                        <span class="act-item qrcode-popov-wrp" tabindex="-1"
-                                                              data-reactid=".0.0.0.0.1.1.0.0.$2.1.0"><i
-                                                                class="iconfont act-icon if-chatnavcall"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$2.1.0.0"></i><div
-                                                                class="qrcode-popov popov-bottom" hidden=""
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$2.1.0.1"><div
-                                                                class="qrcode-img-wrp"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$2.1.0.1.0"><img
-                                                                src="https://www.iwjw.com/sale/wZuQb7LgUIM/?from=040203&amp;p=40000"
-                                                                alt="" class="qrcode-img"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$2.1.0.1.0.0"></div><p
-                                                                class="popov-text"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$2.1.0.1.1">微信扫码拨号</p><div
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$2.1.0.1.2"><span
-                                                                class="agent-phone"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$2.1.0.1.2.0">186 2029 4320</span></div></div><div
-                                                                class="j-tooltip act-tootip"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$2.1.0.2"><span
-                                                                class="j-tooltip-text"
-                                                                data-reactid=".0.0.0.0.1.1.0.0.$2.1.0.2.0">电话咨询</span></div></span><span
-                                                            class="act-item" data-reactid=".0.0.0.0.1.1.0.0.$2.1.1"><i
-                                                            class="iconfont act-icon if-im-message"
-                                                            data-reactid=".0.0.0.0.1.1.0.0.$2.1.1.0"></i><div
-                                                            class="j-tooltip act-tootip"
-                                                            data-reactid=".0.0.0.0.1.1.0.0.$2.1.1.1"><span
-                                                            class="j-tooltip-text"
-                                                            data-reactid=".0.0.0.0.1.1.0.0.$2.1.1.1.0">微聊咨询</span></div></span>
-                                                    </div>
+
                                                 </li>
                                             </ul>
                                             <div class="house-primary-btns" data-reactid=".0.0.0.0.1.1.0.1">
@@ -2530,31 +2444,28 @@
 </div>
 
 
-
-
 <!--预览图片-->
 <script src="../../statics/dist/BigPicture.js"></script>
 <script>
-    (function() {
+    (function () {
 
         function setClickHandler(id, fn) {
             document.getElementById(id).onclick = fn;
         }
+
 //点击事件监听，参数e为当前点击的DOM
-        setClickHandler('image_container', function(e) {
+        setClickHandler('image_container', function (e) {
 
 
             console.log(e.target)
             BigPicture({
                 el: e.target,
-                imgSrc: e.target.src.replace('_thumb', '')
+                imgSrc: e.target.src.replace('_thumb', "")
             });
         });
 
     })();
 </script>
-
-
 
 
 </body>

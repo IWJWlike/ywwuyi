@@ -2,7 +2,9 @@ package com.iwjw.test;
 
 
 import com.iwjw.entity.BaikeList;
+import com.iwjw.entity.HouseImage;
 import com.iwjw.service.BaikeListService;
+import com.iwjw.service.HouseImgListService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -37,10 +39,10 @@ public class Test {
         }*/
 
         ApplicationContext act = new ClassPathXmlApplicationContext("applicationContext-mybatis.xml");
-        BaikeListService baikeListService = (BaikeListService) act.getBean("BaikeListServiceImpl");
-        List<BaikeList> lists = baikeListService.getBaikeList();
-        for (BaikeList list:lists) {
-            System.out.println(list.getTitle());
+        HouseImgListService houseImgListService = (HouseImgListService) act.getBean("houseImgListServiceImpl");
+        List<HouseImage> lists = houseImgListService.getHouseImgList("1");
+        for (HouseImage list:lists) {
+            System.out.println(list.getImgUrl());
         }
     }
 }
