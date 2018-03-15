@@ -49,6 +49,12 @@ public class SaleController {
         request.getSession().setAttribute("houseFace",houseFace);
         return "sale";}
 
+
+        @RequestMapping("goGfgl")
+        public  String goGfgl(){
+        return "gfgl";
+        }
+
 }
 
 
