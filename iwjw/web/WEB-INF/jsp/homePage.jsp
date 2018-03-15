@@ -192,16 +192,15 @@
                                                 <em class="iconfont if-mobile"></em>
                                             </div>
                                             <div class="input-wrap">
-                                                <input id="uPhone" class="login-input" type="tel" name="mobile" maxlength="13" placeholder="输入手机号码" tabindex="1" autocomplete="off">
+                                                <input id="uPhone" class="login-input" type="tel" name="uPhone" maxlength="13" placeholder="输入手机号码" tabindex="1" autocomplete="off">
                                                 <!-- <button class="send-btn" type="button" disabled>发送验证码</button> -->
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="sp-error1" class="sp-error"></div>
                                     <%--滑动验证模块开始--%>
                                     <div id="login-slider-one" class="login-slider-one login-transition slider-control">
                                         <div class="geetest-wrap">
-                                            <p class="geetest-tip">拖动滑块完成验证</p>
+                                            <p id="loginTips" class="geetest-tip">拖动滑块完成验证</p>
                                             <div id="geetest-container" class="geetest-container">
                                                 <div id="holder" class="gt_holder gt_float" style="touch-action: none;">
                                                     <div id="slider1" class="slider1 slider-control"></div>
@@ -212,9 +211,10 @@
                                                                 if (result){
                                                                     if ((/^1[3|4|5|8][0-9]\d{4,8}$/.test($("#uPhone").val()))){
                                                                         $("#holder").html("<div class='input-wrap'>"
-                                                                            +"<input id='codeInput'  class='login-input' type='tel' maxlength='4'name='code'autocomplete='off' placeholder='填写验证码' tabindex='2'>"
+                                                                            +"<input id='codeInput'  class='login-input' type='tel' maxlength='4'name='code'autocomplete='off' placeholder='填写验证码'tabindex='2'>"
                                                                             +"<button id='send-code-btn' class='send-btn'type='button'>发送验证码</button></div>")
                                                                         $("#uPhone").attr("disabled",true)
+                                                                        $("#loginTips").html("根据手机短信输入验证码")
                                                                         <%--$.post("${pageContext.request.contextPath}/login/gotoSendCode", "uPhone="+$("#uPhone").val(), sendBack());--%>
                                                                         }else {
                                                                         $("#slider1").slider("restore");
@@ -241,15 +241,19 @@
                                                                 setTimeout("timer()",1000);
                                                             }
                                                         }
-
-                                                        $("#codeInput").onblur(function () {
-
+                                                        $("#codeInput").click(function () {
+                                                            alert("11111")
+                                                        })
+                                                        function testCode() {
                                                             console.log($("#codeInput").val())
                                                             if ($("#codeInput").val().length()>=4){
                                                                 alert($("#codeInput").val())
                                                                 $(".dialog-login-btn").removeAttr("disabled")
                                                             }
-                                                        })
+                                                        }
+
+                                                    </script>
+                                                    <script>
                                                     </script>
                                                 </div>
                                             </div>

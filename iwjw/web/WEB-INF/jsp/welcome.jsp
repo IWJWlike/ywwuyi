@@ -217,10 +217,12 @@
         </c:forEach>
 </ul>
 <script>
-    $.getScript(src=("../../statics/js/ss.js")).done(function () {
+    $.getScript(("../../statics/js/ss.js")).done(function () {
         lll();
     });
 </script>
+
+
 
 </body>
 </html>
