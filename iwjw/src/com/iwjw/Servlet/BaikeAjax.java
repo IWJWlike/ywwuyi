@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.util.List;
 import java.io.PrintWriter;
 
-
+@RequestMapping("/baikeAjax")
 public class BaikeAjax extends HttpServlet{
     @Resource
     BaikeListService baikeListService;
