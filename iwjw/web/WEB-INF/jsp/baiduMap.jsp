@@ -35,29 +35,29 @@
                         <a href="/" class="nav-item-a ">首页</a>
                     </div>
                     <div class="nav-item" data-log="secondhouse">
-                        <a href="/sale/map/" class="nav-item-a ">二手房</a>
+                        <a href="/" class="nav-item-a ">二手房</a>
                     </div>
                     <div class="nav-item" data-log="rent">
-                        <a href="/chuzu/map/" class="nav-item-a active">租房</a>
+                        <a href="/" class="nav-item-a active">租房</a>
                     </div>
 
 
                     <div class="nav-item nav-item-server" data-log="entrust">
-                        <a href="/delegation/" rel="nofollow" class="nav-item-a ">业主委托</a>
+                        <a href="/" rel="nofollow" class="nav-item-a ">业主委托</a>
                     </div>
 
                     <div class="nav-item" data-log="baike">
                         <a class="nav-item-a " href="/baike/guangzhou/">购房攻略 </a>
                     </div>
                     <div class="nav-item" data-log="ailicai">
-                        <a href="//www.iwlicai.com" target="_blank" class="nav-item-a ailicai ">吉爱财</a>
+                        <a href="/" target="_blank" class="nav-item-a ailicai ">吉爱财</a>
                         <div class="header-new"></div>
                     </div>
                     <div class="nav-item" data-log="dzg">
-                        <a href="/dzg/" class="nav-item-a  ">贷总管</a>
+                        <a href="/" class="nav-item-a  ">贷总管</a>
                     </div>
                     <div class="nav-item" data-log="appDownload">
-                        <a href="/appDownPage/" class="nav-item-a ">
+                        <a href="/" class="nav-item-a ">
                             <i class="iconfont if-mobile"></i>APP</a>
                     </div>
                 </dt>
@@ -1124,7 +1124,7 @@
                     indexmap.clearOverlays();
                     console.log("1级点");
                     var zb = ""; //周边的行政区域名称
-                    obj.js.data.markList.forEach(element => {
+                    obj.json.data.markList.forEach(element => {
                         obj.json2.data.markList.forEach(element1 => {
                             if (element.name == "周边") {
                                 if (element.id == element1.parentId) {
