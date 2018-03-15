@@ -54,9 +54,20 @@ public class MainController {
         return "demo";
     }
 //q去详情页
-    @RequestMapping("/goSale")
-    public  String goSale(){return "sale";}
+//    @RequestMapping("/goSale")
+//    public  String goSale(){return "sale";}
+    @RequestMapping("/login")
+    public String goLogin(@Param("uPhone")String uPhone,Model model){
+        if (userService.selectUser(uPhone)==(null)){
+            userService.createUser(uPhone);
+        }
+        User vistor = userService.selectUser(uPhone);
+        model.addAttribute("vistor",vistor);
+        return "homePage";
+    }
 
+    @RequestMapping("/goGfgl")
+    public String goGfgl(){return "gfgl";}
 }
 
 
