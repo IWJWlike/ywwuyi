@@ -54,8 +54,8 @@ public class MainController {
         return "demo";
     }
 //q去详情页
-    @RequestMapping("/goSale")
-    public  String goSale(){return "sale";}
+//    @RequestMapping("/goSale")
+//    public  String goSale(){return "sale";}
     @RequestMapping("/login")
     public String goLogin(@Param("uPhone")String uPhone,Model model){
         if (userService.selectUser(uPhone)==(null)){

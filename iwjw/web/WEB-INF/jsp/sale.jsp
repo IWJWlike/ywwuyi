@@ -337,11 +337,11 @@
                                                         </div>
                                                         <div class="left"
                                                              style="width: 40px;height: 100px;margin-top: 100px;opacity: 0.5;float: left">
-                                                            <div style="background-image: url(../../statics/images/left.png);width: 15px;height: 30px;margin-top: 30px;margin-left: 10px"></div>
+                                                            <div style="background-image: url(../../statics/images/house_images/left.png);width: 15px;height: 30px;margin-top: 30px;margin-left: 10px"></div>
                                                         </div>
                                                         <div class="right"
                                                              style="width: 40px;height: 100px;margin-top: 100px;opacity: 0.5;float: right">
-                                                            <div style="background-image: url(../../statics/images/right.png);width:15px;height: 30px;margin-top: 30px;margin-left: 10px"></div>
+                                                            <div style="background-image: url(../../statics/images/house_images/right.png);width:15px;height: 30px;margin-top: 30px;margin-left: 10px"></div>
                                                         </div>
                                                     </div>
 
@@ -724,7 +724,7 @@
                                                 小区基本信息</h2><a href="https://www.iwjw.com/estate/sale/PfFUdyyl2Ak/"
                                                               target="_blank" class="f-l estate-imgs"
                                                               data-reactid=".0.0.0.0.1.0.3.0.1"><img
-                                                    src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/0de669bfdcfb41d0936137399cfc0bb6.s.iwjw"
+                                                    src="../../statics/images/house_images/dfd1_env.jpg"
                                                     data-reactid=".0.0.0.0.1.0.3.0.1.0"
                                                     style="width: 100%; height: auto; margin-top: -15px;"></a>
                                                 <div class="f-r estate-details" data-reactid=".0.0.0.0.1.0.3.0.2"><h2

@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -21,6 +22,7 @@
           content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link rel="stylesheet" href='../../statics/css/common_72_1.css'>
     <link rel="stylesheet" href='../../statics/css/baike_61_1.css'>
+    <link rel="stylesheet" href="../../statics/css/gfgl_css.css">
     <script>
         ;(function () {
             if (location.hostname.indexOf('iwjw.com') != -1 && location.hostname.indexOf('pcbeta') == -1 && location.protocol == 'http:') {
@@ -140,60 +142,110 @@
                     <div class="head-banner clearfix ">
 
 
-                        <div class="slide-wrap f-l">
-                            <ul class="slide-ul clearfix">
-                                <li class="slide-li f-l">
-                                    <a class="banner1-a" data-logid="292"
-                                       href="javascript:void(0)" target="_blank">
-                                        <img src="../../statics/images/picture/fc835fe0175d4a6189ba034e71a4f570.jpg" class="slide-img"
-                                             data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/2/20/fc835fe0175d4a6189ba034e71a4f570"/>
-                                        <div class="title-bg"><p class="banner-title bold">那些年一咬牙一跺脚买房的人，现在过的怎么样？</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="slide-li f-l">
-                                    <a class="banner1-a" data-logid="296"
-                                       href="javascript:void(0)" target="_blank">
-                                        <img src="../../statics/images/picture/284f3cb17d4542a2960aa4b51921847c.jpg" class="slide-img"
-                                             data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/3/13/284f3cb17d4542a2960aa4b51921847c"/>
-                                        <div class="title-bg"><p class="banner-title bold">楼层越高噪声越大？错！中间楼层才最吵！</p></div>
-                                    </a>
-                                </li>
-                                <li class="slide-li f-l">
-                                    <a class="banner1-a" data-logid="295"
-                                       href="javascript:void(0)" target="_blank">
-                                        <img src="../../statics/images/picture/47066f86555741839fa282f7ef2e6065.jpg" class="slide-img"
-                                             data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/3/8/47066f86555741839fa282f7ef2e6065"/>
-                                        <div class="title-bg"><p class="banner-title bold">零公摊都是在骗人，每平米都要花钱买！</p></div>
-                                    </a>
-                                </li>
-                                <li class="slide-li f-l">
-                                    <a class="banner1-a" data-logid="292"
-                                       href="javascript:void(0)" target="_blank">
-                                        <img src="../../statics/images/picture/fc835fe0175d4a6189ba034e71a4f570.jpg" class="slide-img"
-                                             data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/2/20/fc835fe0175d4a6189ba034e71a4f570"/>
-                                        <div class="title-bg"><p class="banner-title bold">那些年一咬牙一跺脚买房的人，现在过的怎么样？</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="slide-li f-l">
-                                    <a class="banner1-a" data-logid="296"
-                                       href="javascript:void(0)" target="_blank">
-                                        <img src="../../statics/images/picture/47066f86555741839fa282f7ef2e6065.jpg" class="slide-img"
-                                             data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/3/13/284f3cb17d4542a2960aa4b51921847c"/>
-                                        <div class="title-bg"><p class="banner-title bold">楼层越高噪声越大？错！中间楼层才最吵！</p></div>
-                                    </a>
+
+                        <%--333333333333333333333333333333333333333333--%>
+
+                      <div id="slider-wraps"  class="slide-wrap f-l">
+                            <ul id="sliders" >
+                                <li data-color="#1abc9c">
+                                    <div>
+                                        <h3>Slide #1</h3>
+                                        <span>Sub-title #1</span>
+                                    </div>
                                 </li>
 
+                                <li data-color="#3498db">
+                                    <div>
+                                        <h3>Slide #2</h3>
+                                        <span>Sub-title #2</span>
+                                    </div>
+                                </li>
+
+                                <li data-color="#9b59b6">
+                                    <div>
+                                        <h3>Slide #3</h3>
+                                        <span>Sub-title #3</span>
+                                    </div>
+                                </li>
                             </ul>
-                            <a class="arrow-common arr-left iconfont<%-- if-arrow-left--%> bold">&#139</a>
-                            <a class="arrow-common arr-right iconfont<%-- if-arrow-right--%> bold">&#155</a>
-                            <div class="dots-wrap clearfix">
-                                <a class="dots-a f-l active"></a>
-                                <a class="dots-a f-l "></a>
-                                <a class="dots-a f-l "></a>
-                            </div>
+                            <!--controls-->
+                            <div class="btnst" id="nexts"><img src="../../statics/images/house_images/right.png"style="margin-top: 10px"></div>
+                            <div class="btnst" id="previoust"><img src="../../statics/images/house_images/left.png" style="margin-top: 10px"></div>
+                         <%-- 图片右上角显示index  --%>
+                          <div id="counter"></div>
+
+                          <%-- <div id="pagination-wraps">
+
+                               <ul>
+                               </ul>
+                           </div>--%>
+                            <!--controls-->
+
                         </div>
+
+<%--rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr--%>
+
+
+                            <%-- <div class="slide-wrap f-l">
+                                 <ul class="slide-ul clearfix">
+                                     <li class="slide-li f-l">
+                                         <a class="banner1-a" data-logid="292"
+                                            href="javascript:void(0)" target="_blank">
+                                             <img src="../../statics/images/picture/fc835fe0175d4a6189ba034e71a4f570.jpg" class="slide-img"
+                                                  data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/2/20/fc835fe0175d4a6189ba034e71a4f570"/>
+                                             <div class="title-bg"><p class="banner-title bold">那些年一咬牙一跺脚买房的人，现在过的怎么样？</p>
+                                             </div>
+                                         </a>
+                                     </li>
+                                     <li class="slide-li f-l">
+                                         <a class="banner1-a" data-logid="296"
+                                            href="javascript:void(0)" target="_blank">
+                                             <img src="../../statics/images/picture/284f3cb17d4542a2960aa4b51921847c.jpg" class="slide-img"
+                                                  data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/3/13/284f3cb17d4542a2960aa4b51921847c"/>
+                                             <div class="title-bg"><p class="banner-title bold">楼层越高噪声越大？错！中间楼层才最吵！</p></div>
+                                         </a>
+                                     </li>
+                                     <li class="slide-li f-l">
+                                         <a class="banner1-a" data-logid="295"
+                                            href="javascript:void(0)" target="_blank">
+                                             <img src="../../statics/images/picture/47066f86555741839fa282f7ef2e6065.jpg" class="slide-img"
+                                                  data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/3/8/47066f86555741839fa282f7ef2e6065"/>
+                                             <div class="title-bg"><p class="banner-title bold">零公摊都是在骗人，每平米都要花钱买！</p></div>
+                                         </a>
+                                     </li>
+                                     <li class="slide-li f-l">
+                                         <a class="banner1-a" data-logid="292"
+                                            href="javascript:void(0)" target="_blank">
+                                             <img src="../../statics/images/picture/fc835fe0175d4a6189ba034e71a4f570.jpg" class="slide-img"
+                                                  data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/2/20/fc835fe0175d4a6189ba034e71a4f570"/>
+                                             <div class="title-bg"><p class="banner-title bold">那些年一咬牙一跺脚买房的人，现在过的怎么样？</p>
+                                             </div>
+                                         </a>
+                                     </li>
+                                     <li class="slide-li f-l">
+                                         <a class="banner1-a" data-logid="296"
+                                            href="javascript:void(0)" target="_blank">
+                                             <img src="../../statics/images/picture/47066f86555741839fa282f7ef2e6065.jpg" class="slide-img"
+                                                  data-src="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/3/13/284f3cb17d4542a2960aa4b51921847c"/>
+                                             <div class="title-bg"><p class="banner-title bold">楼层越高噪声越大？错！中间楼层才最吵！</p></div>
+                                         </a>
+                                     </li>
+
+                                 </ul>
+                                 <a class="arrow-common arr-left iconfont if-arrow-left bold">&#139</a>
+                              <a class="arrow-common arr-right iconfont&lt;%&ndash; if-arrow-right&ndash;%&gt; bold">&#155</a>
+                                 <div class="dots-wrap clearfix">
+                                     <a class="dots-a f-l active"></a>
+                                     <a class="dots-a f-l "></a>
+                                     <a class="dots-a f-l "></a>
+                                 </div>
+                             </div>--%>
+
+
+
+
+
+
 
                         <div class="banner-right f-l">
                             <a class="banner-2" href="javascript:void(0)" target="_blank"
@@ -562,7 +614,8 @@
     </script>
 
 </div>
-<!-- 百度统计 -->
 
+<script src="../../statics/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../statics/js/slide.js"></script>
 </body>
 </html>
