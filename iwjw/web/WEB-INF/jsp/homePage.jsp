@@ -9,7 +9,7 @@
 <html>
 <head>
     <script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/jquery-1.8.3.min.js"></script>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script charset="utf-8" src="../../statics/js/v.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>爱屋吉屋-买房先看视频，「真实省力」的房产中介!</title>
     <meta name="keywords" content="爱屋吉屋,二手房,租房,房屋买卖,房产中介">
@@ -417,7 +417,7 @@
     </div>
 </div>
 
-<script src="../../statics/js/gt.js"></script>
+
 
 <script type="text/javascript">
     var _vds = _vds || [];
@@ -437,8 +437,8 @@
         })();
     })();
 </script><!--[if IE 8]> <script src='./js/es5-shim-sham_5.5.js'></script><![endif]-->
-<script src="../../statics/js/common_72.js"></script>
-<script src="../../statics/js/index_74.js"></script>
+<%--<script src="../../statics/js/common_72.js"></script>
+<script src="../../statics/js/index_74.js"></script>--%>
 <script src="https://www.iwjw.com/" async=""></script>
 <div class="mod-footer " style="height: 98px">
     <div class="footer-inner" style="height: 100px">

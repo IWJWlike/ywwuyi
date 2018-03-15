@@ -4,9 +4,9 @@
 
 <mapper namespace="com.iwjw.dao.UserMapper">
 
-    <select id="createUser" resultType="User">
-    INSERT INT user(uPhone) VALUE(uPhone = #{uPhone});
-    </select>
+    <insert id="createUser">
+    INSERT INTO user(uPhone) VALUE(#{uPhone});
+    </insert>
 
     <select id="selectUser" resultType="User">
         SELECT * FROM user WHERE uPhone = #{uPhone};

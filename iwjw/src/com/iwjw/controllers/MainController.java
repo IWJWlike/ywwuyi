@@ -1,7 +1,10 @@
 package com.iwjw.controllers;
 
 import com.iwjw.entity.BaikeList;
+import com.iwjw.entity.User;
 import com.iwjw.service.BaikeListService;
+import com.iwjw.service.UserService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +20,8 @@ public class MainController {
 
     @Resource
     BaikeListService baikeListService;
-
+    @Resource
+    UserService userService;
     @RequestMapping("/test")
     public String goTest(Model model){
         List<BaikeList> lists0 = baikeListService.getBaikeList();
@@ -52,6 +56,15 @@ public class MainController {
 //q去详情页
     @RequestMapping("/goSale")
     public  String goSale(){return "sale";}
+    @RequestMapping("/login")
+    public String goLogin(@Param("uPhone")String uPhone,Model model){
+        if (userService.selectUser(uPhone)==(null)){
+            userService.createUser(uPhone);
+        }
+        User vistor = userService.selectUser(uPhone);
+        model.addAttribute("vistor",vistor);
+        return "homePage";
+    }
 }
 
 

@@ -217,7 +217,7 @@
         </c:forEach>
 </ul>
 <script>
-    $.getScript("../../statics/js/ss.js").done(function () {
+    $.getScript(src=("../../statics/js/ss.js")).done(function () {
         lll();
     });
 </script>

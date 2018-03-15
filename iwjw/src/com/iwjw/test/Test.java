@@ -3,8 +3,10 @@ package com.iwjw.test;
 
 import com.iwjw.entity.BaikeList;
 import com.iwjw.entity.PlateInfo;
+import com.iwjw.entity.User;
 import com.iwjw.service.BaikeListService;
 import com.iwjw.service.PlateInfoService;
+import com.iwjw.service.UserService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -39,8 +41,14 @@ public class Test {
         }*/
 
         ApplicationContext act = new ClassPathXmlApplicationContext("applicationContext-mybatis.xml");
-        PlateInfoService baikeListService = (PlateInfoService) act.getBean("plateInfoServiceImpl");
-        PlateInfo lists = baikeListService.getTitleNum("热点楼市");
-        System.out.println(lists.getPlateId());
+        UserService userService = (UserService) act.getBean("userServeImpl");
+        String uPhone = "13580430327";
+        User lists = userService.selectUser(uPhone);
+        if (userService.selectUser(uPhone)==(null)){
+            System.out.println("11111111");
+            userService.createUser(uPhone);
+        }
+        User vistor = userService.selectUser(uPhone);
+        System.out.println(vistor.getUid());
     }
 }
