@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>map</title>
-    <link rel="stylesheet" href="../../statics/mapCss/mapIndex.css">
     <link rel="stylesheet" href="../../statics/fontawesome-5.0.8/fontawesome-all.css">
+    <link rel="stylesheet" href="../../statics/mapCss/mapIndex.css">
     <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript"
             src="http://api.map.baidu.com/api?v=3.0&ak=vGIMmDBGvKlKoQ5l8lXIckDPtkh0UtHa"></script>
@@ -28,44 +28,45 @@
                     </a>
                     <div class="city nav-item">
                         <a class="province" provinceid="40000" provincepy="guangzhou">广州
-                            <i class="far fa-angle-down"></i>
+                            <i class="fas fa-angle-down iconfont"></i>
                         </a>
                     </div>
                     <div class="nav-item" data-log="homepage">
-                        <a href="/" class="nav-item-a ">首页</a>
+                        <a href="javascript:void(0)" class="nav-item-a ">首页</a>
                     </div>
                     <div class="nav-item" data-log="secondhouse">
-                        <a href="/sale/map/" class="nav-item-a ">二手房</a>
+                        <a href="javascript:void(0)" class="nav-item-a ">二手房</a>
                     </div>
                     <div class="nav-item" data-log="rent">
-                        <a href="/chuzu/map/" class="nav-item-a active">租房</a>
+                        <a href="javascript:void(0)" class="nav-item-a active">租房</a>
                     </div>
 
 
                     <div class="nav-item nav-item-server" data-log="entrust">
-                        <a href="/delegation/" rel="nofollow" class="nav-item-a ">业主委托</a>
+                        <a href="javascript:void(0)" rel="nofollow" class="nav-item-a ">业主委托</a>
                     </div>
 
                     <div class="nav-item" data-log="baike">
-                        <a class="nav-item-a " href="/baike/guangzhou/">购房攻略 </a>
+                        <a class="nav-item-a " href="javascript:void(0)">购房攻略 </a>
                     </div>
                     <div class="nav-item" data-log="ailicai">
-                        <a href="//www.iwlicai.com" target="_blank" class="nav-item-a ailicai ">吉爱财</a>
+                        <a href="javascript:void(0)" target="_blank" class="nav-item-a ailicai ">吉爱财</a>
                         <div class="header-new"></div>
                     </div>
                     <div class="nav-item" data-log="dzg">
-                        <a href="/dzg/" class="nav-item-a  ">贷总管</a>
+                        <a href="javascript:void(0)" class="nav-item-a  ">贷总管</a>
                     </div>
                     <div class="nav-item" data-log="appDownload">
-                        <a href="/appDownPage/" class="nav-item-a ">
+                        <a href="javascript:void(0)" class="nav-item-a ">
                             <i class="iconfont if-mobile"></i>APP</a>
                     </div>
                 </dt>
                 <dd class="header-right clearfix">
                     <div class="nav-item">
-                        <a href="#" class="login none nav-item-a login-require " target="_blank">
+                        <a href="javascript:void(0)" class="login none nav-item-a login-require " target="_blank">
                             <i class="nav-item-txt">登录
-                                <span class="slash">/</span>注册</i>
+                                <span class="slash">/</span>
+                                注册</i>
                         </a>
                     </div>
                     <div class="nav-item message-nav" id="message-nav">
@@ -111,7 +112,7 @@
                                                     <div class="t-r">
                                                         <i class="item-total">
                                                             <i class="total-num">47</i>套</i>
-                                                        <em class="iconfont fo-arrow-r">혨</em>
+                                                        <em class="fas fa-angle-right iconfont"></em>
                                                     </div>
                                                 </li>
 
@@ -124,8 +125,8 @@
 
                     </div>
                     <div class="mod-zoom unselectable">
-                        <a id="bzoom" class="zoom-btn zoom-in iconfont">혱</a>
-                        <a id="szoom" class="zoom-btn zoom-out iconfont">홁</a>
+                        <a id="bzoom" class="zoom-btn zoom-in iconfont fas fa-plus"></a>
+                        <a id="szoom" class="zoom-btn zoom-out iconfont fas fa-minus"></a>
                     </div>
                     <div class="mod-floating">
                         <!-- <div class="mod-find-school hide" id="find-school"></div> -->
@@ -133,23 +134,23 @@
                             <div class="surround-select">
                                 <ul class="surround-opts">
                                     <li class="surround-item" data-index="0" data-text="公交">
-                                        <i class="iconfont">홖</i>
+                                        <i class="iconfont fas fa-bus"></i>
                                         <span class="surround-text">公交</span>
                                     </li>
                                     <li class="surround-item" data-index="1" data-text="地铁">
-                                        <i class="iconfont">혭</i>
+                                        <i class="iconfont fas fa-subway"></i>
                                         <span class="surround-text">地铁</span>
                                     </li>
                                     <li class="surround-item" data-index="2" data-text="学校">
-                                        <i class="iconfont">확</i>
+                                        <i class="iconfont fas fa-graduation-cap"></i>
                                         <span class="surround-text">学校</span>
                                     </li>
                                     <li class="surround-item" data-index="3" data-text="医院">
-                                        <i class="iconfont">홗</i>
+                                        <i class="iconfont fas fa-medkit"></i>
                                         <span class="surround-text">医院</span>
                                     </li>
                                     <li class="surround-item" data-index="4" data-text="银行">
-                                        <i class="iconfont">환</i>
+                                        <i class="iconfont fas fa-university"></i>
                                         <span class="surround-text">银行</span>
                                     </li>
                                     <li class="surround-item last active" data-index="-1" data-text="无">
@@ -170,12 +171,12 @@
                                             <div class="form-kw">
                                                 <input name="kw" placeholder="请输入小区名称或地址" maxlength="50"
                                                        autocomplete="off" type="text">
-                                                <i class="iconfont search-close" title="清除内容"
+                                                <i class="iconfont search-close fas fa-times-circle" title="清除内容"
                                                    style="display: none;"></i>
                                             </div>
                                         </label>
                                         <button class="form-btn" type="button">
-                                            <i class="iconfont search-font if-message"></i>
+                                            <i class="iconfont search-font if-message fas fa-search"></i>
                                         </button>
                                     </div>
                                     <p class="hint-wrap" style="display: none;"></p>
@@ -185,7 +186,7 @@
                             </div>
                             <div class="mod-find-area_line">
                                 <span class="mod-find-al-text need-cut">区域</span>
-                                <em class="iconfont if-arrow-down"></em>
+                                <em class="iconfont if-arrow-down fas fa-angle-down"></em>
                                 <ul class="mod-find-al-ul">
                                     <span class="arrow-top arrow-top-zero"></span>
                                     <li class="mod-find-area active" id="find-area">
@@ -819,7 +820,7 @@
                                                 </dt>
                                                 <dd class="filter-num" data-reactid=".0.0:$0.0.$1.$1"></dd>
                                                 <dd class="filter-icon" data-reactid=".0.0:$0.0.$1.$2">
-                                                    <i class="iconfont if-arrow-down"
+                                                    <i class="iconfont if-arrow-down fas fa-angle-down"
                                                        data-reactid=".0.0:$0.0.$1.$2.0"></i>
                                                 </dd>
                                             </dl>
@@ -865,7 +866,7 @@
                                                 </dt>
                                                 <dd class="filter-num" data-reactid=".0.0:$1.0.$1.$1"></dd>
                                                 <dd class="filter-icon" data-reactid=".0.0:$1.0.$1.$2">
-                                                    <i class="iconfont if-arrow-down"
+                                                    <i class="iconfont if-arrow-down fas fa-angle-down"
                                                        data-reactid=".0.0:$1.0.$1.$2.0"></i>
                                                 </dd>
                                             </dl>
@@ -905,7 +906,7 @@
                                                 </dt>
                                                 <dd class="filter-num" data-reactid=".0.0:$2.0.$1.$1"></dd>
                                                 <dd class="filter-icon" data-reactid=".0.0:$2.0.$1.$2">
-                                                    <i class="iconfont if-arrow-down"
+                                                    <i class="iconfont if-arrow-down fas fa-angle-down"
                                                        data-reactid=".0.0:$2.0.$1.$2.0"></i>
                                                 </dd>
                                             </dl>
@@ -1027,7 +1028,7 @@
                                                 </dt>
                                                 <dd class="filter-num" data-reactid=".0.0:$3.0.$1.$1"></dd>
                                                 <dd class="filter-icon" data-reactid=".0.0:$3.0.$1.$2">
-                                                    <i class="iconfont if-arrow-down"
+                                                    <i class="iconfont if-arrow-down fas fa-angle-down"
                                                        data-reactid=".0.0:$3.0.$1.$2.0"></i>
                                                 </dd>
                                             </dl>
@@ -1083,7 +1084,7 @@
         indexmap.setCenter(cityName);
     });
 
-    $.getJSON("../statics/json/obj.js", function (result) {
+    $.getJSON("../../statics/json/obj.js", function (result) {
         var obj = result.obj;
         console.log(obj);
         var point = new BMap.Point(obj.firstJson.data.lon, obj.firstJson.data.lat); // 创建点坐标
@@ -1118,74 +1119,56 @@
         //监听鼠标滚轮缩放事件
         indexmap.onzoomend = function (type, target) {
             var key = indexmap.getZoom();
+            indexmap.clearOverlays();
             console.log(key);
-            switch (key) {
-                case 12:
-                    indexmap.clearOverlays();
-                    console.log("1级点");
-                    var zb = ""; //周边的行政区域名称
-                    obj.js.data.markList.forEach(element => {
-                        obj.json2.data.markList.forEach(element1 => {
-                            if (element.name == "周边") {
-                                if (element.id == element1.parentId) {
-                                    zb = element1.name;
-                                }
+            if (key <= 13) {
+                console.log("1级点");
+                var zb = ""; //周边的行政区域名称
+                obj.json.data.markList.forEach(element => {
+                    obj.json2.data.markList.forEach(element1 => {
+                        if (element.name == "周边") {
+                            if (element.id == element1.parentId) {
+                                zb = element1.name;
                             }
-                        });
-                        var point1 = new BMap.Point(element.lon, element.lat);
-                        //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
-                        var myCompOverlay = new ComplexCustomOverlay(point1, element.name, element.houseNum +
-                            "套", getBoundary(
-                            obj.firstJson.data.province.text + element.name), obj);
-                        //将覆盖物添加到地图
-                        indexmap.addOverlay(myCompOverlay);
-                    });
-                    break;
-                case 14:
-                    indexmap.clearOverlays();
-                    console.log("2级点");
-                    // $.getScript('../baiduMap/mView/zoom1.js').done(function () {
-                    obj.json3.data.markList.forEach(element => {
-                        var point1 = new BMap.Point(element.lon, element.lat);
-                        //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
-                        var myCompOverlays = new ComplexCustomOverlay_small(point1, element.name,
-                            element.houseNum + "套", null, obj);
-                        // console.log(obj.firstJson.data.province.text+ that._text  + element.name);
-                        //将覆盖物添加到地图
-                        indexmap.addOverlay(myCompOverlays);
-                    });
-
-                    // }).fail(function (jqxhr, settings, exception) {
-                    //     // console.log("======error========"+jqxhr+" : "+settings+" : "+exception);
-                    // });
-                    break;
-                case 16:
-                    indexmap.clearOverlays();
-                    console.log("3级点");
-                    // $.getScript('../baiduMap/mView/zoom2.js').done(function () {
-                    var i = 0;
-                    obj.json4.data.markList.forEach(element => {
-                        i++;
-                        if (i == 50) {
-                            return;
                         }
-                        var point1 = new BMap.Point(element.lon, element.lat);
-                        //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
-                        var myCompOverlays1 = new ComplexCustomOverlay_s_small(point1, element.name,
-                            element.houseNum + "套");
-                        // console.log(obj.firstJson.data.province.text + that._text + element.name);
-                        // //将覆盖物添加到地图
-                        indexmap.addOverlay(myCompOverlays1);
                     });
-
-                    // }).fail(function (jqxhr, settings, exception) {
-                    //     // console.log("======error========"+jqxhr+" : "+settings+" : "+exception);
-                    // });
-                    break;
-
-                // default:
-                // break;
+                    var point1 = new BMap.Point(element.lon, element.lat);
+                    //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
+                    var myCompOverlay = new ComplexCustomOverlay(point1, element.name, element.houseNum +
+                        "套", getBoundary(
+                        obj.firstJson.data.province.text + element.name), obj);
+                    //将覆盖物添加到地图
+                    indexmap.addOverlay(myCompOverlay);
+                });
+            } else if (key <= 15 && key > 13) {
+                console.log("2级点");
+                obj.json3.data.markList.forEach(element => {
+                    var point1 = new BMap.Point(element.lon, element.lat);
+                    //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
+                    var myCompOverlays = new ComplexCustomOverlay_small(point1, element.name,
+                        element.houseNum + "套", null, obj);
+                    // console.log(obj.firstJson.data.province.text+ that._text  + element.name);
+                    //将覆盖物添加到地图
+                    indexmap.addOverlay(myCompOverlays);
+                });
+            } else if (key >= 16) {
+                console.log("3级点");
+                var i = 0;
+                obj.json4.data.markList.forEach(element => {
+                    i++;
+                    if (i == 50) {
+                        return;
+                    }
+                    var point1 = new BMap.Point(element.lon, element.lat);
+                    //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
+                    var myCompOverlays1 = new ComplexCustomOverlay_s_small(point1, element.name,
+                        element.houseNum + "套");
+                    // console.log(obj.firstJson.data.province.text + that._text + element.name);
+                    // //将覆盖物添加到地图
+                    indexmap.addOverlay(myCompOverlays1);
+                });
             }
+
         }
 
         //获取行政区域

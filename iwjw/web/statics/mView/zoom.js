@@ -100,20 +100,15 @@ ComplexCustomOverlay.prototype.initialize = function (map) {
     };
     this.getJS = function () {
         //通过jquery获取js
-        // $.getScript('../baiduMap/mView/zoom1.js').done(function () {
-        obj.json3.data.markList.forEach(element => {
+        that._obj.json3.data.markList.forEach(element => {
             var point1 = new BMap.Point(element.lon, element.lat);
             //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
             var myCompOverlays = new ComplexCustomOverlay_small(point1, element.name, element.houseNum + "套", getBoundary(
-                obj.firstJson.data.province.text + that._text + element.name), obj);
+                that._obj.firstJson.data.province.text + that._text + element.name), obj);
             // console.log(obj-bf.firstJson.data.province.text+ that._text  + element.name);
             //将覆盖物添加到地图
             map.addOverlay(myCompOverlays);
         });
-
-        // }).fail(function (jqxhr, settings, exception) {
-        //     // console.log("======error========"+jqxhr+" : "+settings+" : "+exception);
-        // });
     }
     map.getPanes().labelPane.appendChild(div);
     return div;
@@ -216,9 +211,8 @@ ComplexCustomOverlay_small.prototype.initialize = function (map) {
     };
     this.getJS = function () {
         //通过jquery获取js
-        // $.getScript('../baiduMap/mView/zoom2.js').done(function () {
         var i = 0;
-        obj.json4.data.markList.forEach(element => {
+        that._obj.json4.data.markList.forEach(element => {
             i++;
             if (i == 50) {
                 return;
@@ -231,9 +225,6 @@ ComplexCustomOverlay_small.prototype.initialize = function (map) {
             map.addOverlay(myCompOverlays1);
         });
 
-        // }).fail(function (jqxhr, settings, exception) {
-        //     // console.log("======error========"+jqxhr+" : "+settings+" : "+exception);
-        // });
     }
     map.getPanes().labelPane.appendChild(div);
     return div;
@@ -253,7 +244,6 @@ ComplexCustomOverlay_small.prototype.draw = function () {
 //====================================三级点=========================================
 
 // 自定义覆盖物
-// function ComplexCustomOverlay_s_small(point, text, sub_text, boundary, obj-bf) {
 function ComplexCustomOverlay_s_small(point, text, sub_text) {
     this._point = point;
     this._text = text;
