@@ -1,13 +1,9 @@
-package com.iwjw.Servlet;
+package com.iwjw.controllers;
 
-import com.alibaba.fastjson.JSON;
-import com.iwjw.entity.BaikeList;
 import com.iwjw.service.BaikeListService;
 import com.iwjw.service.PlateInfoService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletException;
@@ -15,8 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 import java.io.PrintWriter;
+
+@Controller
+@RequestMapping("/baikeAjax")
 public class BaikeAjax extends HttpServlet{
     @Resource
     BaikeListService baikeListService;
@@ -32,7 +30,6 @@ public class BaikeAjax extends HttpServlet{
         else{
             title = PlateInfoService.getTitleNum(plateName).getPlateId();
         }
-        resp.setContentType("text/html;charset=UTF-8");
         PrintWriter out = resp.getWriter();
         out.print(title);
         out.flush();

@@ -66,6 +66,9 @@ public class MainController {
         return "homePage";
     }
 
+    @RequestMapping("/goMap")
+    public String goMap(){return "baiduMap";}
+
     @RequestMapping("/goGfgl")
     public String goGfgl(){return "gfgl";}
 }

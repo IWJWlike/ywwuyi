@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: 42958
@@ -6,6 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
     <script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/jquery-1.8.3.min.js"></script>
@@ -25,16 +27,7 @@
     <link rel="stylesheet" href="../../statics/css/index_74.css">
     <link rel="canonical" href="https://www.iwjw.com/">
 
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('#one').click(function(){
-                $('#box2').show();
-            });
-            $('.dialog-close').click(function(){
-                $('#box2').hide();
-            });
-        });
-    </script>
+
     <script src="../../statics/js/hm.js" async=""></script><script type="text/javascript" async="" src="../../statics/js/vds.js"></script><script>
         ;(function () {
             if(location.hostname.indexOf('iwjw.com') != -1 && location.hostname.indexOf('pcbeta') == -1 && location.protocol == 'http:'){
@@ -94,7 +87,7 @@
                     </div>
 
                     <div class="nav-item" data-log="baike">
-                        <a class="nav-item-a " href="https://www.iwjw.com/baike/guangzhou/">购房攻略            </a>
+                        <a class="nav-item-a " href="${pageContext.request.contextPath}/main/goGfgl">购房攻略            </a>
                     </div>
                     <div class="nav-item" data-log="ailicai">
                         <a href="https://www.iwlicai.com/" target="_blank" class="nav-item-a ailicai ">吉爱财</a>
@@ -107,10 +100,47 @@
                         <a href="https://www.iwjw.com/appDownPage/" class="nav-item-a "><i class="iconfont if-mobile"></i>APP</a>
                     </div>
                 </dt>
-                <dd class="header-right clearfix"><div  class="nav-item"><button id="one" href="#" class="login none nav-item-a login-require " target="_blank"><i class="nav-item-txt">登录<span class="slash">/</span>注册</i></button></div><div class="nav-item message-nav" id="message-nav"><div class="nav-message-wrap" data-reactid=".0"></div></div>
+                <c:if test="${vistor==null}">
+                <dd class="header-right clearfix"><div  class="nav-item"><a id="one" href="javascript:showBox()" class="login none nav-item-a login-require " target="_blank"><i class="nav-item-txt">登录<span class="slash">/</span>注册</i></a></div><div class="nav-item message-nav" id="message-nav"><div class="nav-message-wrap" data-reactid=".0"></div></div>
+                </c:if>
+                    <c:if test="${vistor != null}">
+                <dd class="header-right clearfix"><div class="nav-item"><a data-url="/userinfo/" class="login  nav-item-a login-require " target="_blank"><em class="iconfont if-menu"></em><i class="nav-item-txt">135****0667
+                    <span class="shape-circle"></span></i></a><div class="user-down-wrap arrow-top nav-down-wrap"><a class="user-item" href="/userinfo/" id="username"><span class="iconfont">핰</span>我的账户
+
+                    <i class="follow-point"></i></a><a class="user-item" href="/collectHouseList/" id="FollowDynamic"><span class="iconfont">홄</span>关注列表
+
+                </a><!-- web 6.9 已下线 --><!-- <a class="user-item appoint-list" href="/seeHouseList/" id = "Itinerary"><span class="iconfont">&#xd571;</span>约看清单
+
+   </a> --><a class="user-item house-schedule" href="/appointmentList/" id="Showings"><span class="iconfont">혤</span>看房日程
+
+                </a><a class="user-item user-item-payorder" href="/order/"><span class="iconfont">퐀</span>合同订单
+
+                </a><a class="user-item user-item-delegate_mng" href="/delegateManage/"><span class="iconfont">퐁</span>我的委托
+
+                </a><a class="user-item user-item-agent" href="/agent/"><span class="iconfont">퐄</span>我的经纪人
+
+                </a><a class="user-item user-item-complains" href="/complains/"><span class="iconfont">퐐</span>我的投诉
+
+                </a><a class="user-item user-item-logout"><span class="iconfont">퐅</span>退出
+                </a></div><!--  --></div><div class="nav-item message-nav" <%--id="message-nav"--%>><div class="nav-message-wrap" data-reactid=".0"><a class="nav-item-a message show-msg-down" data-reactid=".0.$1"><i class="nav-item-txt line" data-reactid=".0.$1.0"><i data-reactid=".0.$1.0.0">消息</i></i></a><div id="message-down-wrap" class="message-down-wrap nav-down-wrap arrow-top " data-reactid=".0.$2"><div class="message-list-wrap" data-reactid=".0.$2.0"><div class="msg-center-wrap" data-reactid=".0.$2.0.0"><a class="msg-center-a clearfix" href="/message/activity/" data-reactid=".0.$2.0.0.0"><div class="bell-bg f-l" data-reactid=".0.$2.0.0.0.0"><i class="iconfont if-bell" data-reactid=".0.$2.0.0.0.0.0"></i></div><p class="msg-center-tt f-l bold" data-reactid=".0.$2.0.0.0.1">消息中心</p></a></div><ul class="iwjwim-body" data-reactid=".0.$2.0.1"></ul></div></div></div></div>
 
 
 
+
+                </dd>
+                    </c:if>
+
+
+                    <script type="text/javascript">
+                        function showBox(){
+                            $('#one').click(function(){
+                                $('#box2').show();
+                            });
+                            $('.dialog-close').click(function(){
+                                $('#box2').hide();
+                            });
+                        };
+                    </script>
 
                 </dd>
             </dl>
@@ -215,7 +245,7 @@
                                                                             +"<button id='send-code-btn' class='send-btn'type='button'>发送验证码</button></div>")
                                                                         $("#uPhone").attr("disabled",true)
                                                                         $("#loginTips").html("根据手机短信输入验证码")
-                                                                        <%--$.post("${pageContext.request.contextPath}/login/gotoSendCode", "uPhone="+$("#uPhone").val(), sendBack());--%>
+                                                                        $.post("${pageContext.request.contextPath}/login/gotoSendCode", "uPhone="+$("#uPhone").val(), sendBack());
                                                                         }else {
                                                                         $("#slider1").slider("restore");
                                                                         alert("请输入正确手机号")
@@ -241,19 +271,12 @@
                                                                 setTimeout("timer()",1000);
                                                             }
                                                         }
-                                                        $("#codeInput").click(function () {
-                                                            alert("11111")
-                                                        })
-                                                        function testCode() {
-                                                            console.log($("#codeInput").val())
-                                                            if ($("#codeInput").val().length()>=4){
-                                                                alert($("#codeInput").val())
+                                                        $("#holder").on("blur","input",function () {
+                                                            if ($(this).val().length>=4){
                                                                 $(".dialog-login-btn").removeAttr("disabled")
                                                             }
-                                                        }
 
-                                                    </script>
-                                                    <script>
+                                                        } )
                                                     </script>
                                                 </div>
                                             </div>
@@ -264,7 +287,7 @@
                                 <div class="login-footer">
                                     <div id="only-wx-phone-error" class="sp-error"></div>
                                     <div class="block login-panel">
-                                        <button class="dialog-login-btn" type="button" disabled="" tabindex="3">登录</button>
+                                        <button class="dialog-login-btn" type="button" disabled="true" tabindex="3">登录</button>
                                     </div>
                                     <div class="cancel-btn">取消</div>
                                 </div>
@@ -589,6 +612,23 @@
 </div>
 <!-- 百度统计 -->
 
+<script>
+    $(".dialog-login-btn").click(function () {
+        <%--$.post("${pageContext.request.contextPath}/login/goLogin", "uPhone="+$("#uPhone").val(),"textCode="+$("#codeInput").val());--%>
+var param = {
+    "uPhone":$("#uPhone").val(),
+    "textCode":$("#codeInput").val()
+}
+        $.ajax({
+            url:"${pageContext.request.contextPath}/loginAjax/doLogin",
+            data:param,
+            type:"post",
+            success:function (response) {
+               window.location="test";
+            }
+        });
+    })
+</script>
 
 
 </body>
