@@ -1140,7 +1140,7 @@
                     //将覆盖物添加到地图
                     indexmap.addOverlay(myCompOverlay);
                 });
-            } else if (key <= 15) {
+            } else if (key <= 15 && key > 13) {
                 console.log("2级点");
                 obj.json3.data.markList.forEach(element => {
                     var point1 = new BMap.Point(element.lon, element.lat);
