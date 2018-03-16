@@ -100,7 +100,7 @@ ComplexCustomOverlay.prototype.initialize = function (map) {
     };
     this.getJS = function () {
         //通过jquery获取js
-        obj.json3.data.markList.forEach(element => {
+        that._obj.json3.data.markList.forEach(element => {
             var point1 = new BMap.Point(element.lon, element.lat);
             //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
             var myCompOverlays = new ComplexCustomOverlay_small(point1, element.name, element.houseNum + "套", getBoundary(
@@ -212,7 +212,7 @@ ComplexCustomOverlay_small.prototype.initialize = function (map) {
     this.getJS = function () {
         //通过jquery获取js
         var i = 0;
-        obj.json4.data.markList.forEach(element => {
+        that._obj.json4.data.markList.forEach(element => {
             i++;
             if (i == 50) {
                 return;
