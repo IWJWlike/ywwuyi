@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="../../statics/fontawesome-5.0.8/fontawesome-all.css">
     <link rel="stylesheet" href="../../statics/mapCss/mapIndex.css">
     <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=vGIMmDBGvKlKoQ5l8lXIckDPtkh0UtHa"></script>
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=3.0&ak=vGIMmDBGvKlKoQ5l8lXIckDPtkh0UtHa"></script>
     <script type="text/javascript" src="../../statics/mView/zoom.js"></script>
 
 </head>
@@ -1083,7 +1084,7 @@
         indexmap.setCenter(cityName);
     });
 
-    $.getJSON("../statics/json/obj.js", function (result) {
+    $.getJSON("../../statics/json/obj.js", function (result) {
         var obj = result.obj;
         console.log(obj);
         var point = new BMap.Point(obj.firstJson.data.lon, obj.firstJson.data.lat); // 创建点坐标
@@ -1118,74 +1119,56 @@
         //监听鼠标滚轮缩放事件
         indexmap.onzoomend = function (type, target) {
             var key = indexmap.getZoom();
+            indexmap.clearOverlays();
             console.log(key);
-            switch (key) {
-                case 12:
-                    indexmap.clearOverlays();
-                    console.log("1级点");
-                    var zb = ""; //周边的行政区域名称
-                    obj.json.data.markList.forEach(element => {
-                        obj.json2.data.markList.forEach(element1 => {
-                            if (element.name == "周边") {
-                                if (element.id == element1.parentId) {
-                                    zb = element1.name;
-                                }
+            if (key <= 13) {
+                console.log("1级点");
+                var zb = ""; //周边的行政区域名称
+                obj.json.data.markList.forEach(element => {
+                    obj.json2.data.markList.forEach(element1 => {
+                        if (element.name == "周边") {
+                            if (element.id == element1.parentId) {
+                                zb = element1.name;
                             }
-                        });
-                        var point1 = new BMap.Point(element.lon, element.lat);
-                        //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
-                        var myCompOverlay = new ComplexCustomOverlay(point1, element.name, element.houseNum +
-                            "套", getBoundary(
-                            obj.firstJson.data.province.text + element.name), obj);
-                        //将覆盖物添加到地图
-                        indexmap.addOverlay(myCompOverlay);
-                    });
-                    break;
-                case 14:
-                    indexmap.clearOverlays();
-                    console.log("2级点");
-                    // $.getScript('../baiduMap/mView/zoom1.js').done(function () {
-                    obj.json3.data.markList.forEach(element => {
-                        var point1 = new BMap.Point(element.lon, element.lat);
-                        //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
-                        var myCompOverlays = new ComplexCustomOverlay_small(point1, element.name,
-                            element.houseNum + "套", null, obj);
-                        // console.log(obj.firstJson.data.province.text+ that._text  + element.name);
-                        //将覆盖物添加到地图
-                        indexmap.addOverlay(myCompOverlays);
-                    });
-
-                    // }).fail(function (jqxhr, settings, exception) {
-                    //     // console.log("======error========"+jqxhr+" : "+settings+" : "+exception);
-                    // });
-                    break;
-                case 16:
-                    indexmap.clearOverlays();
-                    console.log("3级点");
-                    // $.getScript('../baiduMap/mView/zoom2.js').done(function () {
-                    var i = 0;
-                    obj.json4.data.markList.forEach(element => {
-                        i++;
-                        if (i == 50) {
-                            return;
                         }
-                        var point1 = new BMap.Point(element.lon, element.lat);
-                        //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
-                        var myCompOverlays1 = new ComplexCustomOverlay_s_small(point1, element.name,
-                            element.houseNum + "套");
-                        // console.log(obj.firstJson.data.province.text + that._text + element.name);
-                        // //将覆盖物添加到地图
-                        indexmap.addOverlay(myCompOverlays1);
                     });
-
-                    // }).fail(function (jqxhr, settings, exception) {
-                    //     // console.log("======error========"+jqxhr+" : "+settings+" : "+exception);
-                    // });
-                    break;
-
-                // default:
-                // break;
+                    var point1 = new BMap.Point(element.lon, element.lat);
+                    //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
+                    var myCompOverlay = new ComplexCustomOverlay(point1, element.name, element.houseNum +
+                        "套", getBoundary(
+                        obj.firstJson.data.province.text + element.name), obj);
+                    //将覆盖物添加到地图
+                    indexmap.addOverlay(myCompOverlay);
+                });
+            } else if (key <= 15 && key > 13) {
+                console.log("2级点");
+                obj.json3.data.markList.forEach(element => {
+                    var point1 = new BMap.Point(element.lon, element.lat);
+                    //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
+                    var myCompOverlays = new ComplexCustomOverlay_small(point1, element.name,
+                        element.houseNum + "套", null, obj);
+                    // console.log(obj.firstJson.data.province.text+ that._text  + element.name);
+                    //将覆盖物添加到地图
+                    indexmap.addOverlay(myCompOverlays);
+                });
+            } else if (key >= 16) {
+                console.log("3级点");
+                var i = 0;
+                obj.json4.data.markList.forEach(element => {
+                    i++;
+                    if (i == 50) {
+                        return;
+                    }
+                    var point1 = new BMap.Point(element.lon, element.lat);
+                    //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
+                    var myCompOverlays1 = new ComplexCustomOverlay_s_small(point1, element.name,
+                        element.houseNum + "套");
+                    // console.log(obj.firstJson.data.province.text + that._text + element.name);
+                    // //将覆盖物添加到地图
+                    indexmap.addOverlay(myCompOverlays1);
+                });
             }
+
         }
 
         //获取行政区域

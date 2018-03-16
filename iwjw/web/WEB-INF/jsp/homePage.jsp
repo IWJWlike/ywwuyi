@@ -345,31 +345,33 @@
 
                         <div class="cc-section clearfix">
                             <div class="cc-section-l">
-                                <a href="https://www.iwjw.com/baike/2110/" data-cid="2110" data-pos="1" target="_blank" class="title fs-nowrap point-link-gf">热点城市房价持续降温：很多人等降价</a>
-                                <p class="des">由于目前调控政策收紧，让一些投资投机需求的热钱逐渐退出房地产领域，购房者变得更加冷静和理性。</p>
-                                <p class="time">10-13发布</p>
+
+
+                                <a href="https://www.iwjw.com/baike/2110/" data-cid="2110" data-pos="1" target="_blank" class="title fs-nowrap point-link-gf">${newst.title}</a>
+                                <p class="des">${newst.describeInfo}</p>
+                                <p class="time">${newst.createDate}发布</p>
                             </div>
                             <div class="cc-section-r">
                                 <a href="https://www.iwjw.com/baike/2110/" data-cid="2110" data-pos="1" class="point-link-gf" target="_blank">
-                                    <img src="../../statics/images/link_img/fde82646dad344d78eecf400d79924c6.jpg" alt="">
+                                    <img src="../../statics/images/link_img/${newst.imgUrl}.jpg" alt="">
                                 </a>
                             </div>
                         </div>
                         <div class="cc-section last clearfix">
                             <div class="cc-section-l">
-                                <a href="https://www.iwjw.com/baike/2109/" data-cid="2109" data-pos="2" target="_blank" class="title fs-nowrap point-link-gf">楼市十一遇冷 体现“房住不炒”政策导向</a>
-                                <p class="des">数据显示，国庆8天长假北京合计新建住宅签约222套，二手房住宅33套。其中，北京新建住宅前7天网签...</p>
-                                <p class="time">10-13发布</p>
+                                <a href="https://www.iwjw.com/baike/2109/" data-cid="2109" data-pos="2" target="_blank" class="title fs-nowrap point-link-gf">${second.title}</a>
+                                <p class="des">${second.describeInfo}</p>
+                                <p class="time">${second.createDate}发布</p>
                             </div>
                             <div class="cc-section-r">
                                 <a href="https://www.iwjw.com/baike/2109/" data-cid="2109" data-pos="2" target="_blank" class="point-link-gf">
-                                    <img src="../../statics/images/link_img/e42ba18290cc4ab2a03c96e6c268d4e1.jpg" alt="">
+                                    <img src="../../statics/images/link_img/${second.imgUrl}.jpg" alt="">
                                 </a>
                             </div>
                         </div>
                         <div class="cc-section-b clearfix">
-                            <a href="https://www.iwjw.com/baike/2108/" data-cid="2108" data-pos="3" target="_blank" class="title fs-nowrap point-link-gf">楼市调控下的“90后”：租买之间犹豫不决</a>
-                            <span class="time">10-10发布</span>
+                            <a href="https://www.iwjw.com/baike/2108/" data-cid="2108" data-pos="3" target="_blank" class="title fs-nowrap point-link-gf">${third.title}</a>
+                            <span class="time">${third.createDate}发布</span>
                             <a href="https://www.iwjw.com/baike/guangzhou/" data-cid="" data-pos="4" target="_blank" class="all point-link-gf">查看全部&#155</a>
                         </div>
                     </div>

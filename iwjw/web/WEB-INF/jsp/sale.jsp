@@ -36,6 +36,7 @@
     <script src="../../statics/js/index.js"></script>
     <script type="text/javascript" async="" src="../../statics/js/vds.js"></script>
 
+    <script src="../../statics/js/common_72.js"></script>
     <script>
         (function () {
             if (location.hostname.indexOf('iwjw.com') != -1 && location.hostname.indexOf('pcbeta') == -1 && location.protocol == 'http:') {
@@ -219,6 +220,10 @@
         };
         var _hmt = _hmt || [];
     </script>
+
+<style>
+    #hidd{display: none}
+</style>
 
 </head>
 <body>
@@ -494,31 +499,37 @@
                                                 <div class="change-agent" data-reactid=".1.0.0.0.2">换一换</div>
                                             </div>
                                         </div>
+
                                         <div class="f-r primary-agent-btns" data-reactid=".1.0.1"><a
-                                                class="primary-agent-btn phone-btn qrcode-popov-wrp" tabindex="-1"
+                                                class="primary-agent-btn phone-btn qrcode-popov-wrp" id="phoneAsk" tabindex="-1"
                                                 data-reactid=".1.0.1.0"><span data-reactid=".1.0.1.0.0">电话咨询 </span>
-                                            <div class="qrcode-popov popov-top" hidden="" data-reactid=".1.0.1.0.1">
+
+
+
+                                            <div class="qrcode-popov popov-top" data-reactid=".1.0.1.0.1" id="hidd">
                                                 <div class="qrcode-img-wrp" data-reactid=".1.0.1.0.1.0"><img
-                                                        src="https://www.iwjw.com/sale/wZuQb7LgUIM/?from=040203&amp;p=40000"
+                                                        src="../../statics/images/house_images/seller_ewm1.jpg"
                                                         alt="" class="qrcode-img" data-reactid=".1.0.1.0.1.0.0"></div>
                                                 <p class="popov-text" data-reactid=".1.0.1.0.1.1">微信扫码拨号</p>
                                                 <div data-reactid=".1.0.1.0.1.2"><span class="agent-phone"
-                                                                                       data-reactid=".1.0.1.0.1.2.0">186 2014 6206</span>
+                                                                                       data-reactid=".1.0.1.0.1.2.0">137 2014 6206</span>
                                                 </div>
                                             </div>
+
                                         </a>
                                             <button class="primary-agent-btn chat-btn" data-reactid=".1.0.1.1">在线咨询
                                             </button>
                                         </div>
+
                                     </div>
                                     <div class="house-primary-btns" data-reactid=".1.1">
-                                        <button class="btn-item house-primary-btn-fo  " data-reactid=".1.1.0"><i
-                                                class="iconfont if-favourite" data-reactid=".1.1.0.0"></i><span
+                                        <button class="btn-item house-primary-btn-fo  " data-reactid=".1.1.0"><%--<i
+                                                class="iconfont if-favourite" &lt;%&ndash;data-reactid=".1.1.0.0"&ndash;%&gt;></i>--%><span
                                                 data-reactid=".1.1.0.1">2人关注</span></button>
                                         <span data-reactid=".1.1.1"> </span>
-                                        <button class="btn-item house-primary-btn-se" data-reactid=".1.1.2"><i
+                                        <button class="btn-item house-primary-btn-se" data-reactid=".1.1.2"><%--<i
                                                 class="iconfont if-wo_yao_kan_fang"
-                                                data-reactid=".1.1.2.$icon"></i><span
+                                                data-reactid=".1.1.2.$icon"></i>--%><span
                                                 data-reactid=".1.1.2.$text">我要看房</span></button>
                                     </div>
                                     <div class="correction-block" data-reactid=".1.2"><a class="rc-correction-link"
@@ -531,7 +542,7 @@
                             <div class="share btn-forwarding hover-none-decoration">
                                 <div class="qr-icon">用手机看房<i class="iconfont if-qr-code icon-forwarding"></i></div>
                                 <div class="qr-box">
-                                    <img src="https://www.iwjw.com/sale/wZuQb7LgUIM/?from=040203&amp;p=40000"
+                                    <img src="../../statics/images/house_images/seller_ewm1.jpg"
                                          class="qr-img">
                                     <p class="qr-txt">扫码去手机看房</p>
                                     <i class="iconfont if-triangle-top"></i>
@@ -592,7 +603,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="detail-content-row clearfix" data-reactid=".0.0.0.0.1">
+
+
+
+
+                                <%--*******************************************************************************************--%>
+                                <div class="detail-content-row clearfix" data-reactid=".0.0.0.0.1" <%--style="position:relative"--%>>
                                     <div class="col-1" data-reactid=".0.0.0.0.1.0">
                                         <div id="j-house-calc" data-reactid=".0.0.0.0.1.0.0">
                                             <div class="house-calc" data-reactid=".0.0.0.0.1.0.0.0">
@@ -1290,7 +1306,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-2" data-reactid=".0.0.0.0.1.1">
+                                    <%--j经纪人#########################################################################3--%>
+                                    <div class="col-2" data-reactid=".0.0.0.0.1.1" <%--style="float: right;position:absolute;z-index:9999;top:100px;right:10px;background-color: red"--%>>
                                         <div class="agents-list-container " data-reactid=".0.0.0.0.1.1.0">
                                             <ul class="agents-list-ul" data-reactid=".0.0.0.0.1.1.0.0">
                                                 <li class="agent-item clearfix" data-reactid=".0.0.0.0.1.1.0.0.$0">
@@ -2196,50 +2213,52 @@
             }
 
         </script>
-        <script type="text/javascript" src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/api"></script>
-        <script type="text/javascript" src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/getscript"></script>
+        <%--??????????????????--%>
+       <%-- <script type="text/javascript" src="../../statics/js/api"></script>--%>
+        <%--???????????????????????????????????--%>
+       <%-- <script type="text/javascript" src="../../statics/js/getscript"></script>--%>
         <div class="suspend-wrap" style="bottom: 80px;">
 
             <!-- feedback -->
-            <a href="https://www.iwjw.com/gofeedback#https%3A%2F%2Fwww.iwjw.com%2Fsale%2FwZuQb7LgUIM%2F%3Ffrom%3D040203%26p%3D40000"
+            <%--<a href="https://www.iwjw.com/gofeedback#https%3A%2F%2Fwww.iwjw.com%2Fsale%2FwZuQb7LgUIM%2F%3Ffrom%3D040203%26p%3D40000"
                class="suspend-div suspend-report j-feedback" target="_blank">
-                <em class="opinion iconfont"></em>
+                <em class="opinion iconfont">意</em>
                 <em class="text">
                     意见反馈
                     <i class="triangle iconfont if-triangle-right"></i>
                 </em>
-            </a>
+            </a>--%>
 
             <!-- app qrcode -->
-            <div class="suspend-div suspend-code show-qrcode">
+            <%--<div class="suspend-div suspend-code show-qrcode">
                 <em class="iconfont code-icon if-saomao"></em>
                 <div class="code-content">
                     <div>
                         <p class="app-qrcode"></p>
                         <p class="line-1">扫一扫体验APP</p>
-                        <em class="triangle iconfont if-triangle-right"></em>
+                       &lt;%&ndash; <em class="triangle iconfont if-triangle-right"></em>&ndash;%&gt;
                     </div>
-                    <em class="code-close iconfont if-delete"></em>
+                   &lt;%&ndash; <em class="code-close iconfont if-delete"></em>&ndash;%&gt;
                 </div>
-            </div>
+            </div>--%>
 
             <!-- to top -->
-            <div class="suspend-div suspend-top" style="display: none;">
+           <%-- <div class="suspend-div suspend-top" style="display: none;">
                 <a class="to-top" href="https://www.iwjw.com/sale/wZuQb7LgUIM/?from=040203&amp;p=40000#iwjw">
-                    <em class="iconfont"></em>
+                    <em class="iconfont">顶</em>
                 </a>
                 <em class="text">回到顶部
                     <i class="triangle iconfont if-triangle-right"></i>
                 </em>
-            </div>
+            </div>--%>
 
             <!-- 背景 -->
-            <div class="suspend-back"></div>
+           <%-- <div class="suspend-back"></div>--%>
         </div>
     </div>
 </div>
 
-<script src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/gt.js.下载"></script>
+<script src="../../statics/js/gt.js"></script>
 
 <script type="text/javascript">
     ;!function () {
@@ -2293,9 +2312,9 @@
     })();
 </script>
 <!--[if IE 8]>
-<script src='//resource.iwjw.com/iwjw-pc/es5-shim-sham_5.5.js'></script><![endif]-->
-<script src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/common_72.js.下载"></script>
-<script src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/sale_74.js.下载"></script>
+<script src='../../statics/js/es5-shim-sham_5.5.js'></script><![endif]-->
+<script src="../../statics/js/common_72.js"></script>
+<script src="../../statics/js/sale_74.js"></script>
 <script src="https://www.iwjw.com/sale/wZuQb7LgUIM/?from=040203&amp;p=40000" async=""></script>
 <div class="mod-footer short-shift">
     <div class="footer-inner">
@@ -2358,7 +2377,7 @@
                     <a class="footer-t-m-item last footer-wechat">
                         <i class="iconfont if-weixin"></i>
                         <span>微信公众号</span>
-                        <b><img src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/WXcode.png"></b>
+                        <b><img src="../../statics/images/house_images/WXcode.png"></b>
                     </a>
                 </div>
                 <div class="footer-t-bot">
@@ -2390,7 +2409,7 @@
         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
         document.write(unescape("%3Cscript async src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd3a10bbf8b4afa9e5ab91d66b6944e813' type='text/javascript'%3E%3C/script%3E"));
     </script>
-    <script async="" src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/h.js.下载" type="text/javascript"></script>
+    <script async="" src="../../statics/js/h.js" type="text/javascript"></script>
     <script type="text/javascript">
         //
         <!-- 其他统计 -->
@@ -2434,6 +2453,10 @@
         // }
     </script>
 
+
+
+
+
 </div>
 <!-- 百度统计 -->
 
@@ -2465,6 +2488,13 @@
         });
 
     })();
+</script>
+
+<%--电话咨询--%>
+<script type="text/javascript">
+    $('div').on("click","#phoneAsk",function(){
+        $('#hidd').toggle();
+    });
 </script>
 
 
