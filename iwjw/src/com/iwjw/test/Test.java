@@ -50,5 +50,6 @@ public class Test {
         }
         User vistor = userService.selectUser(uPhone);
         System.out.println(vistor.getUid());
+
     }
 }

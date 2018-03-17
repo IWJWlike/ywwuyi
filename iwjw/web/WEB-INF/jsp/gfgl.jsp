@@ -388,37 +388,16 @@
                     <div class="hot-article">
                         <h4 class="title-h4 bold"><span class="title-span">热门文章</span></h4>
 
+
                         <ul class="hot-list-wrap">
-                            <li class="hot-list">
-                                <a class="title-a bold" href="javascript:void(0)" target="_blank">最严调控半年：部分城市房价仍轮动上涨</a>
-                            </li>
-                            <li class="hot-list">
-                                <a class="title-a bold" href="javascript:void(0)" target="_blank">多地住房租赁体系将建
-                                    一线城市近5年供应超250万套</a>
-                            </li>
-                            <li class="hot-list">
-                                <a class="title-a bold" href="javascript:void(0)" target="_blank">8月一线城市住宅成交疲软
-                                    成交面积环比下降6.34%</a>
-                            </li>
-                            <li class="hot-list">
-                                <a class="title-a bold" href="javascript:void(0)" target="_blank">政策红利不断推出
-                                    租房市场驶入发展快车道</a>
-                            </li>
-                            <li class="hot-list">
-                                <a class="title-a bold" href="javascript:void(0)" target="_blank">租售同权 年轻人真的不必买房了吗？</a>
-                            </li>
-                            <li class="hot-list">
-                                <a class="title-a bold" href="javascript:void(0)" target="_blank">统计局：7月一线房价趋于稳定
-                                    二三线环比涨幅回落</a>
-                            </li>
-                            <li class="hot-list">
-                                <a class="title-a bold" href="javascript:void(0)" target="_blank">央行发布7月金融数据
-                                    贷款利率或将上升引发关注</a>
-                            </li>
-                            <li class="hot-list">
-                                <a class="title-a bold" href="javascript:void(0)" target="_blank">统计局：前7月房地产投资增速回落
-                                    过热局面降温</a>
-                            </li>
+                            <c:forEach items="${likes}" var="like" begin="1" end="8">
+                                <li class="hot-list">
+                                    <a class="title-a bold" href="javascript:void(0)" target="_blank">${like.title}</a>
+                                </li>
+
+                            </c:forEach>
+
+
                         </ul>
                     </div>
                 </div>

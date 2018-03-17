@@ -97,7 +97,9 @@ public class MainController {
     public String goMap(){return "baiduMap";}
 
    @RequestMapping("/goGfgl")
-    public String goGfgl() {
+    public String goGfgl(Model model) {
+        List<BaikeList> likes = baikeListService.getBaikeList();
+        model.addAttribute("likes",likes);
         return "gfgl";
     }
 

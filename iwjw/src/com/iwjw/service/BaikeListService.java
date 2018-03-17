@@ -23,5 +23,6 @@ public interface BaikeListService {
     BaikeList getSecond();
     //获取第三条
     BaikeList getThird();
-
+    //获取likes数前八条
+    List<BaikeList> getLikes();
 }
