@@ -15,7 +15,7 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping("main")
+@RequestMapping("/main")
 public class MainController {
 
     @Resource
@@ -84,6 +84,9 @@ public class MainController {
     public String goGfgl() {
         return "gfgl";
     }
+
+    @RequestMapping("/goUser")
+    public String goUser(){return "agent";}
 }
 
 

@@ -26,7 +26,7 @@ public class LoginAjax extends HttpServlet{
         String uPhone = request.getParameter("uPhone");
         String textCode = request.getParameter("textCode");
         String code = (String) request.getSession().getAttribute(uPhone);
-        if (textCode.equals("1111")) {
+        if (textCode.equals(code)) {
             if (userService.selectUser(uPhone) == (null)) {
                 userService.createUser(uPhone);
             }
@@ -34,7 +34,6 @@ public class LoginAjax extends HttpServlet{
             request.getSession().setAttribute("vistor", vistor);
             PrintWriter out = response.getWriter();
             out.print(vistor);
-            response.sendRedirect("../main/test");
         }
     }
 
