@@ -123,20 +123,26 @@
         <div class="mod-index mod-index-type3">
             <div class="banner">
                 <div class="w1190">
+
+
                     <div class="banner-content">
                         <div class="banner-search">
                             <ul class="search-tabs clearfix unselectable">
-                                <li class="search-tab active" data-housetype="2" data-actionmap="/sale/map/" data-actionlist="/sale/guangzhou/">
+                                <li class="search-tab active"   onclick="Searchtype1()">
                                     <span class="v-middle">二手房</span>
                                 </li>
-                                <li class="search-tab " data-housetype="1" data-actionmap="/chuzu/map/" data-actionlist="/chuzu/guangzhou/">
-                                    <span class="v-middle">租房</span>
+                                <li class="search-tab "  onclick="Searchtype2()">
+                                    <span class="v-middle" >租房</span>
                                 </li>
                             </ul>
+
+                            
+                            
+                            
                             <div class="search-form p-r">
                                 <p class="banner-describe ht2 ">
                                     <i class="city-name">[广州]</i>
-                                    <i class="house-num">8867</i>
+                                    <i class="house-num">${totalHouse}</i>
                                     <i class="house-unit">套</i>
                                     二手房在售
                                 </p>
@@ -146,24 +152,26 @@
                                     <i class="house-num">59套</i>
                                 </p>
 
-                                <form method="get" action="https://www.iwjw.com/sale/map/" class="mod-search clearfix" data-provinceid="40000" data-provincepy="guangzhou" data-quotationdate="$quotationDate" data-provincename="广州" data-housetype="2">
+                                <form method="get"id="sreachs" action="saleController/searchSale" class="mod-search clearfix" data-provinceid="40000" data-provincepy="guangzhou" data-quotationdate="$quotationDate" data-provincename="广州" data-housetype="2">
                                     <em class="triangle-top triangle-search p-a " style="left: 13px;"></em>
                                     <input type="hidden" name="t" value="1">
                                     <label class="search-label">
-                                        <em class="iconfont fo-search"><!--혳--></em>
+                                        <em class="iconfont fo-search"><img src="../../statics/images/index_images/glass.jpg" width="30px;" height="30px" style="margin-top: 10px;margin-left: -10px"></em>
                                         <div class="index-kw-wrap" >
-                                            <input type="text" class="kw-input" name="kw" placeholder="请输入小区、地铁、区域板块…" maxlength="50" autocomplete="off" autofocus="" style="width: 488px;height: 48px"><i class="iconfont search-close" title="清除内容">홈</i>
+                                            <input type="text" class="kw-input" name="kw" placeholder="请输入小区、地铁、区域板块…" maxlength="50" autocomplete="off" autofocus="" style="width: 488px;height: 48px"><i class="iconfont search-close" title="清除内容"></i>
                                         </div>
                                     </label>
-                                    <button type="submit" class="btn-map">搜索</button>
+                                    <button type="submit" class="btn-map" id="searchsales">搜索</button>
                                     <p class="hint-wrap"></p></form>
                             </div>
                         </div>
                         <div class="form-mask mask-input"></div>
                     </div>
+
+
+
                 </div>
             </div>
-
 
 
 
@@ -585,7 +593,25 @@
 </div>
 <!-- 百度统计 -->
 
-
+<%--<script type="text/javascript">
+    $('li').on("click","#sales",function () {
+        $('#sreachs').action='https://www.baidu.com';
+        /*  document.getElementById('sreachs').action='https://www.jd.com';*/
+    })
+    $('li').on("click","#chuzu",function () {
+        $('#sreachs').action='https://www.jd.com';
+        /*document.getElementById('sreachs').action='https://www.baidu.com';*/
+    })
+</script>--%>
+<%--搜索--%>
+<script>
+    function Searchtype1(){
+        document.getElementById("sreachs").action="http://localhost:8080/saleController/searchSale"
+    }
+    function Searchtype2(){
+        document.getElementById("sreachs").action="http://localhost:8080/main/login"
+    }
+</script>
 
 </body>
 </html>
