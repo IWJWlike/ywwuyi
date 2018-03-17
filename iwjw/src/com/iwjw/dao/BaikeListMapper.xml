@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.iwjw.dao.BaikeListMapper">
 
     <select id="getBaikeList" resultType="BaikeList">
-    SELECT * FROM baikelist;
+        SELECT * FROM baikelist;
     </select>
 
     <select id="getBaikeListByPlate" resultType="BaikeList">
         SELECT * FROM baikelist WHERE plateId = #{plateId};
+    </select>
+
+    <select id="getBaikeListByDate" resultType="BaikeList">
+        SELECT * FROM baikelist WHERE createDate = #{createDate};
+    </select>
+
+    <select id="getNewst" resultType="BaikeList">
+        SELECT * from baikelist order by id desc limit 0,1
+    </select>
+    <select id="getSecond" resultType="BaikeList">
+        SELECT * FROM baikelist ORDER BY id DESC LIMIT 1,1
+    </select>
+    <select id="getThird" resultType="BaikeList">
+        SELECT * FROM baikelist ORDER BY id DESC LIMIT 2,1
     </select>
 
 

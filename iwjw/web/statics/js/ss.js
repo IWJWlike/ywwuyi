@@ -155,4 +155,22 @@ function lll() {
             )
         }
     }
+
+    var flag = 120;
+
+    $("#slider1").slider({
+        callback: function(result) {
+            if (result){
+                if ((/^1[3|4|5|8][0-9]\d{4,8}$/.test($("#uPhone")))){
+                    $("#holder").html("<div class='input-wrap'>"
+                    +"<input  class='login-input' type='tel' maxlength='4' name='code' autocomplete='off' placeholder='填写验证码' tabindex='2'>"
+                    +"<button id='send-code-btn' class='send-btn' type='button'>发送验证码</button></div>"
+                )}else {
+                        $("#slider1").slider("restore");
+                    alert("请输入正确手机号")
+                }
+
+            }
+        }
+    });
 }

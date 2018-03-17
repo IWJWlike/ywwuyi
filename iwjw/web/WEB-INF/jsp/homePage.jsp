@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: 42958
@@ -6,6 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
     <script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/jquery-1.8.3.min.js"></script>
@@ -25,16 +27,7 @@
     <link rel="stylesheet" href="../../statics/css/index_74.css">
     <link rel="canonical" href="https://www.iwjw.com/">
 
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('#one').click(function(){
-                $('#box2').show();
-            });
-            $('.dialog-close').click(function(){
-                $('#box2').hide();
-            });
-        });
-    </script>
+
     <script src="../../statics/js/hm.js" async=""></script><script type="text/javascript" async="" src="../../statics/js/vds.js"></script><script>
         ;(function () {
             if(location.hostname.indexOf('iwjw.com') != -1 && location.hostname.indexOf('pcbeta') == -1 && location.protocol == 'http:'){
@@ -94,7 +87,7 @@
                     </div>
 
                     <div class="nav-item" data-log="baike">
-                        <a class="nav-item-a " href="https://www.iwjw.com/baike/guangzhou/">购房攻略            </a>
+                        <a class="nav-item-a " href="${pageContext.request.contextPath}/main/goGfgl">购房攻略            </a>
                     </div>
                     <div class="nav-item" data-log="ailicai">
                         <a href="https://www.iwlicai.com/" target="_blank" class="nav-item-a ailicai ">吉爱财</a>
@@ -107,10 +100,47 @@
                         <a href="https://www.iwjw.com/appDownPage/" class="nav-item-a "><i class="iconfont if-mobile"></i>APP</a>
                     </div>
                 </dt>
-                <dd class="header-right clearfix"><div  class="nav-item"><button id="one" href="#" class="login none nav-item-a login-require " target="_blank"><i class="nav-item-txt">登录<span class="slash">/</span>注册</i></button></div><div class="nav-item message-nav" id="message-nav"><div class="nav-message-wrap" data-reactid=".0"></div></div>
+                <c:if test="${vistor==null}">
+                <dd class="header-right clearfix"><div  class="nav-item"><a id="one" href="javascript:showBox()" class="login none nav-item-a login-require " target="_blank"><i class="nav-item-txt">登录<span class="slash">/</span>注册</i></a></div><div class="nav-item message-nav" id="message-nav"><div class="nav-message-wrap" data-reactid=".0"></div></div>
+                </c:if>
+                    <c:if test="${vistor != null}">
+                <dd class="header-right clearfix"><div class="nav-item"><a data-url="/userinfo/" class="login  nav-item-a login-require " target="_blank"><em class="iconfont if-menu"></em><i class="nav-item-txt">135****0667
+                    <span class="shape-circle"></span></i></a><div class="user-down-wrap arrow-top nav-down-wrap"><a class="user-item" href="/userinfo/" id="username"><span class="iconfont">핰</span>我的账户
+
+                    <i class="follow-point"></i></a><a class="user-item" href="/collectHouseList/" id="FollowDynamic"><span class="iconfont">홄</span>关注列表
+
+                </a><!-- web 6.9 已下线 --><!-- <a class="user-item appoint-list" href="/seeHouseList/" id = "Itinerary"><span class="iconfont">&#xd571;</span>约看清单
+
+   </a> --><a class="user-item house-schedule" href="/appointmentList/" id="Showings"><span class="iconfont">혤</span>看房日程
+
+                </a><a class="user-item user-item-payorder" href="/order/"><span class="iconfont">퐀</span>合同订单
+
+                </a><a class="user-item user-item-delegate_mng" href="/delegateManage/"><span class="iconfont">퐁</span>我的委托
+
+                </a><a class="user-item user-item-agent" href="/agent/"><span class="iconfont">퐄</span>我的经纪人
+
+                </a><a class="user-item user-item-complains" href="/complains/"><span class="iconfont">퐐</span>我的投诉
+
+                </a><a class="user-item user-item-logout"><span class="iconfont">퐅</span>退出
+                </a></div><!--  --></div><div class="nav-item message-nav" <%--id="message-nav"--%>><div class="nav-message-wrap" data-reactid=".0"><a class="nav-item-a message show-msg-down" data-reactid=".0.$1"><i class="nav-item-txt line" data-reactid=".0.$1.0"><i data-reactid=".0.$1.0.0">消息</i></i></a><div id="message-down-wrap" class="message-down-wrap nav-down-wrap arrow-top " data-reactid=".0.$2"><div class="message-list-wrap" data-reactid=".0.$2.0"><div class="msg-center-wrap" data-reactid=".0.$2.0.0"><a class="msg-center-a clearfix" href="/message/activity/" data-reactid=".0.$2.0.0.0"><div class="bell-bg f-l" data-reactid=".0.$2.0.0.0.0"><i class="iconfont if-bell" data-reactid=".0.$2.0.0.0.0.0"></i></div><p class="msg-center-tt f-l bold" data-reactid=".0.$2.0.0.0.1">消息中心</p></a></div><ul class="iwjwim-body" data-reactid=".0.$2.0.1"></ul></div></div></div></div>
 
 
 
+
+                </dd>
+                    </c:if>
+
+
+                    <script type="text/javascript">
+                        function showBox(){
+                            $('#one').click(function(){
+                                $('#box2').show();
+                            });
+                            $('.dialog-close').click(function(){
+                                $('#box2').hide();
+                            });
+                        };
+                    </script>
 
                 </dd>
             </dl>
@@ -123,26 +153,20 @@
         <div class="mod-index mod-index-type3">
             <div class="banner">
                 <div class="w1190">
-
-
                     <div class="banner-content">
                         <div class="banner-search">
                             <ul class="search-tabs clearfix unselectable">
-                                <li class="search-tab active"   onclick="Searchtype1()">
+                                <li class="search-tab active" data-housetype="2" data-actionmap="/sale/map/" data-actionlist="/sale/guangzhou/">
                                     <span class="v-middle">二手房</span>
                                 </li>
-                                <li class="search-tab "  onclick="Searchtype2()">
-                                    <span class="v-middle" >租房</span>
+                                <li class="search-tab " data-housetype="1" data-actionmap="/chuzu/map/" data-actionlist="/chuzu/guangzhou/">
+                                    <span class="v-middle">租房</span>
                                 </li>
                             </ul>
-
-                            
-                            
-                            
                             <div class="search-form p-r">
                                 <p class="banner-describe ht2 ">
                                     <i class="city-name">[广州]</i>
-                                    <i class="house-num">${totalHouse}</i>
+                                    <i class="house-num">8867</i>
                                     <i class="house-unit">套</i>
                                     二手房在售
                                 </p>
@@ -152,26 +176,24 @@
                                     <i class="house-num">59套</i>
                                 </p>
 
-                                <form method="get"id="sreachs" action="saleController/searchSale" class="mod-search clearfix" data-provinceid="40000" data-provincepy="guangzhou" data-quotationdate="$quotationDate" data-provincename="广州" data-housetype="2">
+                                <form method="get" action="https://www.iwjw.com/sale/map/" class="mod-search clearfix" data-provinceid="40000" data-provincepy="guangzhou" data-quotationdate="$quotationDate" data-provincename="广州" data-housetype="2">
                                     <em class="triangle-top triangle-search p-a " style="left: 13px;"></em>
                                     <input type="hidden" name="t" value="1">
                                     <label class="search-label">
-                                        <em class="iconfont fo-search"><img src="../../statics/images/index_images/glass.jpg" width="30px;" height="30px" style="margin-top: 10px;margin-left: -10px"></em>
+                                        <em class="iconfont fo-search"><!--혳--></em>
                                         <div class="index-kw-wrap" >
-                                            <input type="text" class="kw-input" name="kw" placeholder="请输入小区、地铁、区域板块…" maxlength="50" autocomplete="off" autofocus="" style="width: 488px;height: 48px"><i class="iconfont search-close" title="清除内容"></i>
+                                            <input type="text" class="kw-input" name="kw" placeholder="请输入小区、地铁、区域板块…" maxlength="50" autocomplete="off" autofocus="" style="width: 488px;height: 48px"><i class="iconfont search-close" title="清除内容">홈</i>
                                         </div>
                                     </label>
-                                    <button type="submit" class="btn-map" id="searchsales">搜索</button>
+                                    <button type="submit" class="btn-map">搜索</button>
                                     <p class="hint-wrap"></p></form>
                             </div>
                         </div>
                         <div class="form-mask mask-input"></div>
                     </div>
-
-
-
                 </div>
             </div>
+
 
 
 
@@ -200,16 +222,15 @@
                                                 <em class="iconfont if-mobile"></em>
                                             </div>
                                             <div class="input-wrap">
-                                                <input id="uPhone" class="login-input" type="tel" name="mobile" maxlength="13" placeholder="输入手机号码" tabindex="1" autocomplete="off">
+                                                <input id="uPhone" class="login-input" type="tel" name="uPhone" maxlength="13" placeholder="输入手机号码" tabindex="1" autocomplete="off">
                                                 <!-- <button class="send-btn" type="button" disabled>发送验证码</button> -->
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="sp-error1" class="sp-error"></div>
                                     <%--滑动验证模块开始--%>
                                     <div id="login-slider-one" class="login-slider-one login-transition slider-control">
                                         <div class="geetest-wrap">
-                                            <p class="geetest-tip">拖动滑块完成验证</p>
+                                            <p id="loginTips" class="geetest-tip">拖动滑块完成验证</p>
                                             <div id="geetest-container" class="geetest-container">
                                                 <div id="holder" class="gt_holder gt_float" style="touch-action: none;">
                                                     <div id="slider1" class="slider1 slider-control"></div>
@@ -220,10 +241,11 @@
                                                                 if (result){
                                                                     if ((/^1[3|4|5|8][0-9]\d{4,8}$/.test($("#uPhone").val()))){
                                                                         $("#holder").html("<div class='input-wrap'>"
-                                                                            +"<input id='codeInput'  class='login-input' type='tel' maxlength='4'name='code'autocomplete='off' placeholder='填写验证码' tabindex='2'>"
+                                                                            +"<input id='codeInput'  class='login-input' type='tel' maxlength='4'name='code'autocomplete='off' placeholder='填写验证码'tabindex='2'>"
                                                                             +"<button id='send-code-btn' class='send-btn'type='button'>发送验证码</button></div>")
                                                                         $("#uPhone").attr("disabled",true)
-                                                                        <%--$.post("${pageContext.request.contextPath}/login/gotoSendCode", "uPhone="+$("#uPhone").val(), sendBack());--%>
+                                                                        $("#loginTips").html("根据手机短信输入验证码")
+                                                                        $.post("${pageContext.request.contextPath}/login/gotoSendCode", "uPhone="+$("#uPhone").val(), sendBack());
                                                                         }else {
                                                                         $("#slider1").slider("restore");
                                                                         alert("请输入正确手机号")
@@ -249,15 +271,12 @@
                                                                 setTimeout("timer()",1000);
                                                             }
                                                         }
-
-                                                        $("#codeInput").onblur(function () {
-
-                                                            console.log($("#codeInput").val())
-                                                            if ($("#codeInput").val().length()>=4){
-                                                                alert($("#codeInput").val())
+                                                        $("#holder").on("blur","input",function () {
+                                                            if ($(this).val().length>=4){
                                                                 $(".dialog-login-btn").removeAttr("disabled")
                                                             }
-                                                        })
+
+                                                        } )
                                                     </script>
                                                 </div>
                                             </div>
@@ -268,7 +287,7 @@
                                 <div class="login-footer">
                                     <div id="only-wx-phone-error" class="sp-error"></div>
                                     <div class="block login-panel">
-                                        <button class="dialog-login-btn" type="button" disabled="" tabindex="3">登录</button>
+                                        <button class="dialog-login-btn" type="button" disabled="true" tabindex="3">登录</button>
                                     </div>
                                     <div class="cancel-btn">取消</div>
                                 </div>
@@ -326,31 +345,33 @@
 
                         <div class="cc-section clearfix">
                             <div class="cc-section-l">
-                                <a href="https://www.iwjw.com/baike/2110/" data-cid="2110" data-pos="1" target="_blank" class="title fs-nowrap point-link-gf">热点城市房价持续降温：很多人等降价</a>
-                                <p class="des">由于目前调控政策收紧，让一些投资投机需求的热钱逐渐退出房地产领域，购房者变得更加冷静和理性。</p>
-                                <p class="time">10-13发布</p>
+
+
+                                <a href="https://www.iwjw.com/baike/2110/" data-cid="2110" data-pos="1" target="_blank" class="title fs-nowrap point-link-gf">${newst.title}</a>
+                                <p class="des">${newst.describeInfo}</p>
+                                <p class="time">${newst.createDate}发布</p>
                             </div>
                             <div class="cc-section-r">
                                 <a href="https://www.iwjw.com/baike/2110/" data-cid="2110" data-pos="1" class="point-link-gf" target="_blank">
-                                    <img src="../../statics/images/link_img/fde82646dad344d78eecf400d79924c6.jpg" alt="">
+                                    <img src="../../statics/images/link_img/${newst.imgUrl}.jpg" alt="">
                                 </a>
                             </div>
                         </div>
                         <div class="cc-section last clearfix">
                             <div class="cc-section-l">
-                                <a href="https://www.iwjw.com/baike/2109/" data-cid="2109" data-pos="2" target="_blank" class="title fs-nowrap point-link-gf">楼市十一遇冷 体现“房住不炒”政策导向</a>
-                                <p class="des">数据显示，国庆8天长假北京合计新建住宅签约222套，二手房住宅33套。其中，北京新建住宅前7天网签...</p>
-                                <p class="time">10-13发布</p>
+                                <a href="https://www.iwjw.com/baike/2109/" data-cid="2109" data-pos="2" target="_blank" class="title fs-nowrap point-link-gf">${second.title}</a>
+                                <p class="des">${second.describeInfo}</p>
+                                <p class="time">${second.createDate}发布</p>
                             </div>
                             <div class="cc-section-r">
                                 <a href="https://www.iwjw.com/baike/2109/" data-cid="2109" data-pos="2" target="_blank" class="point-link-gf">
-                                    <img src="../../statics/images/link_img/e42ba18290cc4ab2a03c96e6c268d4e1.jpg" alt="">
+                                    <img src="../../statics/images/link_img/${second.imgUrl}.jpg" alt="">
                                 </a>
                             </div>
                         </div>
                         <div class="cc-section-b clearfix">
-                            <a href="https://www.iwjw.com/baike/2108/" data-cid="2108" data-pos="3" target="_blank" class="title fs-nowrap point-link-gf">楼市调控下的“90后”：租买之间犹豫不决</a>
-                            <span class="time">10-10发布</span>
+                            <a href="https://www.iwjw.com/baike/2108/" data-cid="2108" data-pos="3" target="_blank" class="title fs-nowrap point-link-gf">${third.title}</a>
+                            <span class="time">${third.createDate}发布</span>
                             <a href="https://www.iwjw.com/baike/guangzhou/" data-cid="" data-pos="4" target="_blank" class="all point-link-gf">查看全部&#155</a>
                         </div>
                     </div>
@@ -593,25 +614,24 @@
 </div>
 <!-- 百度统计 -->
 
-<%--<script type="text/javascript">
-    $('li').on("click","#sales",function () {
-        $('#sreachs').action='https://www.baidu.com';
-        /*  document.getElementById('sreachs').action='https://www.jd.com';*/
-    })
-    $('li').on("click","#chuzu",function () {
-        $('#sreachs').action='https://www.jd.com';
-        /*document.getElementById('sreachs').action='https://www.baidu.com';*/
-    })
-</script>--%>
-<%--搜索--%>
 <script>
-    function Searchtype1(){
-        document.getElementById("sreachs").action="http://localhost:8080/saleController/searchSale"
-    }
-    function Searchtype2(){
-        document.getElementById("sreachs").action="http://localhost:8080/main/login"
-    }
+    $(".dialog-login-btn").click(function () {
+        <%--$.post("${pageContext.request.contextPath}/login/goLogin", "uPhone="+$("#uPhone").val(),"textCode="+$("#codeInput").val());--%>
+var param = {
+    "uPhone":$("#uPhone").val(),
+    "textCode":$("#codeInput").val()
+}
+        $.ajax({
+            url:"${pageContext.request.contextPath}/loginAjax/doLogin",
+            data:param,
+            type:"post",
+            success:function (response) {
+               window.location="test";
+            }
+        });
+    })
 </script>
+
 
 </body>
 </html>
