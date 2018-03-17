@@ -629,7 +629,7 @@ var param = {
             data:param,
             type:"post",
             success:function (response) {
-               window.location="test";
+               window.location="home";
             }
         });
     })
