@@ -1,8 +1,10 @@
 package com.iwjw.controllers;
 
 import com.iwjw.entity.BaikeList;
+import com.iwjw.entity.Estate;
 import com.iwjw.entity.User;
 import com.iwjw.service.BaikeListService;
+import com.iwjw.service.HouseImgListService;
 import com.iwjw.service.UserService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.iwjw.service.impl.BaikeListServiceImpl;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -22,6 +25,8 @@ public class MainController {
     BaikeListService baikeListService;
     @Resource
     UserService userService;
+    @Resource
+    HouseImgListService houseImgListService;
 
     @RequestMapping("/test")
     public String goTest(Model model) {
@@ -56,6 +61,17 @@ public class MainController {
         model.addAttribute("newst", newst);
         model.addAttribute("second", second);
         model.addAttribute("third", third);
+
+        /*广州房子二手房总量*/
+        List<Estate>lis=houseImgListService.getEstateSumBuProvinceId("1");
+        List list=new ArrayList();
+        for (int i=0;i<lis.size();i++){
+            String index=lis.get(i).getEstateId()+"";
+            list.add(houseImgListService.getALLHouseByEstateId(index));
+        }
+        model.addAttribute("totalHouseSize", lis.size());
+
+
         return "homePage";
     }
 
@@ -80,7 +96,7 @@ public class MainController {
     @RequestMapping("/goMap")
     public String goMap(){return "baiduMap";}
 
-    @RequestMapping("/goGfgl")
+   @RequestMapping("/goGfgl")
     public String goGfgl() {
         return "gfgl";
     }

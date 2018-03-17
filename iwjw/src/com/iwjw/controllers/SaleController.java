@@ -27,8 +27,10 @@ public class SaleController {
     public String goSale(Model model, HttpServletResponse response, HttpServletRequest request) {
         //获取房子信息
         List<HouseImage> lists = houseImgListService.getHouseImgList("1");
+        System.out.println(lists.size()+"###############################");
         //获取房子户型信息
         List<HouseImage> lists2 = houseImgListService.getHouseImgList2("1");
+        System.out.println(lists.size()+"###############################");
         //房子图片放入会话
         request.getSession().setAttribute("imgLists", lists);
         //房子户型图片放入会话
@@ -72,8 +74,12 @@ public class SaleController {
         System.out.println("########################################################");
         System.out.println(list.size());
         request.getSession().setAttribute("totalHouse",lis.size());
-        return "homePage";
+        return "sale";
     }
+   /* @RequestMapping("/goGfgl")
+    public String goGfgl() {
+        return "gfgl";
+    }*/
 
 }
 

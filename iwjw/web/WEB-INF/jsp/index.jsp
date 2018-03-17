@@ -9,6 +9,7 @@
 <script>
   function showMain() {
       window.location="/main/home";
+
   }
 </script>
 <html>

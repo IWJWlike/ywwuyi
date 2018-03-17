@@ -445,7 +445,7 @@
            class="hover-none-decoration house-position text-underline-hover"
            title="${estate.estateName}">${estate.estateName}</a></span>
                                         <a href="https://www.iwjw.com/sale/map/?kw=%E7%99%BD%E5%85%B0%E8%8A%B1%E5%9B%AD"
-                                           target="_blank" class="sale-change-map"><i class="iconfont if-area"></i>周边房源</a>
+                                           target="_blank" class="sale-change-map">&nbsp;&nbsp;周边房源</a>
                                     </li>
                                     <li id="houseTrafficInfo">
                                         <span class="description-label">交通</span>
@@ -473,26 +473,19 @@
                                                             class="agent-name-sp" data-reactid=".1.0.0.0.1.0.1"></span>
                                                     </div>
                                                     <div class="ui-component-score agent-score"
-                                                         data-reactid=".1.0.0.0.1.1"><span class="score-wrapper"
-                                                                                           data-reactid=".1.0.0.0.1.1.0:$0"><i
-                                                            class="score-star iconfont if-star active"
-                                                            data-reactid=".1.0.0.0.1.1.0:$0.0"></i></span><span
-                                                            class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$1"><i
-                                                            class="score-star iconfont if-star active"
-                                                            data-reactid=".1.0.0.0.1.1.0:$1.0"></i></span><span
-                                                            class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$2"><i
-                                                            class="score-star iconfont if-star active"
-                                                            data-reactid=".1.0.0.0.1.1.0:$2.0"></i></span><span
-                                                            class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$3"><i
-                                                            class="score-star iconfont if-star active"
-                                                            data-reactid=".1.0.0.0.1.1.0:$3.0"></i></span><span
-                                                            class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$4"><i
-                                                            class="score-star iconfont if-star"
-                                                            data-reactid=".1.0.0.0.1.1.0:$4.0"></i><i
-                                                            class="score-star half-star iconfont if-star active"
-                                                            style="width:70.00000000000001%;"
-                                                            data-reactid=".1.0.0.0.1.1.0:$4.1"></i></span><span
-                                                            data-reactid=".1.0.0.0.1.1.1"> 评分 4.7</span></div>
+                                                         data-reactid=".1.0.0.0.1.1">
+                                                        <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$0">
+                                                        <i>★</i></span>
+                                                        <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$1">
+                                                        <i>★</i></span>
+                                                        <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$2">
+                                                        <i>★</i></span>
+                                                        <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$3">
+                                                           <i>★</i></span>
+                                                        <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$4">
+                                                           <i>☆</i>
+                                                            </span>
+                                                        <span data-reactid=".1.0.0.0.1.1.1"> 评分 4.7</span></div>
                                                     <div class="recommend-reason" data-reactid=".1.0.0.0.1.2">历史带看176次
                                                     </div>
                                                 </div>
@@ -523,13 +516,10 @@
 
                                     </div>
                                     <div class="house-primary-btns" data-reactid=".1.1">
-                                        <button class="btn-item house-primary-btn-fo  " data-reactid=".1.1.0"><%--<i
-                                                class="iconfont if-favourite" &lt;%&ndash;data-reactid=".1.1.0.0"&ndash;%&gt;></i>--%><span
+                                        <button class="btn-item house-primary-btn-fo  " data-reactid=".1.1.0"><span
                                                 data-reactid=".1.1.0.1">2人关注</span></button>
                                         <span data-reactid=".1.1.1"> </span>
-                                        <button class="btn-item house-primary-btn-se" data-reactid=".1.1.2"><%--<i
-                                                class="iconfont if-wo_yao_kan_fang"
-                                                data-reactid=".1.1.2.$icon"></i>--%><span
+                                        <button class="btn-item house-primary-btn-se" data-reactid=".1.1.2"><span
                                                 data-reactid=".1.1.2.$text">我要看房</span></button>
                                     </div>
                                     <div class="correction-block" data-reactid=".1.2"><a class="rc-correction-link"
@@ -607,8 +597,8 @@
 
 
 
-                                <%--*******************************************************************************************--%>
-                                <div class="detail-content-row clearfix" data-reactid=".0.0.0.0.1" <%--style="position:relative"--%>>
+
+                                <div class="detail-content-row clearfix" data-reactid=".0.0.0.0.1" style="position:relative">
                                     <div class="col-1" data-reactid=".0.0.0.0.1.0">
                                         <div id="j-house-calc" data-reactid=".0.0.0.0.1.0.0">
                                             <div class="house-calc" data-reactid=".0.0.0.0.1.0.0.0">
@@ -633,7 +623,7 @@
                                                         data-reactid=".0.0.0.0.1.0.0.0.2.0">去算算</span><span
                                                         class="point" data-reactid=".0.0.0.0.1.0.0.0.2.1"><i
                                                         class="iconfont"
-                                                        data-reactid=".0.0.0.0.1.0.0.0.2.1.0">혴</i></span></a></div>
+                                                        data-reactid=".0.0.0.0.1.0.0.0.2.1.0">★</i></span></a></div>
                                         </div>
                                         <div id="j-house-pics" data-reactid=".0.0.0.0.1.0.1">
                                             <div class="house-pics-wrp" data-reactid=".0.0.0.0.1.0.1.0">
@@ -643,7 +633,7 @@
                                                 <div class="house-pics-list clearfix" data-reactid=".0.0.0.0.1.0.1.0.1">
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/layout/ea6adbb13e7b439e9bc17584ebd02d77=1s=1iwjw">
-                                                        <img src="${imgLists2.get(0).imgUrl}"
+                                                        <img src="${imgLists.get(0).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/layout/ea6adbb13e7b439e9bc17584ebd02d77=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -653,7 +643,7 @@
                                                     </div>
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/f8c815ff12594ec1b595a98fcd3e9190=1s=1iwjw">
-                                                        <img src="${imgLists2.get(1).imgUrl}"
+                                                        <img src="${imgLists.get(1).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/f8c815ff12594ec1b595a98fcd3e9190=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -663,7 +653,7 @@
                                                     </div>
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/9e132e6af33445dcbbf707a7c063beea=1s=1iwjw">
-                                                        <img src="${imgLists2.get(2).imgUrl}"
+                                                        <img src="${imgLists.get(2).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/9e132e6af33445dcbbf707a7c063beea=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -673,7 +663,7 @@
                                                     </div>
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/3e33864f9b1348edaac2146b794c891e=1s=1iwjw">
-                                                        <img src="${imgLists2.get(3).imgUrl}"
+                                                        <img src="${imgLists.get(3).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/3e33864f9b1348edaac2146b794c891e=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -683,7 +673,7 @@
                                                     </div>
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/04c04f0ed6054c6d924e4eea2d28e045=1s=1iwjw">
-                                                        <img src="${imgLists2.get(4).imgUrl}"
+                                                        <img src="${imgLists.get(4).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/04c04f0ed6054c6d924e4eea2d28e045=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -693,7 +683,7 @@
                                                     </div>
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/6cc4c7caf84e4befbd88a7365a42fb28=1s=1iwjw">
-                                                        <img src="${imgLists2.get(5).imgUrl}"
+                                                        <img src="${imgLists.get(5).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/6cc4c7caf84e4befbd88a7365a42fb28=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -1327,31 +1317,18 @@
                                                                         data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.0.1"></span>
                                                                 </div>
                                                                 <div class="ui-component-score agent-score"
-                                                                     data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1"><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$0"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$0.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$1"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$1.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$2"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$2.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$3"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$3.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$4"><i
-                                                                        class="score-star iconfont if-star"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$4.0"></i><i
-                                                                        class="score-star half-star iconfont if-star active"
-                                                                        style="width:70.00000000000001%;"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$4.1"></i></span><span
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.1"> 评分 4.7</span>
+                                                                     data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1"><span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$0">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$1">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$2">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$3">
+                                                           <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$4">
+                                                           <i>☆</i>
+                                                            </span>
+                                                                    <span data-reactid=".1.0.0.0.1.1.1"> 评分 4.7</span>
                                                                 </div>
                                                                 <div class="recommend-reason"
                                                                      data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.2">历史带看176次
@@ -1378,28 +1355,18 @@
                                                                         data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.0.1"></span>
                                                                 </div>
                                                                 <div class="ui-component-score agent-score"
-                                                                     data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1"><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$0"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$0.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$1"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$1.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$2"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$2.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$3"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$3.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$4"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$4.0"></i></span><span
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.1"> 评分 5</span></div>
+                                                                     data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1"><span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$0">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$1">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$2">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$3">
+                                                           <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$4">
+                                                           <i>★</i>
+                                                            </span>
+                                                                    <span data-reactid=".1.0.0.0.1.1.1"> 评分 5.0</span></div>
                                                                 <div class="recommend-reason"
                                                                      data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.2">历史带看1次
                                                                 </div>
@@ -1424,28 +1391,18 @@
                                                                         data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.0.1"></span>
                                                                 </div>
                                                                 <div class="ui-component-score agent-score"
-                                                                     data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1"><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$0"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$0.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$1"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$1.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$2"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$2.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$3"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$3.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$4"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$4.0"></i></span><span
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.1"> 评分 5</span>
+                                                                     data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1"><span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$0">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$1">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$2">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$3">
+                                                           <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$4">
+                                                           <i>★</i>
+                                                            </span>
+                                                                    <span data-reactid=".1.0.0.0.1.1.1"> 评分 4.9</span>
                                                                 </div>
                                                                 <div class="recommend-reason"
                                                                      data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.2">历史带看2次
@@ -1458,9 +1415,7 @@
                                             </ul>
                                             <div class="house-primary-btns" data-reactid=".0.0.0.0.1.1.0.1">
                                                 <button class="btn-item house-primary-btn-fo  "
-                                                        data-reactid=".0.0.0.0.1.1.0.1.0"><i
-                                                        class="iconfont if-favourite"
-                                                        data-reactid=".0.0.0.0.1.1.0.1.0.0"></i><span
+                                                        data-reactid=".0.0.0.0.1.1.0.1.0">♥<span
                                                         data-reactid=".0.0.0.0.1.1.0.1.0.1">2人关注</span></button>
                                                 <span data-reactid=".0.0.0.0.1.1.0.1.1"> </span>
                                                 <button class="btn-item house-primary-btn-se"
@@ -1474,8 +1429,19 @@
                                 </div>
                                 <div class="house-around" id="detailsmw" data-reactid=".0.0.0.0.2">
                                     <div class="detail-h2" id="j-house-around" data-reactid=".0.0.0.0.2.0">周边配套</div>
-                                    <div id="around-wrp" class="around-wrp" data-reactid=".0.0.0.0.2.1">
-                                        <div class="around-canvas active" data-reactid=".0.0.0.0.2.1.1">
+
+
+
+
+
+
+
+
+
+                                    <%--地图div--%>
+                                    <div id="around-wrp" class="around-wrp" data-reactid=".0.0.0.0.2.1" style="background-color: red">
+                                        <div class="around-canvas active" data-reactid=".0.0.0.0.2.1.1" style="background-color: green">
+                                            <%--公交地图学校。。。。--%>
                                             <div class="around-items" data-reactid=".0.0.0.0.2.1.1.0">
                                                 <ul class="around-menu" data-reactid=".0.0.0.0.2.1.1.0.0">
                                                     <li class="around-menu-li active"
@@ -1892,7 +1858,7 @@
                                                     <a title="到百度地图查看此区域" target="_blank"
                                                        href="http://map.baidu.com/?sr=1" style="outline: none;"><img
                                                             style="border:none;width:77px;height:32px"
-                                                            src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/copyright_logo.png"></a>
+                                                            src="../../statics/images/house_images/copyright_logo.png"></a>
                                                 </div>
                                                 <div id="zoomer"
                                                      style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:url(https://api.map.baidu.com/images/openhand.cur) 8 8,default">
@@ -2119,7 +2085,7 @@
                 </div>
             </div>
         </div>
-        <script>
+       <%-- <script>
             window.pageConfig = window.pageConfig || {};
             var sale = pageConfig.sale = window.pageConfig.sale || {};
 
@@ -2212,7 +2178,7 @@
                 sellPrice: "80"
             }
 
-        </script>
+        </script>--%>
         <%--??????????????????--%>
        <%-- <script type="text/javascript" src="../../statics/js/api"></script>--%>
         <%--???????????????????????????????????--%>
@@ -2475,8 +2441,7 @@
         function setClickHandler(id, fn) {
             document.getElementById(id).onclick = fn;
         }
-
-//点击事件监听，参数e为当前点击的DOM
+        <!--点击事件监听，参数e为当前点击的-->
         setClickHandler('image_container', function (e) {
 
 
