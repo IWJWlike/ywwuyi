@@ -18953,9 +18953,7 @@
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, n = this, r = e.callback,
                     o = e.errorCallback, a = $.Deferred();
                 return t.request.ajax({
-                    type: 'get', url: n.api('checkLoginAndProvinceId'), error: function (e) {
-                        o && o(e)
-                    }, success: function (e) {
+                    type: 'get', url: n.api('checkLoginAndProvinceId'), success: function (e) {
                         1 == e.status && (window.pageConfig.visitor = e.data, i["default"].setUser(e), n.setVds()), a.resolve(e), r && r(e)
                     }
                 }), a.promise()

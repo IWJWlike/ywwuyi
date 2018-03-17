@@ -50,18 +50,19 @@
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
-  <servlet>
-    <servlet-name>BaikeAjax</servlet-name>
-    <servlet-class>com.iwjw.Servlet.BaikeAjax</servlet-class>
-  </servlet>
   <servlet-mapping>
     <servlet-name>spring</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+<servlet>
+  <servlet-name>BaikeAjax</servlet-name>
+  <servlet-class>com.iwjw.Servlet.BaikeAjax</servlet-class>
+</servlet>
 <servlet-mapping>
   <servlet-name>BaikeAjax</servlet-name>
-  <url-pattern>/baikeAjax</url-pattern>
+  <url-pattern>/BaikeAjax</url-pattern>
 </servlet-mapping>
+
 
 
   <!-- Spring配置 -->

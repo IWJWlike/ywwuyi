@@ -36,6 +36,7 @@
     <script src="../../statics/js/index.js"></script>
     <script type="text/javascript" async="" src="../../statics/js/vds.js"></script>
 
+    <script src="../../statics/js/common_72.js"></script>
     <script>
         (function () {
             if (location.hostname.indexOf('iwjw.com') != -1 && location.hostname.indexOf('pcbeta') == -1 && location.protocol == 'http:') {
@@ -220,6 +221,10 @@
         var _hmt = _hmt || [];
     </script>
 
+<style>
+    #hidd{display: none}
+</style>
+
 </head>
 <body>
 
@@ -263,16 +268,35 @@
                                 class="iconfont if-mobile"></i>APP</a>
                     </div>
                 </dt>
-                <dd class="header-right clearfix">
-                    <div class="nav-item"><a href="https://www.iwjw.com/sale/wZuQb7LgUIM/?from=040203&amp;p=40000#"
-                                             class="login none nav-item-a login-require " target="_blank"><i
-                            class="nav-item-txt">登录<span class="slash">/</span>注册</i></a></div>
-                    <div class="nav-item message-nav" id="message-nav">
-                        <div class="nav-message-wrap" data-reactid=".3"></div>
-                    </div>
+                <c:if test="${vistor==null}">
+                <dd class="header-right clearfix"><div  class="nav-item"><a id="one" href="javascript:showBox()" class="login none nav-item-a login-require " target="_blank"><i class="nav-item-txt">登录<span class="slash">/</span>注册</i></a></div><div class="nav-item message-nav" id="message-nav"><div class="nav-message-wrap" data-reactid=".0"></div></div>
+                    </c:if>
+                    <c:if test="${vistor != null}">
+                <dd class="header-right clearfix"><div class="nav-item"><a data-url="/userinfo/" class="login  nav-item-a login-require " target="_blank"><em class="iconfont if-menu"></em><i class="nav-item-txt">135****0667
+                    <span class="shape-circle"></span></i></a><div class="user-down-wrap arrow-top nav-down-wrap"><a class="user-item" href="/userinfo/" id="username"><span class="iconfont">핰</span>我的账户
+
+                    <i class="follow-point"></i></a><a class="user-item" href="/collectHouseList/" id="FollowDynamic"><span class="iconfont">홄</span>关注列表
+
+                </a><!-- web 6.9 已下线 --><!-- <a class="user-item appoint-list" href="/seeHouseList/" id = "Itinerary"><span class="iconfont">&#xd571;</span>约看清单
+
+   </a> --><a class="user-item house-schedule" href="/appointmentList/" id="Showings"><span class="iconfont">혤</span>看房日程
+
+                </a><a class="user-item user-item-payorder" href="/order/"><span class="iconfont">퐀</span>合同订单
+
+                </a><a class="user-item user-item-delegate_mng" href="/delegateManage/"><span class="iconfont">퐁</span>我的委托
+
+                </a><a class="user-item user-item-agent" href="/agent/"><span class="iconfont">퐄</span>我的经纪人
+
+                </a><a class="user-item user-item-complains" href="/complains/"><span class="iconfont">퐐</span>我的投诉
+
+                </a><a class="user-item user-item-logout"><span class="iconfont">퐅</span>退出
+                </a></div><!--  --></div><div class="nav-item message-nav" <%--id="message-nav"--%>><div class="nav-message-wrap" data-reactid=".0"><a class="nav-item-a message show-msg-down" data-reactid=".0.$1"><i class="nav-item-txt line" data-reactid=".0.$1.0"><i data-reactid=".0.$1.0.0">消息</i></i></a><div id="message-down-wrap" class="message-down-wrap nav-down-wrap arrow-top " data-reactid=".0.$2"><div class="message-list-wrap" data-reactid=".0.$2.0"><div class="msg-center-wrap" data-reactid=".0.$2.0.0"><a class="msg-center-a clearfix" href="/message/activity/" data-reactid=".0.$2.0.0.0"><div class="bell-bg f-l" data-reactid=".0.$2.0.0.0.0"><i class="iconfont if-bell" data-reactid=".0.$2.0.0.0.0.0"></i></div><p class="msg-center-tt f-l bold" data-reactid=".0.$2.0.0.0.1">消息中心</p></a></div><ul class="iwjwim-body" data-reactid=".0.$2.0.1"></ul></div></div></div></div>
+
+
 
 
                 </dd>
+                </c:if>
             </dl>
         </div>
 
@@ -440,7 +464,7 @@
            class="hover-none-decoration house-position text-underline-hover"
            title="${estate.estateName}">${estate.estateName}</a></span>
                                         <a href="https://www.iwjw.com/sale/map/?kw=%E7%99%BD%E5%85%B0%E8%8A%B1%E5%9B%AD"
-                                           target="_blank" class="sale-change-map"><i class="iconfont if-area"></i>周边房源</a>
+                                           target="_blank" class="sale-change-map">&nbsp;&nbsp;周边房源</a>
                                     </li>
                                     <li id="houseTrafficInfo">
                                         <span class="description-label">交通</span>
@@ -468,57 +492,53 @@
                                                             class="agent-name-sp" data-reactid=".1.0.0.0.1.0.1"></span>
                                                     </div>
                                                     <div class="ui-component-score agent-score"
-                                                         data-reactid=".1.0.0.0.1.1"><span class="score-wrapper"
-                                                                                           data-reactid=".1.0.0.0.1.1.0:$0"><i
-                                                            class="score-star iconfont if-star active"
-                                                            data-reactid=".1.0.0.0.1.1.0:$0.0"></i></span><span
-                                                            class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$1"><i
-                                                            class="score-star iconfont if-star active"
-                                                            data-reactid=".1.0.0.0.1.1.0:$1.0"></i></span><span
-                                                            class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$2"><i
-                                                            class="score-star iconfont if-star active"
-                                                            data-reactid=".1.0.0.0.1.1.0:$2.0"></i></span><span
-                                                            class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$3"><i
-                                                            class="score-star iconfont if-star active"
-                                                            data-reactid=".1.0.0.0.1.1.0:$3.0"></i></span><span
-                                                            class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$4"><i
-                                                            class="score-star iconfont if-star"
-                                                            data-reactid=".1.0.0.0.1.1.0:$4.0"></i><i
-                                                            class="score-star half-star iconfont if-star active"
-                                                            style="width:70.00000000000001%;"
-                                                            data-reactid=".1.0.0.0.1.1.0:$4.1"></i></span><span
-                                                            data-reactid=".1.0.0.0.1.1.1"> 评分 4.7</span></div>
+                                                         data-reactid=".1.0.0.0.1.1">
+                                                        <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$0">
+                                                        <i>★</i></span>
+                                                        <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$1">
+                                                        <i>★</i></span>
+                                                        <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$2">
+                                                        <i>★</i></span>
+                                                        <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$3">
+                                                           <i>★</i></span>
+                                                        <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$4">
+                                                           <i>☆</i>
+                                                            </span>
+                                                        <span data-reactid=".1.0.0.0.1.1.1"> 评分 4.7</span></div>
                                                     <div class="recommend-reason" data-reactid=".1.0.0.0.1.2">历史带看176次
                                                     </div>
                                                 </div>
                                                 <div class="change-agent" data-reactid=".1.0.0.0.2">换一换</div>
                                             </div>
                                         </div>
+
                                         <div class="f-r primary-agent-btns" data-reactid=".1.0.1"><a
-                                                class="primary-agent-btn phone-btn qrcode-popov-wrp" tabindex="-1"
+                                                class="primary-agent-btn phone-btn qrcode-popov-wrp" id="phoneAsk" tabindex="-1"
                                                 data-reactid=".1.0.1.0"><span data-reactid=".1.0.1.0.0">电话咨询 </span>
-                                            <div class="qrcode-popov popov-top" hidden="" data-reactid=".1.0.1.0.1">
+
+
+
+                                            <div class="qrcode-popov popov-top" data-reactid=".1.0.1.0.1" id="hidd">
                                                 <div class="qrcode-img-wrp" data-reactid=".1.0.1.0.1.0"><img
-                                                        src="https://www.iwjw.com/sale/wZuQb7LgUIM/?from=040203&amp;p=40000"
+                                                        src="../../statics/images/house_images/seller_ewm1.jpg"
                                                         alt="" class="qrcode-img" data-reactid=".1.0.1.0.1.0.0"></div>
                                                 <p class="popov-text" data-reactid=".1.0.1.0.1.1">微信扫码拨号</p>
                                                 <div data-reactid=".1.0.1.0.1.2"><span class="agent-phone"
-                                                                                       data-reactid=".1.0.1.0.1.2.0">186 2014 6206</span>
+                                                                                       data-reactid=".1.0.1.0.1.2.0">137 2014 6206</span>
                                                 </div>
                                             </div>
+
                                         </a>
                                             <button class="primary-agent-btn chat-btn" data-reactid=".1.0.1.1">在线咨询
                                             </button>
                                         </div>
+
                                     </div>
                                     <div class="house-primary-btns" data-reactid=".1.1">
-                                        <button class="btn-item house-primary-btn-fo  " data-reactid=".1.1.0"><i
-                                                class="iconfont if-favourite" data-reactid=".1.1.0.0"></i><span
+                                        <button class="btn-item house-primary-btn-fo  " data-reactid=".1.1.0"><span
                                                 data-reactid=".1.1.0.1">2人关注</span></button>
                                         <span data-reactid=".1.1.1"> </span>
-                                        <button class="btn-item house-primary-btn-se" data-reactid=".1.1.2"><i
-                                                class="iconfont if-wo_yao_kan_fang"
-                                                data-reactid=".1.1.2.$icon"></i><span
+                                        <button class="btn-item house-primary-btn-se" data-reactid=".1.1.2"><span
                                                 data-reactid=".1.1.2.$text">我要看房</span></button>
                                     </div>
                                     <div class="correction-block" data-reactid=".1.2"><a class="rc-correction-link"
@@ -531,7 +551,7 @@
                             <div class="share btn-forwarding hover-none-decoration">
                                 <div class="qr-icon">用手机看房<i class="iconfont if-qr-code icon-forwarding"></i></div>
                                 <div class="qr-box">
-                                    <img src="https://www.iwjw.com/sale/wZuQb7LgUIM/?from=040203&amp;p=40000"
+                                    <img src="../../statics/images/house_images/seller_ewm1.jpg"
                                          class="qr-img">
                                     <p class="qr-txt">扫码去手机看房</p>
                                     <i class="iconfont if-triangle-top"></i>
@@ -592,7 +612,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="detail-content-row clearfix" data-reactid=".0.0.0.0.1">
+
+
+
+
+
+                                <div class="detail-content-row clearfix" data-reactid=".0.0.0.0.1" style="position:relative">
                                     <div class="col-1" data-reactid=".0.0.0.0.1.0">
                                         <div id="j-house-calc" data-reactid=".0.0.0.0.1.0.0">
                                             <div class="house-calc" data-reactid=".0.0.0.0.1.0.0.0">
@@ -617,7 +642,7 @@
                                                         data-reactid=".0.0.0.0.1.0.0.0.2.0">去算算</span><span
                                                         class="point" data-reactid=".0.0.0.0.1.0.0.0.2.1"><i
                                                         class="iconfont"
-                                                        data-reactid=".0.0.0.0.1.0.0.0.2.1.0">혴</i></span></a></div>
+                                                        data-reactid=".0.0.0.0.1.0.0.0.2.1.0">★</i></span></a></div>
                                         </div>
                                         <div id="j-house-pics" data-reactid=".0.0.0.0.1.0.1">
                                             <div class="house-pics-wrp" data-reactid=".0.0.0.0.1.0.1.0">
@@ -627,7 +652,7 @@
                                                 <div class="house-pics-list clearfix" data-reactid=".0.0.0.0.1.0.1.0.1">
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/layout/ea6adbb13e7b439e9bc17584ebd02d77=1s=1iwjw">
-                                                        <img src="${imgLists2.get(0).imgUrl}"
+                                                        <img src="${imgLists.get(0).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/layout/ea6adbb13e7b439e9bc17584ebd02d77=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -637,7 +662,7 @@
                                                     </div>
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/f8c815ff12594ec1b595a98fcd3e9190=1s=1iwjw">
-                                                        <img src="${imgLists2.get(1).imgUrl}"
+                                                        <img src="${imgLists.get(1).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/f8c815ff12594ec1b595a98fcd3e9190=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -647,7 +672,7 @@
                                                     </div>
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/9e132e6af33445dcbbf707a7c063beea=1s=1iwjw">
-                                                        <img src="${imgLists2.get(2).imgUrl}"
+                                                        <img src="${imgLists.get(2).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/9e132e6af33445dcbbf707a7c063beea=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -657,7 +682,7 @@
                                                     </div>
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/3e33864f9b1348edaac2146b794c891e=1s=1iwjw">
-                                                        <img src="${imgLists2.get(3).imgUrl}"
+                                                        <img src="${imgLists.get(3).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/3e33864f9b1348edaac2146b794c891e=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -667,7 +692,7 @@
                                                     </div>
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/04c04f0ed6054c6d924e4eea2d28e045=1s=1iwjw">
-                                                        <img src="${imgLists2.get(4).imgUrl}"
+                                                        <img src="${imgLists.get(4).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/04c04f0ed6054c6d924e4eea2d28e045=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -677,7 +702,7 @@
                                                     </div>
                                                     <div class="house-pic-item"
                                                          data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/6cc4c7caf84e4befbd88a7365a42fb28=1s=1iwjw">
-                                                        <img src="${imgLists2.get(5).imgUrl}"
+                                                        <img src="${imgLists.get(5).imgUrl}"
                                                              data-reactid=".0.0.0.0.1.0.1.0.1.$//files=1iwjw=1com/housecheckpc/2016/7/24/6cc4c7caf84e4befbd88a7365a42fb28=1s=1iwjw.0"
                                                              style="width: auto; height: 100%; margin-left: -7.5px;">
                                                         <div class="house-pic-item-label"
@@ -1290,7 +1315,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-2" data-reactid=".0.0.0.0.1.1">
+                                    <%--j经纪人#########################################################################3--%>
+                                    <div class="col-2" data-reactid=".0.0.0.0.1.1" <%--style="float: right;position:absolute;z-index:9999;top:100px;right:10px;background-color: red"--%>>
                                         <div class="agents-list-container " data-reactid=".0.0.0.0.1.1.0">
                                             <ul class="agents-list-ul" data-reactid=".0.0.0.0.1.1.0.0">
                                                 <li class="agent-item clearfix" data-reactid=".0.0.0.0.1.1.0.0.$0">
@@ -1310,31 +1336,18 @@
                                                                         data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.0.1"></span>
                                                                 </div>
                                                                 <div class="ui-component-score agent-score"
-                                                                     data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1"><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$0"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$0.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$1"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$1.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$2"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$2.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$3"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$3.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$4"><i
-                                                                        class="score-star iconfont if-star"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$4.0"></i><i
-                                                                        class="score-star half-star iconfont if-star active"
-                                                                        style="width:70.00000000000001%;"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.0:$4.1"></i></span><span
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1.1"> 评分 4.7</span>
+                                                                     data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.1"><span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$0">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$1">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$2">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$3">
+                                                           <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$4">
+                                                           <i>☆</i>
+                                                            </span>
+                                                                    <span data-reactid=".1.0.0.0.1.1.1"> 评分 4.7</span>
                                                                 </div>
                                                                 <div class="recommend-reason"
                                                                      data-reactid=".0.0.0.0.1.1.0.0.$0.0.0.1.2">历史带看176次
@@ -1361,28 +1374,18 @@
                                                                         data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.0.1"></span>
                                                                 </div>
                                                                 <div class="ui-component-score agent-score"
-                                                                     data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1"><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$0"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$0.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$1"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$1.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$2"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$2.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$3"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$3.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$4"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.0:$4.0"></i></span><span
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1.1"> 评分 5</span></div>
+                                                                     data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.1"><span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$0">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$1">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$2">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$3">
+                                                           <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$4">
+                                                           <i>★</i>
+                                                            </span>
+                                                                    <span data-reactid=".1.0.0.0.1.1.1"> 评分 5.0</span></div>
                                                                 <div class="recommend-reason"
                                                                      data-reactid=".0.0.0.0.1.1.0.0.$1.0.0.1.2">历史带看1次
                                                                 </div>
@@ -1407,28 +1410,18 @@
                                                                         data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.0.1"></span>
                                                                 </div>
                                                                 <div class="ui-component-score agent-score"
-                                                                     data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1"><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$0"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$0.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$1"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$1.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$2"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$2.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$3"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$3.0"></i></span><span
-                                                                        class="score-wrapper"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$4"><i
-                                                                        class="score-star iconfont if-star active"
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.0:$4.0"></i></span><span
-                                                                        data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1.1"> 评分 5</span>
+                                                                     data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.1"><span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$0">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$1">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$2">
+                                                        <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$3">
+                                                           <i>★</i></span>
+                                                                    <span class="score-wrapper" data-reactid=".1.0.0.0.1.1.0:$4">
+                                                           <i>★</i>
+                                                            </span>
+                                                                    <span data-reactid=".1.0.0.0.1.1.1"> 评分 4.9</span>
                                                                 </div>
                                                                 <div class="recommend-reason"
                                                                      data-reactid=".0.0.0.0.1.1.0.0.$2.0.0.1.2">历史带看2次
@@ -1441,9 +1434,7 @@
                                             </ul>
                                             <div class="house-primary-btns" data-reactid=".0.0.0.0.1.1.0.1">
                                                 <button class="btn-item house-primary-btn-fo  "
-                                                        data-reactid=".0.0.0.0.1.1.0.1.0"><i
-                                                        class="iconfont if-favourite"
-                                                        data-reactid=".0.0.0.0.1.1.0.1.0.0"></i><span
+                                                        data-reactid=".0.0.0.0.1.1.0.1.0">♥<span
                                                         data-reactid=".0.0.0.0.1.1.0.1.0.1">2人关注</span></button>
                                                 <span data-reactid=".0.0.0.0.1.1.0.1.1"> </span>
                                                 <button class="btn-item house-primary-btn-se"
@@ -1457,8 +1448,19 @@
                                 </div>
                                 <div class="house-around" id="detailsmw" data-reactid=".0.0.0.0.2">
                                     <div class="detail-h2" id="j-house-around" data-reactid=".0.0.0.0.2.0">周边配套</div>
-                                    <div id="around-wrp" class="around-wrp" data-reactid=".0.0.0.0.2.1">
-                                        <div class="around-canvas active" data-reactid=".0.0.0.0.2.1.1">
+
+
+
+
+
+
+
+
+
+                                    <%--地图div--%>
+                                    <div id="around-wrp" class="around-wrp" data-reactid=".0.0.0.0.2.1" style="background-color: red">
+                                        <div class="around-canvas active" data-reactid=".0.0.0.0.2.1.1" style="background-color: green">
+                                            <%--公交地图学校。。。。--%>
                                             <div class="around-items" data-reactid=".0.0.0.0.2.1.1.0">
                                                 <ul class="around-menu" data-reactid=".0.0.0.0.2.1.1.0.0">
                                                     <li class="around-menu-li active"
@@ -1875,7 +1877,7 @@
                                                     <a title="到百度地图查看此区域" target="_blank"
                                                        href="http://map.baidu.com/?sr=1" style="outline: none;"><img
                                                             style="border:none;width:77px;height:32px"
-                                                            src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/copyright_logo.png"></a>
+                                                            src="../../statics/images/house_images/copyright_logo.png"></a>
                                                 </div>
                                                 <div id="zoomer"
                                                      style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:url(https://api.map.baidu.com/images/openhand.cur) 8 8,default">
@@ -2102,7 +2104,7 @@
                 </div>
             </div>
         </div>
-        <script>
+       <%-- <script>
             window.pageConfig = window.pageConfig || {};
             var sale = pageConfig.sale = window.pageConfig.sale || {};
 
@@ -2195,51 +2197,53 @@
                 sellPrice: "80"
             }
 
-        </script>
-        <script type="text/javascript" src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/api"></script>
-        <script type="text/javascript" src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/getscript"></script>
+        </script>--%>
+        <%--??????????????????--%>
+       <%-- <script type="text/javascript" src="../../statics/js/api"></script>--%>
+        <%--???????????????????????????????????--%>
+       <%-- <script type="text/javascript" src="../../statics/js/getscript"></script>--%>
         <div class="suspend-wrap" style="bottom: 80px;">
 
             <!-- feedback -->
-            <a href="https://www.iwjw.com/gofeedback#https%3A%2F%2Fwww.iwjw.com%2Fsale%2FwZuQb7LgUIM%2F%3Ffrom%3D040203%26p%3D40000"
+            <%--<a href="https://www.iwjw.com/gofeedback#https%3A%2F%2Fwww.iwjw.com%2Fsale%2FwZuQb7LgUIM%2F%3Ffrom%3D040203%26p%3D40000"
                class="suspend-div suspend-report j-feedback" target="_blank">
-                <em class="opinion iconfont"></em>
+                <em class="opinion iconfont">意</em>
                 <em class="text">
                     意见反馈
                     <i class="triangle iconfont if-triangle-right"></i>
                 </em>
-            </a>
+            </a>--%>
 
             <!-- app qrcode -->
-            <div class="suspend-div suspend-code show-qrcode">
+            <%--<div class="suspend-div suspend-code show-qrcode">
                 <em class="iconfont code-icon if-saomao"></em>
                 <div class="code-content">
                     <div>
                         <p class="app-qrcode"></p>
                         <p class="line-1">扫一扫体验APP</p>
-                        <em class="triangle iconfont if-triangle-right"></em>
+                       &lt;%&ndash; <em class="triangle iconfont if-triangle-right"></em>&ndash;%&gt;
                     </div>
-                    <em class="code-close iconfont if-delete"></em>
+                   &lt;%&ndash; <em class="code-close iconfont if-delete"></em>&ndash;%&gt;
                 </div>
-            </div>
+            </div>--%>
 
             <!-- to top -->
-            <div class="suspend-div suspend-top" style="display: none;">
+           <%-- <div class="suspend-div suspend-top" style="display: none;">
                 <a class="to-top" href="https://www.iwjw.com/sale/wZuQb7LgUIM/?from=040203&amp;p=40000#iwjw">
-                    <em class="iconfont"></em>
+                    <em class="iconfont">顶</em>
                 </a>
                 <em class="text">回到顶部
                     <i class="triangle iconfont if-triangle-right"></i>
                 </em>
-            </div>
+            </div>--%>
 
             <!-- 背景 -->
-            <div class="suspend-back"></div>
+           <%-- <div class="suspend-back"></div>--%>
         </div>
     </div>
 </div>
 
-<script src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/gt.js.下载"></script>
+<script src="../../statics/js/gt.js"></script>
 
 <script type="text/javascript">
     ;!function () {
@@ -2293,9 +2297,9 @@
     })();
 </script>
 <!--[if IE 8]>
-<script src='//resource.iwjw.com/iwjw-pc/es5-shim-sham_5.5.js'></script><![endif]-->
-<script src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/common_72.js.下载"></script>
-<script src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/sale_74.js.下载"></script>
+<script src='../../statics/js/es5-shim-sham_5.5.js'></script><![endif]-->
+<script src="../../statics/js/common_72.js"></script>
+<script src="../../statics/js/sale_74.js"></script>
 <script src="https://www.iwjw.com/sale/wZuQb7LgUIM/?from=040203&amp;p=40000" async=""></script>
 <div class="mod-footer short-shift">
     <div class="footer-inner">
@@ -2358,7 +2362,7 @@
                     <a class="footer-t-m-item last footer-wechat">
                         <i class="iconfont if-weixin"></i>
                         <span>微信公众号</span>
-                        <b><img src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/WXcode.png"></b>
+                        <b><img src="../../statics/images/house_images/WXcode.png"></b>
                     </a>
                 </div>
                 <div class="footer-t-bot">
@@ -2390,7 +2394,7 @@
         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
         document.write(unescape("%3Cscript async src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd3a10bbf8b4afa9e5ab91d66b6944e813' type='text/javascript'%3E%3C/script%3E"));
     </script>
-    <script async="" src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/h.js.下载" type="text/javascript"></script>
+    <script async="" src="../../statics/js/h.js" type="text/javascript"></script>
     <script type="text/javascript">
         //
         <!-- 其他统计 -->
@@ -2434,6 +2438,10 @@
         // }
     </script>
 
+
+
+
+
 </div>
 <!-- 百度统计 -->
 
@@ -2452,8 +2460,7 @@
         function setClickHandler(id, fn) {
             document.getElementById(id).onclick = fn;
         }
-
-//点击事件监听，参数e为当前点击的DOM
+        <!--点击事件监听，参数e为当前点击的-->
         setClickHandler('image_container', function (e) {
 
 
@@ -2465,6 +2472,13 @@
         });
 
     })();
+</script>
+
+<%--电话咨询--%>
+<script type="text/javascript">
+    $('div').on("click","#phoneAsk",function(){
+        $('#hidd').toggle();
+    });
 </script>
 
 

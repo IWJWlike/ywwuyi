@@ -16,5 +16,14 @@ public interface BaikeListMapper {
     List<BaikeList> getBaikeList();
     //Ajax查
     List<BaikeList> getBaikeListByPlate(@Param("plateId")String plateId);
-
+    //根据更新时间来查新闻
+    List<BaikeList> getBaikeListByDate(@Param("createDate")String createDate);
+    //获取第一条
+    BaikeList getNewst();
+    //获取第二条
+    BaikeList getSecond();
+    //获取第三条
+    BaikeList getThird();
+    //获取likes数前八条
+    List<BaikeList> getLikes();
 }

@@ -1,36 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.iwjw.dao.HouseImgListMapper">
 
 
-    <!--根据房id获取图片-->
+    <!--1.根据房id获取图片-->
     <select id="getHouseImgList" resultType="HouseImage">
     SELECT imgUrl FROM houseimage where houseid=#{houseid} and houseImgNo="1";
     </select>
 
-    <!--根据房id获取图片-->
+    <!--2.根据房id获取图片-->
     <select id="getHouseImgList2" resultType="HouseImage">
         SELECT imgUrl FROM houseimage where houseid=#{houseid} and houseImgNo="2";
     </select>
 
-   <!-- 根据房id查询房子具体信息-->
+    <!-- 3.根据房id查询房子具体信息-->
     <select id="getHouseById" resultType="Secondary">
         SELECT * from secondary where houseid=#{houseid};
     </select>
 
-    <!--根据小区id查询所在小区信息-->
+    <!--4.根据小区id查询所在小区信息-->
     <select id="getEstateByHouseId" resultType="Estate">
         SELECT * from estate e,secondary s where e.estateId =s.estateId and s.houseid=#{houseid};
     </select>
-    
-    <!--根据房子id查询房子朝向-->
+
+    <!--5.根据房子id查询房子朝向-->
     <select id="getHouseFaceByHouseId" resultType="String">
         SELECT faceName from houseFace h,secondary s where s.houseFace=h.faceId and s.houseid=#{houseid};
     </select>
-    
 
+    <!-- 6.查询某城市的所有小区-->
+    <select id="getEstateSumBuProvinceId" resultType="Estate">
+        SELECT * from estate where provinceId=#{provinceId};
+    </select>
+
+   <!-- 7.查询某小区的所有房子-->
+    <select id="getALLHouseByEstateId" resultType="Secondary">
+        SELECT * from secondary where estateId=#{estateId}
+
+    </select>
+<!--8.模糊查询某市的所有小区-->
+    <select id="getALLHouseByProvinceLike" resultType="Estate">
+        SELECT  * from estate e ,province p<trim prefix="WHERE">
+                         <if test="likep != null">  p.provincename like  concat( '%' , #{liket}, '%')  and  p.provinceid=e.provinceid </if>
+</trim>
+    </select>
+
+    <!--9.模糊查询某区的所有小区-->
+    <select id="getALLHouseByCityLike" resultType="Estate">
+        SELECT  * from estate e ,city c<trim prefix="WHERE">
+        <if test="likec != null">  c.cityName like  concat( '%' , #{likec}, '%')  and  e.cityId=c.cityId </if>
+    </trim>
+    </select>
+    <!--10.模糊查询某街道的所有小区-->
+    <select id="getALLHouseByTownLike" resultType="Estate">
+        SELECT  * from estate e ,town t<trim prefix="WHERE">
+        <if test="liket != null">  t.townName like  concat( '%' , #{liket}, '%')  and  e.cityId=t.townId </if>
+    </trim>
+    </select>
+    <!--11.模糊查询所有小区-->
+    <select id="getALLHouseByEstateLike" resultType="Estate">
+        SELECT  * from estate e <trim prefix="WHERE">
+        <if test="likee != null">  e.estateName like  concat( '%' , #{likee}, '%')  </if>
+    </trim>
+    </select>
 
 
 
