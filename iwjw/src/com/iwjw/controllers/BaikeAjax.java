@@ -34,6 +34,7 @@ public class BaikeAjax extends HttpServlet{
         out.print(title);
         out.flush();
         out.close();
+
     }
 
     @Override

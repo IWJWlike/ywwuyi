@@ -42,11 +42,11 @@ function lll() {
                 "<c:forEach items='${lists0}' var='li'>"
                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
                 +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
-                +"<div class='list-desc'>由于目前调控政策收紧，让一些投资投机需求的热钱逐渐退出房地产领域，购房者变得更加冷静和理性。</div>"
+                +"<div class='list-desc'>${li.describeInfo}</div>"
                 +"<div class='classify-date'>"
                 +"<span class='classify' >${li.plateId}</span>"
                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
                 +"</c:forEach>"
             )
         }
@@ -59,7 +59,7 @@ function lll() {
                 +"<div class='classify-date'>"
                 +"<span class='classify' >${li.plateId}</span>"
                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
                 +"</c:forEach>"
             )
         }
@@ -72,7 +72,7 @@ function lll() {
                 +"<div class='classify-date'>"
                 +"<span class='classify' >${li.plateId}</span>"
                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
                 +"</c:forEach>"
             )
         }
@@ -85,7 +85,7 @@ function lll() {
                 +"<div class='classify-date'>"
                 +"<span class='classify' >${li.plateId}</span>"
                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
                 +"</c:forEach>"
             )
         }
@@ -98,7 +98,7 @@ function lll() {
                 +"<div class='classify-date'>"
                 +"<span class='classify' >${li.plateId}</span>"
                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
                 +"</c:forEach>"
             )
         }
@@ -111,7 +111,7 @@ function lll() {
                 +"<div class='classify-date'>"
                 +"<span class='classify' >${li.plateId}</span>"
                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
                 +"</c:forEach>"
             )
         }
@@ -124,7 +124,7 @@ function lll() {
                 +"<div class='classify-date'>"
                 +"<span class='classify' >${li.plateId}</span>"
                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
                 +"</c:forEach>"
             )
         }
@@ -137,7 +137,7 @@ function lll() {
                 +"<div class='classify-date'>"
                 +"<span class='classify' >${li.plateId}</span>"
                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
                 +"</c:forEach>"
             )
         }
@@ -150,7 +150,7 @@ function lll() {
                 +"<div class='classify-date'>"
                 +"<span class='classify' >${li.plateId}</span>"
                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
                 +"</c:forEach>"
             )
         }
