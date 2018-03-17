@@ -16,6 +16,10 @@
   <a href="lease/test" target="_blank">租房</a>
   <a href="main/goGfgl" target="_blank">咨询页面</a>
   <a href="sell/goSell" target="_blank">卖房</a>
+  <a href="main/goMap" target="_blank">5656565</a>
+  <a href="login/goAgent" target="_blank">经纪人</a>
+  <a href="login/goComplaints" target="_blank">投诉</a>
+  <a href="login/goOrders" target="_blank">订单</a>
 
   </body>
 </html>

@@ -15,7 +15,7 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping("/main")
+@RequestMapping("main")
 public class MainController {
 
     @Resource

@@ -62,4 +62,14 @@ public class LoginController extends HttpServlet{
 
           return "test";
     }
+
+    @RequestMapping("/goAgent")
+    public String goAgent(){return "agent";}
+
+    @RequestMapping("/goComplaints")
+    public String goComplaints(){return "complaints";}
+
+    @RequestMapping("/goOrders")
+    public String goOrders(){return "orders";}
+
 }

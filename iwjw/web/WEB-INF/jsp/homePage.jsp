@@ -156,17 +156,19 @@
                     <div class="banner-content">
                         <div class="banner-search">
                             <ul class="search-tabs clearfix unselectable">
-                                <li class="search-tab active" data-housetype="2" data-actionmap="/sale/map/" data-actionlist="/sale/guangzhou/">
+                                <li class="search-tab active" onclick="saleSearch()">
                                     <span class="v-middle">二手房</span>
                                 </li>
-                                <li class="search-tab " data-housetype="1" data-actionmap="/chuzu/map/" data-actionlist="/chuzu/guangzhou/">
+                                <li class="search-tab "onclick="sellSearch()">
                                     <span class="v-middle">租房</span>
                                 </li>
                             </ul>
+
+
                             <div class="search-form p-r">
                                 <p class="banner-describe ht2 ">
                                     <i class="city-name">[广州]</i>
-                                    <i class="house-num">8867</i>
+                                    <i class="house-num">${totalHouseSize}</i>
                                     <i class="house-unit">套</i>
                                     二手房在售
                                 </p>
@@ -176,11 +178,12 @@
                                     <i class="house-num">59套</i>
                                 </p>
 
-                                <form method="get" action="https://www.iwjw.com/sale/map/" class="mod-search clearfix" data-provinceid="40000" data-provincepy="guangzhou" data-quotationdate="$quotationDate" data-provincename="广州" data-housetype="2">
+                                <form method="get" id="searchs" action="http://localhost:8080/saleController/searchSale" class="mod-search clearfix" data-provinceid="40000" data-provincepy="guangzhou" data-quotationdate="$quotationDate" data-provincename="广州" data-housetype="2">
                                     <em class="triangle-top triangle-search p-a " style="left: 13px;"></em>
                                     <input type="hidden" name="t" value="1">
                                     <label class="search-label">
-                                        <em class="iconfont fo-search"><!--혳--></em>
+                                        <em class="iconfont fo-search"><img src="../../statics/images/index_images/glass.jpg"
+                                                                            style="width: 30px;height: 30px;margin-top: 10px;margin-left: -10px"> </em>
                                         <div class="index-kw-wrap" >
                                             <input type="text" class="kw-input" name="kw" placeholder="请输入小区、地铁、区域板块…" maxlength="50" autocomplete="off" autofocus="" style="width: 488px;height: 48px"><i class="iconfont search-close" title="清除内容">홈</i>
                                         </div>
@@ -631,7 +634,14 @@ var param = {
         });
     })
 </script>
-
-
+<%--搜索--%>
+<script type="text/javascript">
+    function saleSearch() {
+        document.getElementById("searchs").action="http://localhost:8080/saleController/searchSale";
+    }
+    function sellSearch() {
+        document.getElementById("searchs").action="${pageContext.request.contextPath}/main/goGfgl";
+    }
+</script>
 </body>
 </html>
