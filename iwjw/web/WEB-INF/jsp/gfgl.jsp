@@ -338,7 +338,7 @@
                                             <div class="classify-date">
                                                 <span class="classify" >${li.plateId}</span>
                                                 <span class="pub-date pad-left"><fmt:formatDate value="${li.createDate}" pattern="yyyy-MM-dd"/></span></div></div>
-                                        <a class="list-right f-l" href="https://www.iwjw.com/baike/2110/" target="_blank"><img src="../../statics/images/link_img/${li.imgUrl}" class="list-img"></a></li>
+                                        <a class="list-right f-l" href="https://www.iwjw.com/baike/2110/" target="_blank"><img src="../../statics/images/link_img/${li.imgUrl}.jpg" class="list-img"></a></li>
                                 </c:forEach>
                             </ul>
                                 <%--新闻预览模块结束--%>
