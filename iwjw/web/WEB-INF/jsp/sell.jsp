@@ -382,7 +382,7 @@
     <div class="wrap"><a href="/yezhu" class="logo"></a>
         <div class="nav">
             <ul>
-                <li><a href="javascript:void(0)" class="active">我要卖房</a></li>
+                <li><a href="javascropt:scroll(0,0)" class="active">我要卖房</a></li>
                 <li><a href="javascript:void(0)">我要估价</a></li>
                 <li><a href="javascript:void(0)">我要出租</a></li>
             </ul>

@@ -138,7 +138,7 @@
         </div>
 
 
-        <div class="header"><div class="wrap"><div class="nav"><ul><li><a href="https://gz.lianjia.com/yezhu/maifang/">我要卖房</a></li><li><a href="http://localhost:63342/AiWu_demo_lease/%E7%88%B1%E5%B1%8B%E5%90%89%E5%B1%8B-%E4%B9%B0%E6%88%BF%E5%85%88%E7%9C%8B%E8%A7%86%E9%A2%91%EF%BC%8C%E3%80%8C%E7%9C%9F%E5%AE%9E%E7%9C%81%E5%8A%9B%E3%80%8D%E7%9A%84%E6%88%BF%E4%BA%A7%E4%B8%AD%E4%BB%8B!.html?_ijt=l83ehajm771f54na5ttotmkl4f" class="active">我要出租</a></li></ul></div></div></div>
+        <div class="header"><div class="wrap"><div class="nav"><ul><li><a href="${pageContext.request.contextPath}/sell/goSell">我要卖房</a></li><li><a href="javascropt:scroll(0,0)" class="active">我要出租</a></li></ul></div></div></div>
 
         <!--<div class="g-main"><div class="m-jumbotron"><div class="tit">发布出租房源</div><div class="sub-tit">8000+全国链家门店·10万+全国经纪人·链家倾情服务15年+</div></div>--><div class="m-form">
         <div class="box-l m-entry" style="height: 480px">

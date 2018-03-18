@@ -110,11 +110,11 @@
 
 
                     <div class="nav-item nav-item-server" data-log="entrust">
-                        <a href="https://www.iwjw.com/delegation/" rel="nofollow" class="nav-item-a ">业主委托</a>
+                        <a href="${pageContext.request.contextPath}/lease/test" rel="nofollow" class="nav-item-a " target="_blank">业主委托</a>
                     </div>
 
                     <div class="nav-item" data-log="baike">
-                        <a class="nav-item-a " href="${pageContext.request.contextPath}/main/goGfgl">购房攻略 </a>
+                        <a class="nav-item-a " href="${pageContext.request.contextPath}/main/goGfgl" target="_blank">购房攻略 </a>
                     </div>
                     <div class="nav-item" data-log="ailicai">
                         <a href="https://www.iwlicai.com/" target="_blank" class="nav-item-a ailicai ">吉爱财</a>
