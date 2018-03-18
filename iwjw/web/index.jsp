@@ -22,6 +22,8 @@
   <a href="login/goOrders" target="_blank">订单</a> <br>
   <a href="main/goArticle" target="_blank">测试文章页面</a> <br>
 
-
+  <script>
+    window.location="main/home";
+  </script>
   </body>
 </html>

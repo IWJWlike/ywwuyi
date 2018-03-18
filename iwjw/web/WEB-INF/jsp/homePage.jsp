@@ -17,7 +17,7 @@
     <title>爱屋吉屋-买房先看视频，「真实省力」的房产中介!</title>
     <meta name="keywords" content="爱屋吉屋,二手房,租房,房屋买卖,房产中介">
     <meta name="description" content="爱屋吉屋，互联网房产中介!找二手房、新房、租房，透明中介、不加价、不独家、过户专业。四险一支持交易保障，马上约、实地看、快成交！">
-    <link rel="apple-touch-icon-precomposed" href="../../statics/images/logo_wx.png">
+    <link rel="apple-touch-icon-precomposed" href="${pageContext.request.contextPath}/statics/images/logo_wx.png">
     <link rel="shortcut icon" href="https://files.iwjw.com/icon/favicon.ico">
     <meta name="baidu-site-verification" content="rO1Bqg66kn">
     <meta name="viewport"
@@ -26,20 +26,27 @@
             src="${pageContext.request.contextPath}/statics/js/jquery.easydrag.handler.beta2.js"></script>
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/Scroll.css">
     <script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/jquery.slider.js"></script>
-    <link rel="stylesheet" href="../../statics/css/common_72.css">
-    <link rel="stylesheet" href="../../statics/css/index_74.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/common_72.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/index_74.css">
 
-    <link rel="stylesheet" href="../../statics/css/index_css1/index_shuffling.css">
-    <link rel="stylesheet" href="../../statics/css/index_css1/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/index_css1/index_shuffling.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/index_css1/bootstrap.min.css">
 
     <link rel="canonical" href="https://www.iwjw.com/">
 
-    <script src="../../statics/js/hm.js" async=""></script>
-    <script type="text/javascript" async="" src="../../statics/js/vds.js"></script>
+    <script src="${pageContext.request.contextPath}/statics/js/hm.js" async=""></script>
+    <script type="text/javascript" async="" src="${pageContext.request.contextPath}/statics/js/vds.js"></script>
 
     <%--<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>--%>
-    <script src="../../statics/bootstrap-3.3.7-dist/js/bootstrap.min.js"/>
+    <script src="${pageContext.request.contextPath}/statics/bootstrap-3.3.7-dist/js/bootstrap.min.js"/>
     <%--<script src="../../statics/js/index_js/index_shuffling.js"></script>--%>
+
+
+
+
+    <script>
+        window.location="${pageContext.request.contextPath}/indexController/goHomePage";
+    </script>
     <script>
         ;(function () {
             if (location.hostname.indexOf('iwjw.com') != -1 && location.hostname.indexOf('pcbeta') == -1 && location.protocol == 'http:') {
@@ -93,7 +100,8 @@
         var _hmt = _hmt || [];
     </script>
 </head>
-<body>
+<body >
+
 
 
 <!--日志提交功能-->
@@ -483,31 +491,37 @@
 
                     <div class="container">
                         <div id="full" class="carousel slide" data-ride="carousel"
-                             style="background-color: greenyellow;width: 1190px;height: 232px">
-                            <div class="carousel-inner" style="width: 1190px;height: 232px">
+                             style="background-color: greenyellow;width: 1190px;height: 270px">
+                            <div class="carousel-inner" style="width: 1190px;height: 265px;border: blue solid 1px">
                                 <ul class="row item active" style="border: red solid 1px">
+                                   <%-- <c:forEach items="${homeImgLists}" var="img" varStatus="status">
+                                        <li class="col-xs-4">
+                                        <img src="${img.imgUrl}" class="img-responsive">
+                                        </li>
+                                    </c:forEach>--%>
+
                                     <li class="col-xs-4">
-                                        <img src="http://placehold.it/200/6dc066/ffffff&text=1" class="img-responsive">
+                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/dfd1_1_thumb.jpg" class="img-responsive">
                                     </li>
                                     <li class="col-xs-4">
-                                        <img src="http://placehold.it/200/6dc066/ffffff&text=2" class="img-responsive">
+                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/bl1_1_thumb.jpg" class="img-responsive">
                                     </li>
                                     <li class="col-xs-4">
-                                        <img src="http://placehold.it/200/6dc066/ffffff&text=3" class="img-responsive">
+                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/qianxi1_1_thumb.jpg" class="img-responsive">
                                     </li>
                                     <li class="col-xs-4">
-                                        <img src="http://placehold.it/200/6dc066/ffffff&text=4" class="img-responsive">
+                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/yx1_1_thumb.jpg" class="img-responsive">
                                     </li>
                                 </ul>
                                 <ul class="row item ">
                                     <li class="col-xs-4">
-                                        <img src="http://placehold.it/200/6dc066/ffffff&text=5" class="img-responsive">
+                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/zsg1_1_thumb.jpg" class="img-responsive">
                                     </li>
                                     <li class="col-xs-4">
-                                        <img src="http://placehold.it/200/6dc066/ffffff&text=6" class="img-responsive">
+                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/zsg1_1_thumb.jpg" class="img-responsive">
                                     </li>
                                     <li class="col-xs-4">
-                                        <img src="http://placehold.it/200/6dc066/ffffff&text=7" class="img-responsive">
+                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/bl1_1_thumb.jpg" class="img-responsive">
                                     </li>
                                     <li class="col-xs-4">
                                         <img src="http://placehold.it/200/6dc066/ffffff&text=8" class="img-responsive">
