@@ -106,6 +106,16 @@ public class MainController {
 
     @RequestMapping("/goUser")
     public String goUser(){return "agent";}
+
+    /*文章*/
+    @RequestMapping("/goArticle")
+    public String goArticle(Model model){
+        BaikeList baikeArticle1 = baikeListService.getArticle(1);
+
+        model.addAttribute("baikeArticle1",baikeArticle1);
+
+        return "baike_article";
+    }
 }
 
 

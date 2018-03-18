@@ -28,6 +28,9 @@
     <select id="getLikes" resultType="BaikeList">
         SELECT * FROM baikelist ORDER BY likes DESC LIMIT 0,8
     </select>
+    <select id="getArticle" resultType="Baikelist">
+        SELECT * FROM  baikelist WHERE id=#{id}
+    </select>
 
 
 </mapper>

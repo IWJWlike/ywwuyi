@@ -48,4 +48,11 @@ public class BaikeListServiceImpl implements BaikeListService {
     public List<BaikeList> getLikes() {
         return baikeListMapper.getLikes();
     }
+
+    @Override
+    public BaikeList getArticle(int id) {
+        return baikeListMapper.getArticle(id);
+    }
+
+
 }

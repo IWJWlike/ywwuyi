@@ -25,4 +25,7 @@ public interface BaikeListService {
     BaikeList getThird();
     //获取likes数前八条
     List<BaikeList> getLikes();
+
+    //获取文章
+    BaikeList getArticle(int id);
 }
