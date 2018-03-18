@@ -8,6 +8,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <html>
 <head>
     <script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/jquery-1.8.3.min.js"></script>
@@ -352,7 +354,7 @@
 
                                 <a href="https://www.iwjw.com/baike/2110/" data-cid="2110" data-pos="1" target="_blank" class="title fs-nowrap point-link-gf">${newst.title}</a>
                                 <p class="des">${newst.describeInfo}</p>
-                                <p class="time">${newst.createDate}发布</p>
+                                <p class="time"><fmt:formatDate value="${newst.createDate}" pattern="yyyy-MM-dd"/>发布</p>
                             </div>
                             <div class="cc-section-r">
                                 <a href="https://www.iwjw.com/baike/2110/" data-cid="2110" data-pos="1" class="point-link-gf" target="_blank">
@@ -364,7 +366,7 @@
                             <div class="cc-section-l">
                                 <a href="https://www.iwjw.com/baike/2109/" data-cid="2109" data-pos="2" target="_blank" class="title fs-nowrap point-link-gf">${second.title}</a>
                                 <p class="des">${second.describeInfo}</p>
-                                <p class="time">${second.createDate}发布</p>
+                                <p class="time"><fmt:formatDate value="${second.createDate}" pattern="yyyy-MM-dd"/>发布</p>
                             </div>
                             <div class="cc-section-r">
                                 <a href="https://www.iwjw.com/baike/2109/" data-cid="2109" data-pos="2" target="_blank" class="point-link-gf">
@@ -374,7 +376,7 @@
                         </div>
                         <div class="cc-section-b clearfix">
                             <a href="https://www.iwjw.com/baike/2108/" data-cid="2108" data-pos="3" target="_blank" class="title fs-nowrap point-link-gf">${third.title}</a>
-                            <span class="time">${third.createDate}发布</span>
+                            <span class="time"><fmt:formatDate value="${third.createDate}" pattern="yyyy-MM-dd"/>发布</span>
                             <a href="https://www.iwjw.com/baike/guangzhou/" data-cid="" data-pos="4" target="_blank" class="all point-link-gf">查看全部&#155</a>
                         </div>
                     </div>
