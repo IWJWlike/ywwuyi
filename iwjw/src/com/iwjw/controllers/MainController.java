@@ -1,10 +1,8 @@
 package com.iwjw.controllers;
 
 import com.iwjw.entity.BaikeList;
-import com.iwjw.entity.Estate;
 import com.iwjw.entity.User;
 import com.iwjw.service.BaikeListService;
-import com.iwjw.service.HouseImgListService;
 import com.iwjw.service.UserService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
@@ -13,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.iwjw.service.impl.BaikeListServiceImpl;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -25,8 +22,6 @@ public class MainController {
     BaikeListService baikeListService;
     @Resource
     UserService userService;
-    @Resource
-    HouseImgListService houseImgListService;
 
     @RequestMapping("/test")
     public String goTest(Model model) {
@@ -61,17 +56,6 @@ public class MainController {
         model.addAttribute("newst", newst);
         model.addAttribute("second", second);
         model.addAttribute("third", third);
-
-        /*广州房子二手房总量*/
-        List<Estate>lis=houseImgListService.getEstateSumBuProvinceId("1");
-        List list=new ArrayList();
-        for (int i=0;i<lis.size();i++){
-            String index=lis.get(i).getEstateId()+"";
-            list.add(houseImgListService.getALLHouseByEstateId(index));
-        }
-        model.addAttribute("totalHouseSize", lis.size());
-
-
         return "homePage";
     }
 
@@ -96,10 +80,45 @@ public class MainController {
     @RequestMapping("/goMap")
     public String goMap(){return "baiduMap";}
 
-   @RequestMapping("/goGfgl")
-    public String goGfgl() {
+    @RequestMapping("/goGfgl")
+    public String goGfgl(Model model) {
+        List<BaikeList> lists0 = baikeListService.getBaikeList();
+        List<BaikeList> lists1 = baikeListService.getBaikeListByPlate("热点楼市");
+        List<BaikeList> lists2 = baikeListService.getBaikeListByPlate("最新政策");
+        List<BaikeList> lists3 = baikeListService.getBaikeListByPlate("购房须知");
+        List<BaikeList> lists4 = baikeListService.getBaikeListByPlate("选房攻略");
+        List<BaikeList> lists5 = baikeListService.getBaikeListByPlate("签约要点");
+        List<BaikeList> lists6 = baikeListService.getBaikeListByPlate("贷款指南");
+        List<BaikeList> lists7 = baikeListService.getBaikeListByPlate("缴税过户");
+        List<BaikeList> lists8 = baikeListService.getBaikeListByPlate("典型案例");
+
+        model.addAttribute("lists0", lists0);
+        model.addAttribute("lists1", lists1);
+        model.addAttribute("lists2", lists2);
+        model.addAttribute("lists3", lists3);
+        model.addAttribute("lists4", lists4);
+        model.addAttribute("lists5", lists5);
+        model.addAttribute("lists6", lists6);
+        model.addAttribute("lists7", lists7);
+        model.addAttribute("lists8", lists8);
         return "gfgl";
     }
+
+    @RequestMapping("/goUser")
+    public String goUser(){return "agent";}
+
+    /*文章*/
+    @RequestMapping("/goArticle")
+    public String goArticle(Model model){
+        BaikeList baikeArticle1 = baikeListService.getArticle(1);
+
+        model.addAttribute("baikeArticle1",baikeArticle1);
+
+        return "baike_article";
+    }
+
+    @RequestMapping("/goCal")
+    public String goCal(){return "calculator";}
 }
 
 

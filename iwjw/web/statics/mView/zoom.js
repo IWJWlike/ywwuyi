@@ -103,8 +103,8 @@ ComplexCustomOverlay.prototype.initialize = function (map) {
         that._obj.json3.data.markList.forEach(element => {
             var point1 = new BMap.Point(element.lon, element.lat);
             //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
-            var myCompOverlays = new ComplexCustomOverlay_small(point1, element.name, element.houseNum + "套", getBoundary(
-                that._obj.firstJson.data.province.text + that._text + element.name), obj);
+            var myCompOverlays = new ComplexCustomOverlay_small(point1, element.name, element.houseNum + "套",that._obj);
+            // getBoundary(that._obj.firstJson.data.province.text + that._text + element.name), obj);
             // console.log(obj-bf.firstJson.data.province.text+ that._text  + element.name);
             //将覆盖物添加到地图
             map.addOverlay(myCompOverlays);
@@ -129,11 +129,12 @@ ComplexCustomOverlay.prototype.draw = function () {
 //=================================两级点===================================================
 
 // 自定义覆盖物
-function ComplexCustomOverlay_small(point, text, sub_text, boundary, obj) {
+// function ComplexCustomOverlay_small(point, text, sub_text, boundary, obj) {
+function ComplexCustomOverlay_small(point, text, sub_text, obj) {
     this._point = point;
     this._text = text;
     this._sub_text = sub_text;
-    this._boundary = boundary; //行政区域覆盖物集合
+    // this._boundary = boundary; //行政区域覆盖物集合
     this._obj = obj; //json
 }
 

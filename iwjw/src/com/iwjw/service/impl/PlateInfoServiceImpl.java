@@ -11,7 +11,6 @@ import java.util.List;
 
 @Service("plateInfoServiceImpl")
 public class PlateInfoServiceImpl implements PlateInfoService {
-
     @Resource
     PlateInfoMapper PlateInfoMapper;
     @Override

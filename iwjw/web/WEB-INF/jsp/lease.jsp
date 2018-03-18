@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/jquery-1.8.3.min.js"></script>
@@ -99,7 +100,35 @@
                         <a href="https://www.iwjw.com/appDownPage/" class="nav-item-a "><!--<i class="iconfont if-mobile">--></i>APP</a>
                     </div>
                 </dt>
-                <dd class="header-right clearfix"><div class="nav-item"><a href="https://www.iwjw.com/delegation/#" class="login none nav-item-a login-require " target="_blank"><i class="nav-item-txt">登录<span class="slash">/</span>注册</i></a></div><div class="nav-item message-nav" id="message-nav"><div class="nav-message-wrap" data-reactid=".1"></div></div>
+                <c:if test="${vistor==null}">
+                <dd class="header-right clearfix"><div  class="nav-item"><a id="one" href="javascript:showBox()" class="login none nav-item-a login-require " target="_blank"><i class="nav-item-txt">登录<span class="slash">/</span>注册</i></a></div><div class="nav-item message-nav" id="message-nav"><div class="nav-message-wrap" data-reactid=".0"></div></div>
+                    </c:if>
+                    <c:if test="${vistor != null}">
+                <dd class="header-right clearfix"><div class="nav-item"><a data-url="/userinfo/" class="login  nav-item-a login-require " target="_blank"><em class="iconfont if-menu"></em><i class="nav-item-txt">135****0667
+                    <span class="shape-circle"></span></i></a><div class="user-down-wrap arrow-top nav-down-wrap"><a class="user-item" href="/userinfo/" id="username"><span class="iconfont">핰</span>我的账户
+
+                    <i class="follow-point"></i></a><a class="user-item" href="/collectHouseList/" id="FollowDynamic"><span class="iconfont">홄</span>关注列表
+
+                </a><!-- web 6.9 已下线 --><!-- <a class="user-item appoint-list" href="/seeHouseList/" id = "Itinerary"><span class="iconfont">&#xd571;</span>约看清单
+
+   </a> --><a class="user-item house-schedule" href="/appointmentList/" id="Showings"><span class="iconfont">혤</span>看房日程
+
+                </a><a class="user-item user-item-payorder" href="/order/"><span class="iconfont">퐀</span>合同订单
+
+                </a><a class="user-item user-item-delegate_mng" href="/delegateManage/"><span class="iconfont">퐁</span>我的委托
+
+                </a><a class="user-item user-item-agent" href="/agent/"><span class="iconfont">퐄</span>我的经纪人
+
+                </a><a class="user-item user-item-complains" href="/complains/"><span class="iconfont">퐐</span>我的投诉
+
+                </a><a class="user-item user-item-logout"><span class="iconfont">퐅</span>退出
+                </a></div><!--  --></div><div class="nav-item message-nav" <%--id="message-nav"--%>><div class="nav-message-wrap" data-reactid=".0"><a class="nav-item-a message show-msg-down" data-reactid=".0.$1"><i class="nav-item-txt line" data-reactid=".0.$1.0"><i data-reactid=".0.$1.0.0">消息</i></i></a><div id="message-down-wrap" class="message-down-wrap nav-down-wrap arrow-top " data-reactid=".0.$2"><div class="message-list-wrap" data-reactid=".0.$2.0"><div class="msg-center-wrap" data-reactid=".0.$2.0.0"><a class="msg-center-a clearfix" href="/message/activity/" data-reactid=".0.$2.0.0.0"><div class="bell-bg f-l" data-reactid=".0.$2.0.0.0.0"><i class="iconfont if-bell" data-reactid=".0.$2.0.0.0.0.0"></i></div><p class="msg-center-tt f-l bold" data-reactid=".0.$2.0.0.0.1">消息中心</p></a></div><ul class="iwjwim-body" data-reactid=".0.$2.0.1"></ul></div></div></div></div>
+
+
+
+
+                </dd>
+                </c:if>
 
 
 
@@ -109,7 +138,7 @@
         </div>
 
 
-        <div class="header"><div class="wrap"><div class="nav"><ul><li><a href="https://gz.lianjia.com/yezhu/maifang/">我要卖房</a></li><li><a href="http://localhost:63342/AiWu_demo_lease/%E7%88%B1%E5%B1%8B%E5%90%89%E5%B1%8B-%E4%B9%B0%E6%88%BF%E5%85%88%E7%9C%8B%E8%A7%86%E9%A2%91%EF%BC%8C%E3%80%8C%E7%9C%9F%E5%AE%9E%E7%9C%81%E5%8A%9B%E3%80%8D%E7%9A%84%E6%88%BF%E4%BA%A7%E4%B8%AD%E4%BB%8B!.html?_ijt=l83ehajm771f54na5ttotmkl4f" class="active">我要出租</a></li></ul></div></div></div>
+        <div class="header"><div class="wrap"><div class="nav"><ul><li><a href="${pageContext.request.contextPath}/sell/goSell">我要卖房</a></li><li><a href="javascropt:scroll(0,0)" class="active">我要出租</a></li></ul></div></div></div>
 
         <!--<div class="g-main"><div class="m-jumbotron"><div class="tit">发布出租房源</div><div class="sub-tit">8000+全国链家门店·10万+全国经纪人·链家倾情服务15年+</div></div>--><div class="m-form">
         <div class="box-l m-entry" style="height: 480px">
@@ -208,8 +237,8 @@
         </div>
 
         <!-- to top -->
-        <div class="suspend-div suspend-top">
-            <a class="to-top" href="https://www.iwjw.com/delegation/#iwjw">
+        <div class="suspend-div suspend-top" style="display: block;">
+            <a class="to-top" href="javascript:scroll(0,0)">
                 <em class="iconfont"></em>
             </a>
             <em class="text">回到顶部

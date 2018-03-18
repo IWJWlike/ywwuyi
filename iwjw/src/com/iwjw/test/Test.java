@@ -41,14 +41,9 @@ public class Test {
         }*/
 
         ApplicationContext act = new ClassPathXmlApplicationContext("applicationContext-mybatis.xml");
-        UserService userService = (UserService) act.getBean("userServeImpl");
-        String uPhone = "13580430327";
-        User lists = userService.selectUser(uPhone);
-        if (userService.selectUser(uPhone)==(null)){
-            System.out.println("11111111");
-            userService.createUser(uPhone);
-        }
-        User vistor = userService.selectUser(uPhone);
-        System.out.println(vistor.getUid());
+        BaikeListService userService = (BaikeListService) act.getBean("baikeListServiceImpl");
+        String plateId = null;
+        int lists = userService.getCount(plateId);
+        System.out.println(lists);
     }
 }
