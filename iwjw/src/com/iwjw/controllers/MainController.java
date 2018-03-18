@@ -116,6 +116,9 @@ public class MainController {
 
         return "baike_article";
     }
+
+    @RequestMapping("/goCal")
+    public String goCal(){return "calculator";}
 }
 
 

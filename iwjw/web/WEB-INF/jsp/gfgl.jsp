@@ -16,7 +16,7 @@
     <title>广州二手房买卖-广州爱屋吉屋</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
-
+    <script type="text/javascript" src="../../statics/js/jquery-1.8.3.min.js"></script>
     <link rel="apple-touch-icon-precomposed" href="//resource.iwjw.com/iwjw-pc/img/common/logo_wx.png"/>
     <link rel="shortcut icon" href="//files.iwjw.com/icon/favicon.ico">
     <meta name="baidu-site-verification" content="rO1Bqg66kn"/>
@@ -82,7 +82,7 @@
 
 
 <!--日志提交功能-->
-
+<%--主体部分--%>
 <div id="iwjw" class="short-footer">
     <div class="iwjw-wrap">
         <div class="mod-header " id="Top">
@@ -306,29 +306,28 @@
                         <div data-reactid=".0">
                             <%--新闻类型start--%>
                                 <ul class="baike-nav clearfix">
-                                    <li  class="nav-li f-l" data-reactid=".0.0.$0">
-                                        <a href="javascript:void(0)" id="baike1" class="nav-a" data-reactid=".0.0.$0.0">全部文章</a></li>
-                                    <li  class="nav-li f-l" data-reactid=".0.0.$1">
-                                        <a href="javascript:void(0)" id="baike2" class="nav-a" data-reactid=".0.0.$1.0">热点楼市</a></li>
-                                    <li  class="nav-li f-l" data-reactid=".0.0.$2">
-                                        <a href="javascript:void(0)" id="baike3" class="nav-a" data-reactid=".0.0.$2.0">最新政策</a></li>
-                                    <li  class="nav-li f-l" data-reactid=".0.0.$3">
-                                        <a href="javascript:void(0)" id="baike4" class="nav-a" data-reactid=".0.0.$3.0">购房须知</a></li>
-                                    <li class="nav-li f-l" data-reactid=".0.0.$4">
-                                        <a href="javascript:void(0)" id="baike5" class="nav-a" data-reactid=".0.0.$4.0">选房攻略</a></li>
-                                    <li class="nav-li f-l" data-reactid=".0.0.$5">
-                                        <a href="javascript:void(0)" id="baike6" class="nav-a" data-reactid=".0.0.$5.0">签约要点</a></li>
-                                    <li class="nav-li f-l" data-reactid=".0.0.$6">
-                                        <a href="javascript:void(0)" id="baike7" class="nav-a" data-reactid=".0.0.$6.0">贷款指南</a></li>
-                                    <li class="nav-li f-l" data-reactid=".0.0.$7">
-                                        <a href="javascript:void(0)" id="baike8" class="nav-a" data-reactid=".0.0.$7.0">缴税过户</a></li>
-                                    <li class="nav-li f-l" data-reactid=".0.0.$8">
-                                        <a href="javascript:void(0)" id="baike9" class="nav-a" data-reactid=".0.0.$8.0">典型案例</a></li>
+                                    <li  class="nav-li f-l" >
+                                        <a href="javascript:void(0)" id="baike1" class="nav-a">全部文章</a></li>
+                                    <li  class="nav-li f-l" >
+                                        <a href="javascript:void(0)" id="baike2" class="nav-a">热点楼市</a></li>
+                                    <li  class="nav-li f-l" >
+                                        <a href="javascript:void(0)" id="baike3" class="nav-a">最新政策</a></li>
+                                    <li  class="nav-li f-l" >
+                                        <a href="javascript:void(0)" id="baike4" class="nav-a">购房须知</a></li>
+                                    <li class="nav-li f-l">
+                                        <a href="javascript:void(0)" id="baike5" class="nav-a">选房攻略</a></li>
+                                    <li class="nav-li f-l">
+                                        <a href="javascript:void(0)" id="baike6" class="nav-a">签约要点</a></li>
+                                    <li class="nav-li f-l">
+                                        <a href="javascript:void(0)" id="baike7" class="nav-a">贷款指南</a></li>
+                                    <li class="nav-li f-l">
+                                        <a href="javascript:void(0)" id="baike8" class="nav-a" >缴税过户</a></li>
+                                    <li class="nav-li f-l">
+                                        <a href="javascript:void(0)" id="baike9" class="nav-a">典型案例</a></li>
                                 </ul>
                                 <%--新闻类型end--%>
                                 <%--新闻预览模块--%>
                             <ul id="zixun" class="baike-list" data-reactid=".0.1">
-
                                 <c:forEach items="${lists0}" var="li">
                                     <li class="list-li clearfix">
                                         <div class="list-left f-l">
@@ -338,7 +337,7 @@
                                             <div class="classify-date">
                                                 <span class="classify" >${li.plateId}</span>
                                                 <span class="pub-date pad-left"><fmt:formatDate value="${li.createDate}" pattern="yyyy-MM-dd"/></span></div></div>
-                                        <a class="list-right f-l" href="https://www.iwjw.com/baike/2110/" target="_blank"><img src="../../statics/images/link_img/${li.imgUrl}" class="list-img"></a></li>
+                                        <a class="list-right f-l" href="https://www.iwjw.com/baike/2110/" target="_blank"><img src="../../statics/images/link_img/${li.imgUrl}.jpg" class="list-img"></a></li>
                                 </c:forEach>
                             </ul>
                                 <%--新闻预览模块结束--%>
@@ -346,9 +345,8 @@
                     </div>
                 </div>
 
-
+<%--切换内容script--%>
                 <script>
-
                     $(".baike-nav").on("click","a",function () {
                         alert($(this).html())
                         var plateName = $(this).html();
@@ -361,11 +359,11 @@
                                 "<c:forEach items='${lists0}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
                                 +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
-                                +"<div class='list-desc'>由于目前调控政策收紧，让一些投资投机需求的热钱逐渐退出房地产领域，购房者变得更加冷静和理性。</div>"
+                                +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
                                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -374,11 +372,11 @@
                                 "<c:forEach items='${lists1}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
                                 +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
-                                +"<div class='list-desc'>由于目前调控政策收紧，让一些投资投机需求的热钱逐渐退出房地产领域，购房者变得更加冷静和理性。</div>"
+                                +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
                                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -387,11 +385,11 @@
                                 "<c:forEach items='${lists2}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
                                 +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
-                                +"<div class='list-desc'>由于目前调控政策收紧，让一些投资投机需求的热钱逐渐退出房地产领域，购房者变得更加冷静和理性。</div>"
+                                +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
                                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -400,11 +398,11 @@
                                 "<c:forEach items='${lists3}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
                                 +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
-                                +"<div class='list-desc'>由于目前调控政策收紧，让一些投资投机需求的热钱逐渐退出房地产领域，购房者变得更加冷静和理性。</div>"
+                                +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
                                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -413,11 +411,11 @@
                                 "<c:forEach items='${lists4}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
                                 +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
-                                +"<div class='list-desc'>由于目前调控政策收紧，让一些投资投机需求的热钱逐渐退出房地产领域，购房者变得更加冷静和理性。</div>"
+                                +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
                                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -426,11 +424,11 @@
                                 "<c:forEach items='${lists5}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
                                 +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
-                                +"<div class='list-desc'>由于目前调控政策收紧，让一些投资投机需求的热钱逐渐退出房地产领域，购房者变得更加冷静和理性。</div>"
+                                +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
                                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -439,11 +437,11 @@
                                 "<c:forEach items='${lists6}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
                                 +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
-                                +"<div class='list-desc'>由于目前调控政策收紧，让一些投资投机需求的热钱逐渐退出房地产领域，购房者变得更加冷静和理性。</div>"
+                                +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
                                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -452,11 +450,11 @@
                                 "<c:forEach items='${lists7}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
                                 +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
-                                +"<div class='list-desc'>由于目前调控政策收紧，让一些投资投机需求的热钱逐渐退出房地产领域，购房者变得更加冷静和理性。</div>"
+                                +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
                                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -465,11 +463,11 @@
                                 "<c:forEach items='${lists8}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
                                 +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
-                                +"<div class='list-desc'>由于目前调控政策收紧，让一些投资投机需求的热钱逐渐退出房地产领域，购房者变得更加冷静和理性。</div>"
+                                +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
                                 +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/fde82646dad344d78eecf400d79924c6.jpg' class='list-img'></a></li>"
+                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -483,6 +481,16 @@
 
                 </script>
 
+                <%--分页页码块--%>
+                <div class="page-container">
+                    <div class="mod-page">
+                        <i class="page-item stateful if-triangle-left">上一页</i>
+                        <c:forEach items="${pages}" var="page">
+                            <a class="page-item stateful">${page}</a>
+                        </c:forEach>
+                        <i class="page-item stateful if-triangle-right">下一页</i>
+                    </div>
+                </div>
                 <div class="right f-l">
                     <a id="ccs-topic-content" class="ccs-topic-content" href="/caichan/" target="_blank"></a>
                     <a class="special" href="javascript:void(0)" target="_blank" data-logid="8"
@@ -512,85 +520,14 @@
                     </div>
                 </div>
             </div>
-            <script type="text/javascript">
-                window.pageConfig = window.pageConfig || {};
-                window.pageConfig.baike = {
-                    plateList: [{"id": 0, "title": "全部文章", "imageUrl": null}, {
-                        "id": 52782,
-                        "title": "热点楼市",
-                        "imageUrl": "//files.iwjw.com/directwaterbucket/newPurchaseEncy/2016/11/21/779ef6c4275e4152b50361daec4ac0b1"
-                    }, {
-                        "id": 51794,
-                        "title": "最新政策",
-                        "imageUrl": "//files.iwjw.com/directwaterbucket/newPurchaseEncy/2016/11/21/01842bb6f47d47b2b78f68851c3a6545"
-                    }, {
-                        "id": 50156,
-                        "title": "购房须知",
-                        "imageUrl": "//files.iwjw.com/directwaterbucket/newPurchaseEncy/2016/11/21/0e1b9df5d89b46ee98a4bf78c5cfcfe3"
-                    }, {
-                        "id": 51988,
-                        "title": "选房攻略",
-                        "imageUrl": "//files.iwjw.com/directwaterbucket/newPurchaseEncy/2016/11/21/027b1f228541440db7fe428de1e5d312"
-                    }, {
-                        "id": 52126,
-                        "title": "签约要点",
-                        "imageUrl": "//files.iwjw.com/directwaterbucket/newPurchaseEncy/2016/11/21/c333545b342a4b61ac788118f4f31761"
-                    }, {
-                        "id": 52208,
-                        "title": "贷款指南",
-                        "imageUrl": "//files.iwjw.com/directwaterbucket/newPurchaseEncy/2016/11/21/29faa51e65d64ac29ab3e0cec0531e9f"
-                    }, {
-                        "id": 50035,
-                        "title": "缴税过户",
-                        "imageUrl": "//files.iwjw.com/directwaterbucket/newPurchaseEncy/2016/11/21/22e9c2e7753d45d6b0442d5f7d0b836e"
-                    }, {
-                        "id": 50898,
-                        "title": "典型案例",
-                        "imageUrl": "//files.iwjw.com/directwaterbucket/newPurchaseEncy/2016/11/21/693712899fc844f1b51889882e075fdf"
-                    }],
-                }
-            </script>
-
 
         </div>
     </div>
 </div>
 
-<script src="js/gt_1.js"></script>
 
-<script type="text/javascript">
-    ;!function () {
-        var popTpl = '<div class="ie-pop-wrap">' +
-            '<div class="ie-pop-wrap-mask"></div>' +
-            '<div class="ie-pop-layer-wrap">' +
-            '<div class="ie-pop-layer">' +
-            '<img class="ie-pop-layer-qrcode" src="../../statics/images/picture/getdynamicqrimage_1.action" />' +
-            '<div class="ie-pop-layer-links">' +
-            '<a target="_blank" href="javascript:void(0)">360安全</a>' +
-            '<a target="_blank" href="javascript:void(0)">QQ浏览器</a>' +
-            '<a target="_blank" href="javascript:void(0)">2345</a>' +
-            '<a target="_blank" href="javascript:void(0)">搜狗高速</a>' +
-            '</div>' +
-            '</div>' +
-            '</div>' +
-            '</div>';
 
-        function isEdge() {
-            var userAgent = window.navigator.userAgent;
-            return userAgent.indexOf("Edge") > -1;
-        }
 
-        function isIE() {
-            return !!window.ActiveXObject || ("ActiveXObject" in window);
-        }
-
-        if (isIE() || isEdge()) {
-            var container = document.createElement('div');
-            container.innerHTML = popTpl;
-            document.body.appendChild(container.children[0]);
-        }
-    }();
-</script>
 <script type='text/javascript'>
     var _vds = _vds || [];
     window._vds = _vds;
@@ -611,9 +548,6 @@
 </script>
 <!--[if IE 8]>
 <script src='js/es5-shim-sham_5.5_1.js'></script><![endif]-->
-<script src='js/common_72_1.js'></script>
-<script src='js/baike_72_1.js'></script>
-<script src='' async></script>
 <div class="mod-footer short-shift">
     <div class="footer-inner">
         <div class="footer-top clearfix">

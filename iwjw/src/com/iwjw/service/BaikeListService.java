@@ -2,6 +2,7 @@ package com.iwjw.service;
 
 import com.iwjw.entity.BaikeList;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -25,6 +26,8 @@ public interface BaikeListService {
     BaikeList getThird();
     //获取likes数前八条
     List<BaikeList> getLikes();
+    //获取条数
+    Integer getCount(@RequestParam(value = "plateId",required = false) String plateId);
 
     //获取文章
     BaikeList getArticle(int id);

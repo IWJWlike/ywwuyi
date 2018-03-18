@@ -2,11 +2,16 @@ package com.iwjw.utils;
 
 
 
+import com.iwjw.entity.BaikeList;
+import com.iwjw.service.BaikeListService;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.annotation.Resource;
 import java.util.List;
 
 
 public class PageUtils {
-	/*//页量
+	//页量
 	private int pageSize=2;
 	//当前页
 	private int indexPage=1;
@@ -15,15 +20,15 @@ public class PageUtils {
 	//总条数
 	private int totalCount;
 	
-	private List<Product> products;
-	
-	private ProductServiceImpl productServiceImpl = new ProductServiceImpl();
+	private List<BaikeList> products;
+	@Resource
+	private BaikeListService baikeListService;
 	
 	public int getPageSize() {
 		return pageSize;
 	}
 
-	public List<Product> getEmps() {
+	public List<BaikeList> getEmps() {
 		return products;
 	}
 
@@ -35,7 +40,7 @@ public class PageUtils {
 		this.totalCount = totalCount;
 	}
 
-	public void setEmps(List<Product> emps) {
+	public void setEmps(List<BaikeList> emps) {
 		this.products = products;
 	}
 
@@ -60,14 +65,13 @@ public class PageUtils {
 		return totalPage;
 	}
 
-	public int getTotalCount() {
-		totalCount = productServiceImpl.count();
+	public int getTotalCount(@RequestParam(value = "plateId",required = false)String plateId) {
+		totalCount = baikeListService.getCount(plateId);
 		return totalCount;
 	}
 
 
 
-*/
 
 
 	
