@@ -55,8 +55,6 @@ public class BaikeListServiceImpl implements BaikeListService {
         return baikeListMapper.getArticle(id);
     }
 
-
-
     @Override
     public Integer getCount(String plateId) {
         return baikeListMapper.getCount(plateId);
