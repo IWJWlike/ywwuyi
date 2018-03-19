@@ -28,7 +28,6 @@ public class BaikeAjax extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("1111111111111111111111111111111111111");
         String title = "";
         String plateName = req.getParameter("plateName");
         if (plateName.equals("全部文章")){

@@ -41,9 +41,9 @@ public class Test {
         }*/
 
         ApplicationContext act = new ClassPathXmlApplicationContext("applicationContext-mybatis.xml");
-        PlateInfoService userService = (PlateInfoService) act.getBean("plateInfoServiceImpl");
-        String uPhone = "热点楼市";
-        PlateInfo lists = userService.getTitleNum(uPhone);
-        System.out.println(lists.getPlateId());
+        BaikeListService userService = (BaikeListService) act.getBean("baikeListServiceImpl");
+        String plateId = null;
+        int lists = userService.getCount(plateId);
+        System.out.println(lists);
     }
 }

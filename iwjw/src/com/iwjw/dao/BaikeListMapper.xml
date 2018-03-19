@@ -28,6 +28,21 @@
     <select id="getLikes" resultType="BaikeList">
         SELECT * FROM baikelist ORDER BY likes DESC LIMIT 0,8
     </select>
+    <select id="getArticle" resultType="Baikelist">
+        SELECT * FROM  baikelist WHERE id=#{id}
+    </select>
+
+    <select id="getCount" resultType="Integer">
+        SELECT count(1) FROM baikelist
+        <trim prefix="WHERE">
+            <if test="plateId != null">
+                     plateId = #{plateId}
+                <!--<if test="plateId != ''">-->
+                <!--</if>-->
+            </if>
+        </trim>
+
+    </select>
 
 
 </mapper>

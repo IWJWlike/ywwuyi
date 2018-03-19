@@ -26,4 +26,11 @@ public interface BaikeListMapper {
     BaikeList getThird();
     //获取likes数前八条
     List<BaikeList> getLikes();
+    //获取条数
+    Integer getCount();
+    //获取条数
+    Integer getCount(String plateId);
+
+    //获取文章
+    BaikeList getArticle(int id);
 }

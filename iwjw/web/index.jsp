@@ -19,7 +19,11 @@
   <a href="main/goMap" target="_blank">5656565</a>
   <a href="login/goAgent" target="_blank">经纪人</a>
   <a href="login/goComplaints" target="_blank">投诉</a>
-  <a href="login/goOrders" target="_blank">订单</a>
+  <a href="login/goOrders" target="_blank">订单</a> <br>
+  <a href="main/goArticle" target="_blank">测试文章页面</a> <br>
 
+  <script>
+    window.location="main/home";
+  </script>
   </body>
 </html>
