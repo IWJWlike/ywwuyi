@@ -214,14 +214,20 @@ img {
     color: #757575;
 }
 
-.header-wrap .nav-item-a.active,
-.mod-head .header-right .nav-item-a.active {
+/*.header-wrap .nav-item .active,*/
+/*.mod-head .header-right .nav-item .active {*/
+    /*color: #212121;*/
+    /*text-decoration: none;*/
+    /*font-weight: 700;*/
+    /*border-bottom: 3px solid #212121;*/
+/*}*/
+.header-wrap .active,
+.mod-head .header-right .nav-item .active {
     color: #212121;
     text-decoration: none;
     font-weight: 700;
     border-bottom: 3px solid #212121;
 }
-
 .header-right {
     position: absolute;
     right: 0;
@@ -244,7 +250,7 @@ img {
 }
 
 .header-left .nav-item:hover {
-    border-bottom: 3px solid #212121;
+border-bottom: 3px solid #212121;
 }
 
 .header-right .nav-item {
@@ -1404,6 +1410,7 @@ textarea {
     overflow: hidden;
     white-space: nowrap;
 }
+
 .mod-search .hint-item .txt-wrap {
     display: inline-block;
     vertical-align: middle;

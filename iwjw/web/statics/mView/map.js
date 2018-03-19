@@ -42,7 +42,7 @@ $.getJSON("../../statics/json/obj.js", function (result) {
         var point1 = new BMap.Point(element.lon, element.lat);
         //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
         var myCompOverlay = new ComplexCustomOverlay(point1, element.name, element.houseNum + "套", getBoundary(
-            obj.firstJson.data.province.text + element.name), obj);
+            obj.firstJson.data.province.text + element.name), 1,  function(){console.log("点击1----")});
         //将覆盖物添加到地图
         indexmap.addOverlay(myCompOverlay);
     });
@@ -69,7 +69,8 @@ $.getJSON("../../statics/json/obj.js", function (result) {
                 //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
                 var myCompOverlay = new ComplexCustomOverlay(point1, element.name, element.houseNum +
                     "套", getBoundary(
-                    obj.firstJson.data.province.text + element.name), obj);
+                    obj.firstJson.data.province.text + element.name), 1,  function(){console.log("点击1----")});
+                myCompOverlay.initialize(indexmap); //将地图实例传入
                 //将覆盖物添加到地图
                 indexmap.addOverlay(myCompOverlay);
             });
@@ -79,7 +80,7 @@ $.getJSON("../../statics/json/obj.js", function (result) {
                 var point1 = new BMap.Point(element.lon, element.lat);
                 //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
                 var myCompOverlays = new ComplexCustomOverlay_small(point1, element.name,
-                    element.houseNum + "套", null, obj);
+                    element.houseNum + "套", 1,  function(){console.log("点击2----")});
                 // console.log(obj.firstJson.data.province.text+ that._text  + element.name);
                 //将覆盖物添加到地图
                 indexmap.addOverlay(myCompOverlays);
@@ -96,7 +97,7 @@ $.getJSON("../../statics/json/obj.js", function (result) {
                 var point1 = new BMap.Point(element.lon, element.lat);
                 //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
                 var myCompOverlays1 = new ComplexCustomOverlay_s_small(point1, element.name,
-                    element.houseNum + "套");
+                    element.houseNum + "套", 1, function(){console.log("点击3----")});
                 // console.log(obj.firstJson.data.province.text + that._text + element.name);
                 // //将覆盖物添加到地图
                 indexmap.addOverlay(myCompOverlays1);
@@ -146,23 +147,25 @@ $(".form-kw").on("input", "input", function () {
     // console.log($(this).val());
     $(".search-close").show();
     var val = $(this).val();
-    //用户输入时从数据库模糊查询
-    $.post("/map/search", "name=" + val, function (data) {
-        var moddiv = $(".hint-wrap");
-        var result = JSON.parse(data);
-        console.log(result);
-        if (result != null) {
-            moddiv.html("");
-            result.forEach(element => {
-                var li = '<a class="hint-item" ><span class="txt-wrap"><span class="key-txt">' + element.community_name + '</span></span></a>';
-                moddiv.append(li);
-            });
-            moddiv.show();
-        }
-    });
-    if (val == "" || val == null) {
+
+    if (val === "" || val === null) {
+        $(".hint-wrap").hide();
         $(".search-close").hide();
-        $("#hint-wrap").hide();
+    } else {
+        //用户输入时从数据库模糊查询
+        $.post("/map/search", "name=" + val, function (data) {
+            var moddiv = $(".hint-wrap");
+            var result = JSON.parse(data);
+            console.log(result);
+            if (result !== null && result.length !== 0) {
+                moddiv.html("");
+                result.forEach(element => {
+                    var li = '<a class="hint-item" ><span class="txt-wrap"><span class="key-txt">' + element.community_name + '</span></span></a>';
+                    moddiv.append(li);
+                });
+                moddiv.show();
+            }
+        });
     }
 });
 $(".search-close").click(function () {
@@ -184,8 +187,23 @@ $(".mod-zoom").on("click", ".zoom-btn", function () {
     }
 });
 //message 事件
-$("a").on("click","#hint-item",function () {
+$("a").on("click", "#hint-item", function () {
     console.log(this);
     $("input[name=kw]").val($(".key-txt").val());
     $("#hint-wrap").hide();
+});
+
+window.onload = function () {
+    //覆盖城市列表的hover样式
+    $(".header-left .city").css({"border-bottom": "0"});
+};
+
+//header  点击事件
+$(".header-left").on("click", ".nav-item", function () {
+    if ($(this).hasClass("city")) {
+        //......
+    } else {
+        $(".nav-item").removeClass("active");
+        $(this).addClass("active");
+    }
 });

@@ -2,6 +2,7 @@ package com.iwjw.service;
 
 import com.iwjw.entity.BaikeList;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -9,6 +10,7 @@ import java.util.List;
  *
  *
  */
+@Repository
 public interface BaikeListService {
 
     //全查

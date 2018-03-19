@@ -40,8 +40,8 @@
                     <div class="nav-item" data-log="secondhouse">
                         <a href="javascript:void(0)" class="nav-item-a ">二手房</a>
                     </div>
-                    <div class="nav-item" data-log="rent">
-                        <a href="javascript:void(0)" class="nav-item-a active">租房</a>
+                    <div class="nav-item active" data-log="rent">
+                        <a href="javascript:void(0)" class="nav-item-a">租房</a>
                     </div>
 
 
