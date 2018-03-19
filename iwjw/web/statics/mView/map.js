@@ -42,7 +42,9 @@ $.getJSON("../../statics/json/obj.js", function (result) {
         var point1 = new BMap.Point(element.lon, element.lat);
         //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
         var myCompOverlay = new ComplexCustomOverlay(point1, element.name, element.houseNum + "套", getBoundary(
-            obj.firstJson.data.province.text + element.name), 1,  function(){console.log("点击1----")});
+            obj.firstJson.data.province.text + element.name), 2, function () {
+            console.log("点击1----")
+        });
         //将覆盖物添加到地图
         indexmap.addOverlay(myCompOverlay);
     });
@@ -69,7 +71,9 @@ $.getJSON("../../statics/json/obj.js", function (result) {
                 //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
                 var myCompOverlay = new ComplexCustomOverlay(point1, element.name, element.houseNum +
                     "套", getBoundary(
-                    obj.firstJson.data.province.text + element.name), 1,  function(){console.log("点击1----")});
+                    obj.firstJson.data.province.text + element.name), 2, function () {
+                    console.log("点击1----")
+                });
                 myCompOverlay.initialize(indexmap); //将地图实例传入
                 //将覆盖物添加到地图
                 indexmap.addOverlay(myCompOverlay);
@@ -80,7 +84,9 @@ $.getJSON("../../statics/json/obj.js", function (result) {
                 var point1 = new BMap.Point(element.lon, element.lat);
                 //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
                 var myCompOverlays = new ComplexCustomOverlay_small(point1, element.name,
-                    element.houseNum + "套", 1,  function(){console.log("点击2----")});
+                    element.houseNum + "套", 2, function () {
+                        console.log("点击2----")
+                    });
                 // console.log(obj.firstJson.data.province.text+ that._text  + element.name);
                 //将覆盖物添加到地图
                 indexmap.addOverlay(myCompOverlays);
@@ -97,7 +103,9 @@ $.getJSON("../../statics/json/obj.js", function (result) {
                 var point1 = new BMap.Point(element.lon, element.lat);
                 //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
                 var myCompOverlays1 = new ComplexCustomOverlay_s_small(point1, element.name,
-                    element.houseNum + "套", 1, function(){console.log("点击3----")});
+                    element.houseNum + "套", 2, function () {
+                        console.log("点击3----")
+                    });
                 // console.log(obj.firstJson.data.province.text + that._text + element.name);
                 // //将覆盖物添加到地图
                 indexmap.addOverlay(myCompOverlays1);
@@ -206,4 +214,34 @@ $(".header-left").on("click", ".nav-item", function () {
         $(".nav-item").removeClass("active");
         $(this).addClass("active");
     }
+});
+//mod-header mouseover ，mouseout
+var dd = $(".mod-find-area_line ,.filter-in");
+dd.mouseover(function () {
+    let thatc;
+    let $this = $(this);
+    if ($this.hasClass("filter-in")) {
+        thatc = $this.children("dl").children("dd").children(".if-arrow-down");
+    } else {
+        thatc = $this.children(".if-arrow-down");
+    }
+    thatc.rotate({
+        animateTo: 180, duration: 200, callback: function () {
+            $this.children("ul").show();
+        }
+    });
+});
+dd.mouseout(function () {
+    let thatc;
+    let $this = $(this);
+    if ($this.hasClass("filter-in")) {
+        thatc = $this.children("dl").children("dd").children(".if-arrow-down");
+    } else {
+        thatc = $this.children(".if-arrow-down");
+    }
+    thatc.rotate({
+        animateTo: 0, duration: 200, callback: function () {
+            $this.children("ul").hide();
+        }
+    });
 });
