@@ -90,7 +90,7 @@
                         <a class="province"></a>
                     </div>
                     <div class="nav-item" data-log="homepage"
-                    ><a href="/" class="nav-item-a ">首页</a></div>
+                    ><a href="${pageContext.request.contextPath}/main/home" class="nav-item-a ">首页</a></div>
                     <div class="nav-item" data-log="secondhouse">
                         <a href="/sale/map/"
                            class="nav-item-a ">二手房</a></div>
