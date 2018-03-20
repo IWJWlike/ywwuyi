@@ -6,8 +6,97 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/jquery-2.1.1.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>爱屋吉屋-买房先看视频，「真实省力」的房产中介!</title>
+    <meta name="keywords" content="爱屋吉屋,二手房,租房,房屋买卖,房产中介">
+    <meta name="description" content="爱屋吉屋，互联网房产中介!找二手房、新房、租房，透明中介、不加价、不独家、过户专业。四险一支持交易保障，马上约、实地看、快成交！">
+    <link rel="apple-touch-icon-precomposed" href="${pageContext.request.contextPath}/statics/images/logo_wx.png">
+    <link rel="shortcut icon" href="https://files.iwjw.com/icon/favicon.ico">
+    <meta name="baidu-site-verification" content="rO1Bqg66kn">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script type="text/javascript"
+            src="${pageContext.request.contextPath}/statics/js/jquery.easydrag.handler.beta2.js"></script>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/Scroll.css">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/jquery.slider.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/common_72.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/index_74.css">
+
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/index_css1/index_shuffling.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/index_css1/bootstrap.min.css">
+
+    <link rel="canonical" href="https://www.iwjw.com/">
+
+    <script src="${pageContext.request.contextPath}/statics/js/hm.js" async=""></script>
+    <script type="text/javascript" async="" src="${pageContext.request.contextPath}/statics/js/vds.js"></script>
+
+    <%--<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>--%>
+    <script src="${pageContext.request.contextPath}/statics/bootstrap-3.3.7-dist/js/bootstrap.min.js"/>
+    <%--<script src="../../statics/js/index_js/index_shuffling.js"></script>--%>
+
+
+    <script>
+        window.location = "${pageContext.request.contextPath}/indexController/goHomePage";
+    </script>
+    <script>
+        ;(function () {
+            if (location.hostname.indexOf('iwjw.com') != -1 && location.hostname.indexOf('pcbeta') == -1 && location.protocol == 'http:') {
+                location.href = location.href.replace('http://', 'https://')
+            }
+        })()
+        window.pageConfig = {
+            siteUrl: "//www.iwjw.com",
+            mobileSiteUrl: '//m.iwjw.com',
+            mobileSiteUrlHasProtocol: 'https://m.iwjw.com',
+            selectCity: false,
+            map: {
+                province: [{"pname": "上海", "pid": 2, "pinyin": "shanghai"}, {
+                    "pname": "北京",
+                    "pid": 12438,
+                    "pinyin": "beijing"
+                }, {"pname": "广州", "pid": 40000, "pinyin": "guangzhou"}, {
+                    "pname": "深圳",
+                    "pid": 56000,
+                    "pinyin": "shenzhen"
+                }, {"pname": "杭州", "pid": 71049, "pinyin": "hangzhou"}, {
+                    "pname": "天津",
+                    "pid": 71099,
+                    "pinyin": "tianjin"
+                }, {"pname": "南京", "pid": 86724, "pinyin": "nanjing"}, {
+                    "pname": "武汉",
+                    "pid": 86725,
+                    "pinyin": "wuhan"
+                }, {"pname": "成都", "pid": 98289, "pinyin": "chengdu"}, {
+                    "pname": "重庆",
+                    "pid": 98290,
+                    "pinyin": "chongqing"
+                }]
+            },
+            datacollectUrl: '//plog.iwjw.com/dataCollect/',
+            staticUrl: '' || '//resource.iwjw.com/iwjw-pc/',
+            staticTag: 'index',
+            recommendUrl: '//recommend.iwjw.com',
+            videoSerUrl: '//video.iwjw.com/prev/pc/play.html',
+            flag: '1',
+            provinceId: '40000',
+            ht: '2',
+            cookieUserId: 0,
+            signin: '',
+            //全局增加是否采用极验验证标志，1-采用，0-不采用
+            geetestFlag: '1',
+            timestamp: '1520660278623',
+            canSellShow: 'true',
+            canRentShow: 'true'
+        };
+        var _hmt = _hmt || [];
+    </script>
+
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="Cache-Control" content="no-transform"/>
@@ -46,9 +135,9 @@
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
-    <title>我要卖房|广州业主个人委托卖房（广州链家网）</title>
+    <title>我要卖房|广州业主个人委托卖房（广州爱屋吉屋网）</title>
     <meta name="description"
-          content="广州链家网卖房频道,接受业主委托卖房,提供个人卖房的快捷渠道,利用链家网的线下资源,为您提供卖房速销承诺,同时利用链家交易托管平台,卖房更加安全,放心.卖房就上链家网."/>
+          content="广州爱屋吉屋网卖房频道,接受业主委托卖房,提供个人卖房的快捷渠道,利用爱屋吉屋网的线下资源,为您提供卖房速销承诺,同时利用爱屋吉屋交易托管平台,卖房更加安全,放心.卖房就上爱屋吉屋网."/>
     <meta name="keywords" content="广州业主卖房,广州个人卖房,我要卖房,广州委托卖房"/>
     <link href="/favicon.ico" type="image/x-icon" rel=icon>
     <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
@@ -306,7 +395,8 @@
         }
     };
 
-    ;;(function () {
+    ;
+    ;(function () {
         var isW3c = !!document.addEventListener;
 
         LjUserTrack.send({
@@ -326,7 +416,7 @@
 
 </script>
 
-<div class="banner">
+<%--<div class="banner">
     <div class="container">
         <ul class="channelList">
             <li><a href="javascript:void(0)">首页</a></li>
@@ -353,7 +443,7 @@
             <div class="phone"><i></i><span>热线电话1010-9666</span></div>
         </div>
     </div>
-</div>
+</div>--%>
 
 
 <%--<script type="text/template" id="userInfoTpl">
@@ -376,7 +466,105 @@
         <%}%>
     </div>
 </script>&ndash;%&gt;--%>
+<div class="mod-header " id="Top">
+    <dl class="header-wrap clearfix">
+        <dt class="header-left clearfix">
+            <a class="logo" href="#"><img src="../../statics/images/iwjwlog.png" alt="爱屋吉屋"
+                                          class="logo-img"></a>
+            <div class="city nav-item">
+                <a class="province" provinceid="40000" provincepy="guangzhou">广州<i class="iconfont">혟</i></a>
+            </div>
+            <div class="nav-item" data-log="homepage"><a href="${pageContext.request.contextPath}/main/home"
+                                                         class="nav-item-a active">首页</a>
+            </div>
+            <div class="nav-item" data-log="secondhouse">
+                <a href="${pageContext.request.contextPath}/map/goMap" class="nav-item-a ">二手房</a></div>
+            <div class="nav-item" data-log="rent">
+                <a href="${pageContext.request.contextPath}/map/goMap" class="nav-item-a ">租房</a></div>
 
+
+            <div class="nav-item nav-item-server" data-log="entrust">
+                <a href="${pageContext.request.contextPath}/sell/goSell" rel="nofollow" class="nav-item-a ">业主委托</a>
+            </div>
+
+            <div class="nav-item" data-log="baike">
+                <a class="nav-item-a " href="${pageContext.request.contextPath}/baikePage/gfgl"
+                   target="_blank">购房攻略 </a>
+            </div>
+            <div class="nav-item" data-log="ailicai">
+                <a href="#" target="_blank" class="nav-item-a ailicai ">吉爱财</a>
+                <div class="header-new"></div>
+            </div>
+            <div class="nav-item" data-log="dzg">
+                <a href="#" class="nav-item-a  ">贷总管</a>
+            </div>
+            <div class="nav-item" data-log="appDownload">
+                <a href="#" class="nav-item-a "><i
+                        class="iconfont if-mobile"></i>APP</a>
+            </div>
+        </dt>
+        <c:if test="${vistor==null}">
+        <dd class="header-right clearfix">
+            <div class="nav-item"><a id="one" href="javascript:showBox()" class="login none nav-item-a login-require "
+                                     target="_blank"><i class="nav-item-txt">登录<span class="slash">/</span>注册</i></a>
+            </div>
+            <div class="nav-item message-nav" id="message-nav">
+                <div class="nav-message-wrap" data-reactid=".0"></div>
+            </div>
+            </c:if>
+            <c:if test="${vistor != null}">
+        <dd class="header-right clearfix">
+            <div class="nav-item"><a data-url="/userinfo/" class="login  nav-item-a login-require " target="_blank"><em
+                    class="iconfont if-menu"></em><i class="nav-item-txt">135****0667
+                <span class="shape-circle"></span></i></a>
+                <div class="user-down-wrap arrow-top nav-down-wrap"><a class="user-item" href="/userinfo/"
+                                                                       id="username"><span class="iconfont">핰</span>我的账户
+
+                    <i class="follow-point"></i></a><a class="user-item" href="/collectHouseList/"
+                                                       id="FollowDynamic"><span class="iconfont">홄</span>关注列表
+
+                </a><!-- web 6.9 已下线 --><!-- <a class="user-item appoint-list" href="/seeHouseList/" id = "Itinerary"><span class="iconfont">&#xd571;</span>约看清单
+
+   </a> --><a class="user-item house-schedule" href="/appointmentList/" id="Showings"><span class="iconfont">혤</span>看房日程
+
+                </a><a class="user-item user-item-payorder" href="/order/"><span class="iconfont">퐀</span>合同订单
+
+                </a><a class="user-item user-item-delegate_mng" href="/delegateManage/"><span class="iconfont">퐁</span>我的委托
+
+                </a><a class="user-item user-item-agent" href="/agent/"><span class="iconfont">퐄</span>我的经纪人
+
+                </a><a class="user-item user-item-complains" href="/complains/"><span class="iconfont">퐐</span>我的投诉
+
+                </a><a class="user-item user-item-logout"><span class="iconfont">퐅</span>退出
+                </a></div><!--  --></div>
+            <div class="nav-item message-nav" <%--id="message-nav"--%>>
+                <div class="nav-message-wrap" data-reactid=".0"><a class="nav-item-a message show-msg-down"
+                                                                   data-reactid=".0.$1"><i class="nav-item-txt line"
+                                                                                           data-reactid=".0.$1.0"><i
+                        data-reactid=".0.$1.0.0">消息</i></i></a>
+                    <div id="message-down-wrap" class="message-down-wrap nav-down-wrap arrow-top " data-reactid=".0.$2">
+                        <div class="message-list-wrap" data-reactid=".0.$2.0">
+                            <div class="msg-center-wrap" data-reactid=".0.$2.0.0"><a class="msg-center-a clearfix"
+                                                                                     href="/message/activity/"
+                                                                                     data-reactid=".0.$2.0.0.0">
+                                <div class="bell-bg f-l" data-reactid=".0.$2.0.0.0.0"><i class="iconfont if-bell"
+                                                                                         data-reactid=".0.$2.0.0.0.0.0"></i>
+                                </div>
+                                <p class="msg-center-tt f-l bold" data-reactid=".0.$2.0.0.0.1">消息中心</p></a></div>
+                            <ul class="iwjwim-body" data-reactid=".0.$2.0.1"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </dd>
+        </c:if>
+
+
+        </dd>
+    </dl>
+</div>
 
 <div class="header">
     <div class="wrap"><a href="/yezhu" class="logo"></a>
@@ -387,13 +575,13 @@
             </ul>
         </div>
         <a href="javascript:void(0)" target="_blank" class="app"><span
-                class="icon-app"></span><span>下载链家APP</span></a></div>
+                class="icon-app"></span><span>下载爱屋吉屋APP</span></a></div>
 </div>
 
 <div class="g-main" style="padding-bottom:0;margin-bottom:-45px;">
     <div class="m-jumbotron">
         <div class="tit">发布出售房源</div>
-        <div class="sub-tit">8000+全国链家门店·10万+全国经纪人·链家倾情服务15年+</div>
+        <div class="sub-tit">8000+全国爱屋吉屋门店·10万+全国经纪人·爱屋吉屋倾情服务15年+</div>
     </div>
     <div class="m-form">
         <div class="box-l m-entry">
@@ -459,7 +647,8 @@
                            style="width: 170px;"/>
                     <!-- <div class="btn-getcode-voice">获取语音验证码</div> -->
                     <!-- <div class="btn-getcode-sms">获取短信验证码</div> -->
-                    <div class="btn-getcode-sms"><img src="../../statics/images/Sell_img/GeneratePictureUpgrade.png"></div>
+                    <div class="btn-getcode-sms"><img src="../../statics/images/Sell_img/GeneratePictureUpgrade.png">
+                    </div>
                 </dd>
             </dl>
         </div>
@@ -479,13 +668,12 @@
                     <div class="icon-qrcode"></div>
                     <div class="layer-qrcode">
                         <div class="icon-qrcode"></div>
-                        <div class="txt">去链家APP提升卖房速度</div>
+                        <div class="txt">去爱屋吉屋APP提升卖房速度</div>
                         <div class="sub-txt">APP·移动卖房新体验</div>
                     </div>
                 </div>
             </div>
             <div id="tpl-r-relatedhouse">
-
 
 
                 <ul class="bd">
@@ -557,15 +745,15 @@
             </li>
             <li><span class="icon icon-2"></span>
                 <div class="tit">核对房源</div>
-                <div class="sub-tit">30分钟内链家客服联系</div>
+                <div class="sub-tit">30分钟内爱屋吉屋客服联系</div>
             </li>
             <li><span class="icon icon-3"></span>
                 <div class="tit">在线销售</div>
-                <div class="sub-tit">在链家APP移动管理销售</div>
+                <div class="sub-tit">在爱屋吉屋APP移动管理销售</div>
             </li>
             <li><span class="icon icon-4"></span>
                 <div class="tit">签约出售</div>
-                <div class="sub-tit">签约过户链家全程服务</div>
+                <div class="sub-tit">签约过户爱屋吉屋全程服务</div>
             </li>
         </ul>
     </div>
@@ -575,15 +763,15 @@
         <ul class="wrap">
             <li><img src="../../statics/images/Sell_img/feature-1.jpg" alt="">
                 <div class="tit">推广资源</div>
-                <div class="sub-tit">线下10万+专业经纪人，8000+链家门店，线上链家网、链家APP，最大程度上推广您的委托房源。</div>
+                <div class="sub-tit">线下10万+专业经纪人，8000+爱屋吉屋门店，线上爱屋吉屋网、爱屋吉屋APP，最大程度上推广您的委托房源。</div>
             </li>
             <li><img src="../../statics/images/Sell_img/feature-2.jpg" alt="">
                 <div class="tit">速销服务</div>
-                <div class="sub-tit">与链家签定速销协议，链家承诺在一定时间内帮您卖掉房子，否则赔付业主。</div>
+                <div class="sub-tit">与爱屋吉屋签定速销协议，爱屋吉屋承诺在一定时间内帮您卖掉房子，否则赔付业主。</div>
             </li>
             <li><img src="../../statics/images/Sell_img/feature-3.jpg" alt="">
                 <div class="tit">资金监管</div>
-                <div class="sub-tit">使用链家买卖交易资金托管平台--理房通，保障买卖双方在二手房交易中资金安全。</div>
+                <div class="sub-tit">使用爱屋吉屋买卖交易资金托管平台--理房通，保障买卖双方在二手房交易中资金安全。</div>
             </li>
         </ul>
     </div>
@@ -637,7 +825,7 @@
                 <div class="icon-weituo-success"></div>
                 <div class="tit">提交委托成功！</div>
                 <div class="sub-tit">周一至周日9:00-20:00，10109666客服会及时给您回电，请耐心等待</div>
-                <div class="line">下载掌上链家APP</div>
+                <div class="line">下载掌上爱屋吉屋APP</div>
                 <div class="item bold">
                     <div>去APP管理委托</div>
                     <div>去APP领取家基金</div>
@@ -649,52 +837,156 @@
             </div>
             <div class="box-r">
                 <div class="icon-qrcode"></div>
-                <div class="txt">扫一扫·下载掌上链家</div>
+                <div class="txt">扫一扫·下载掌上爱屋吉屋</div>
             </div>
             <div class="icon-close"></div>
         </div>
     </div>
 </div>
-<div class="footer">
-    <div class="wrapper">
-        <div class="f-title">
-            <div class="fl">
-                <ul>
-                    <li><a href="javascript:void(0)" rel="nofollow" target="_blank">了解链家</a></li>
-                    <li><a href="javascript:void(0)" rel="nofollow" target="_blank">关于链家</a>
-                    </li>
-                    <li><a href="javascript:void(0)" rel="nofollow" target="_blank">联系我们</a></li>
-                    <li><a href="javascript:void(0)" rel="nofollow" target="_blank">加入我们</a></li>
-                    <li><a href="javascript:void(0)" rel="nofollow" target="_blank">隐私声明</a></li>
-                    <li><a href="javascript:void(0)" target="_blank">网站地图</a></li>
-                    <li><a href="javascript:void(0)" rel="nofollow" target="_blank">友情链接</a></li>
-                    <li><a href="javascript:void(0)" rel="nofollow" target="_blank">经纪人登录</a></li>
-                </ul>
-            </div>
-            <div class="fr">官方客服 1010 9666</div>
-        </div>
-        <div class="lianjia-link-box">
-            <div class="fl">
-                <div class="tab"><span
-                        class="hover">城市二手房</span><span>房产资讯</span><span>城区二手房</span><span>城区租房</span><span>城区小区</span><span>热门小区</span><span>热门问答</span><span>热门百科</span><span>合作与友情链接</span>
+<div class="mod-footer " style="height: 98px">
+    <div class="footer-inner" style="height: 100px">
+        <div class="footer-top clearfix">
+            <div class="footer-t-l">
+                <div class="footer-t-nav">
+                    <a href="https://www.iwjw.com/about/" rel="nofollow" class="footer-nav-item first">关于我们
+                        <i class="footer-point clearfix">
+                            <em class="footer-p-t"></em>
+                            <em class="footer-p-b"></em>
+                        </i>
+                    </a>
+                    <a href="https://www.iwjw.com/join/" rel="nofollow" class="footer-nav-item">加入我们
+                        <i class="footer-point clearfix">
+                            <em class="footer-p-t"></em>
+                            <em class="footer-p-b"></em>
+                        </i>
+                    </a>
+                    <a href="https://www.iwjw.com/delegation/" rel="nofollow" class="footer-nav-item">业主服务
+                        <i class="footer-point clearfix">
+                            <em class="footer-p-t"></em>
+                            <em class="footer-p-b"></em>
+                        </i>
+                    </a>
+                    <a href="https://www.iwlicai.com/about/alc" target="_blank" rel="nofollow"
+                       class="footer-nav-item">关于吉爱财
+                        <i class="footer-point clearfix">
+                            <em class="footer-p-t"></em>
+                            <em class="footer-p-b"></em>
+                        </i>
+                    </a>
+                    <a href="https://www.iwjw.com/help" rel="nofollow" class="footer-nav-item">帮助中心
+                        <i class="footer-point clearfix">
+                            <em class="footer-p-t"></em>
+                            <em class="footer-p-b"></em>
+                        </i>
+                    </a>
+                    <a href="https://www.iwjw.com/sitemap/" class="footer-nav-item">网站地图
+                        <i class="footer-point clearfix">
+                            <em class="footer-p-t"></em>
+                            <em class="footer-p-b"></em>
+                        </i>
+                    </a>
+                    <a href="https://www.iwjw.com/protocol/u/" rel="nofollow" class="footer-nav-item">网站使用协议
+                        <i class="footer-point clearfix">
+                            <em class="footer-p-t"></em>
+                            <em class="footer-p-b"></em>
+                        </i>
+                    </a>
+                    <a href="https://www.iwjw.com/protocol/h/" rel="nofollow" class="footer-nav-item">中介服务协议</a>
                 </div>
-
+                <div class="footer-t-mid">
+                    <span class="footer-t-m-item footer-t-m-item-copy"><i class="footer-copy">©</i>2014-2017  满懿 (上海) 房地产咨询有限公司</span>
+                    <span class="footer-t-m-item">热线：400-700-6622</span>
+                    <span class="footer-t-m-item">邮箱：cs@iwjw.com</span>
+                    <a class="footer-t-m-item" href="http://weibo.com/u/5132568692/home?wvr=5" rel="nofollow"
+                       target="_blank">
+                        <img src="../../statics/images/background_img/if-weibo.PNG">
+                        <!--<i class="iconfont if-weibo"></i>-->
+                        <span>官方微博</span>
+                    </a>
+                    <a class="footer-t-m-item last footer-wechat">
+                        <img src="../../statics/images/background_img/if-weixin.PNG">
+                        <!--<i class="iconfont if-weixin"></i>-->
+                        <span>微信公众号</span>
+                        <b><img src="../../statics/images/WXcode.png"></b>
+                    </a>
+                </div>
+                <div class="footer-t-bot">
+                        <span class="footer-t-b-item"><a href="http://www.miitbeian.gov.cn/" rel="nofollow"
+                                                         target="_blank">沪ICP备14020180</a></span>
+                    <span class="footer-t-b-item">增值电信业务经营许可证：<a href="http://www.miit.cc/"
+                                                                 target="_blank">沪B2-20160026</a></span>
+                    <span class="footer-t-b-item last"><a target="_blank"
+                                                          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010702001120"><img
+                            class="v-middle record-img"
+                            src="../../statics/images/ghs.png"> 沪公网安备 31010702001120号</a></span>
+                </div>
             </div>
-            <div class="clear"></div>
+            <div class="footer-t-r">
+                <img src="../../statics/images/getDynamicQRImage.png" class="footer-qrcode">
+            </div>
         </div>
-        <div class="bottom">
-            <div class="copyright fl">链家网（北京）科技有限公司 | 网络经营许可证 京ICP备16057509号-2 | © Copyright©2010-2018
-                链家网Lianjia.com版权所有
+    </div>
+    <div class="footer-bottom" style="height: 100px">
+        <div class="footer-inner">
+            <div class="footer-b-link">
+                <span>友情链接：</span>
+                <a href="http://bbs.jia.com/" class="footer-b-item" target="_blank">装修论坛</a>
+                <a href="http://zhuangxiu.pchouse.com.cn/" class="footer-b-item" target="_blank">装修</a>
+                <a href="http://gz.to8to.com/" class="footer-b-item" target="_blank">广州装修网</a>
+                <a href="http://pic.homekoo.com/" class="footer-b-item" target="_blank">装修效果图</a>
+                <a href="http://news.17house.com/" class="footer-b-item" target="_blank">建材头条</a>
+                <a href="http://sh.wed114.cn/" class="footer-b-item" target="_blank">上海婚纱摄影</a>
+                <a href="http://sh.daoxila.com/" class="footer-b-item" target="_blank">上海结婚网</a>
+                <a href="http://m.iwjw.com/" class="footer-b-item" target="_blank">爱屋吉屋移动站</a>
+                <a href="http://sh.jiwu.com/" class="footer-b-item" target="_blank">上海买房</a>
+                <a href="http://www.iwjw.com/caichan/" class="footer-b-item" target="_blank">财产说</a>
+                <a href="http://luoyang.focus.cn/" class="footer-b-item" target="_blank">洛阳房产网</a>
+                <a href="http://www.juwai.com/" class="footer-b-item" target="_blank">海外房产网</a>
+                <a href="http://www.3456.cc/" class="footer-b-item" target="_blank">3456网址导航</a>
+                <a href="http://chongqing.tianqi.com/" class="footer-b-item" target="_blank">重庆天气预报</a>
+                <a href="http://www.zocai.com/" class="footer-b-item" target="_blank">佐卡伊珠宝</a>
+                <a href="http://www.5khouse.com/" class="footer-b-item" target="_blank">昆山房产网</a>
+                <a href="http://shenzhen.liebiao.com/" class="footer-b-item" target="_blank">深圳分类信息</a>
+                <a href="http://college.liuxue86.com/" class="footer-b-item" target="_blank">院校库</a>
+                <a href="http://www.mplife.com/" class="footer-b-item" target="_blank">名品导购</a>
+                <a href="http://yingyu.chazidian.com/" class="footer-b-item" target="_blank">查字典英语网</a>
+                <a href="http://www.wy100.com/" class="footer-b-item" target="_blank">家具网上商城</a>
+                <a href="https://www.iwjw.com/#" class="footer-b-item" target="_blank">友情链接：289479062</a>
+                <a href="http://www.yimianmian.com/" class="footer-b-item" target="_blank">意绵绵珠宝</a>
             </div>
-            <div style="width:300px;color: #888c8e;font-size: 12px;line-height: 20px;"><a target="_blank"
-                                                                                          href="javascript:void(0)"
-                                                                                          style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
-                    src="../../statics/images/Sell_img/beian.png" style="float:left;"><p
-                    style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;color: #888c8e;">京公网安备
-                11010802024019号</p></a></div>
         </div>
     </div>
 </div>
+
+<script>
+    $(".dialog-login-btn").click(function () {
+        <%--$.post("${pageContext.request.contextPath}/login/goLogin", "uPhone="+$("#uPhone").val(),"textCode="+$("#codeInput").val());--%>
+        var param = {
+            "uPhone": $("#uPhone").val(),
+            "textCode": $("#codeInput").val()
+        }
+        $.ajax({
+            url: "${pageContext.request.contextPath}/loginAjax/doLogin",
+            data: param,
+            type: "post",
+            success: function (response) {
+                window.location = "home";
+            }
+        });
+    })
+</script>
+<%--搜索--%>
+<script type="text/javascript">
+    function saleSearch() {
+        document.getElementById("searchs").action = "http://localhost:8080/saleController/searchSale";
+    }
+
+    function sellSearch() {
+        document.getElementById("searchs").action = "${pageContext.request.contextPath}/main/goGfgl";
+    }
+</script>
+
+
 <script src="../../statics/js/Sell_js/fe.js"></script>
 <script src="../../statics/js/Sell_js/common.js"></script>
 <div style="display:none">
@@ -887,7 +1179,7 @@ var feData = {
                                                                                                       value="1"
                                                                                                       class="read-protocol"
                                                                                                       checked/></span>我已阅读并同意</label><a
-                                    class="toprotocol" href="javascript:void(0)" target="_blank">《链家用户使用协议》</a>
+                                    class="toprotocol" href="javascript:void(0)" target="_blank">《爱屋吉屋用户使用协议》</a>
                             </li>
                             <li class="li_btn"><a class="register-user-btn">注册</a></li>
                         </ul>
@@ -1008,5 +1300,6 @@ s.parentNode.insertBefore(mvl, s);
             i.src = n
         }
     })(window);
-})();</script><!--cookie mapping--><img src='../../statics/images/Sell_img/cm.fcg' alt="cookie_mapping_url" style="display: none;"></body>
+})();</script><!--cookie mapping--><img src='../../statics/images/Sell_img/cm.fcg' alt="cookie_mapping_url"
+                                        style="display: none;"></body>
 </html>
