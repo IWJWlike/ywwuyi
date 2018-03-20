@@ -24,8 +24,6 @@ public  String goHomePage(Model model, HttpServletResponse response, HttpServlet
     List<HouseImage> lists = houseImgListService.getHouseImgList("1");
     request.getSession().setAttribute("homeImgLists", lists);
 
-
-
     return "home";
 }
 

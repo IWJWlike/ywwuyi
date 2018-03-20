@@ -44,6 +44,10 @@
 
     </select>
 
+    <select id="getByPage" resultType="BaikeList">
+        SELECT * FROM baikelist limit #{indexPage},#{pageSize}
+    </select>
+
 
 </mapper>
  

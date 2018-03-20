@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!-- saved from url=(0026)https://www.iwjw.com/order -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -69,7 +70,7 @@
                     <div class="city nav-item">
                         <a class="province" provinceid="40000" provincepy="guangzhou">广州<i class="iconfont">혟</i></a>
                     </div>
-                    <div class="nav-item" data-log="homepage"><a href="https://www.iwjw.com/" class="nav-item-a active">首页</a>
+                    <div class="nav-item" data-log="homepage"><a href="${pageContext.request.contextPath}/main/home" class="nav-item-a active">首页</a>
                     </div>
                     <div class="nav-item" data-log="secondhouse">
                         <a href="${pageContext.request.contextPath}/map/goMap" class="nav-item-a ">二手房</a></div>
@@ -126,7 +127,39 @@
 
 
 
-        <div class="mod-payorder" id="mod-payorder"><div class="layout-wrap layout-ucenter" data-reactid=".0"><div class="layout-row" data-reactid=".0.0"><div class="layout-col-2" data-reactid=".0.0.0"><div id="js-nav-wrap" data-reactid=".0.0.0.0"><div class="wrap-nav" data-reactid=".0.0.0.0.0"><div class="j-nav-label" style="top:16px;" data-reactid=".0.0.0.0.0.0"></div><ul class="nav-menus" data-reactid=".0.0.0.0.0.1"><li class="left-menus-item active" data-reactid=".0.0.0.0.0.1.$0"><a href="https://www.iwjw.com/order" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$0.0"><i class="iconfont left-nav-iconfont if-pay-order" data-reactid=".0.0.0.0.0.1.$0.0.0"></i><span data-reactid=".0.0.0.0.0.1.$0.0.1">合同订单</span></a></li><li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$1"><a href="https://www.iwjw.com/agent" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$1.0"><i class="iconfont left-nav-iconfont if-house-consultant" data-reactid=".0.0.0.0.0.1.$1.0.0"></i><span data-reactid=".0.0.0.0.0.1.$1.0.1">我的经纪人</span></a></li><li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$2"><a href="https://www.iwjw.com/delegateManage" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$2.0"><i class="iconfont left-nav-iconfont if-entrust-mgmt" data-reactid=".0.0.0.0.0.1.$2.0.0"></i><span data-reactid=".0.0.0.0.0.1.$2.0.1">我的委托</span></a></li><li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$3"><a href="https://www.iwjw.com/complains" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$3.0"><i class="iconfont left-nav-iconfont if-complaints" data-reactid=".0.0.0.0.0.1.$3.0.0"></i><span data-reactid=".0.0.0.0.0.1.$3.0.1">我的投诉</span></a></li><li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$4"><a href="https://www.iwjw.com/userinfo" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$4.0"><i class="iconfont left-nav-iconfont if-login-register" data-reactid=".0.0.0.0.0.1.$4.0.0"></i><span data-reactid=".0.0.0.0.0.1.$4.0.1">我的账户</span></a></li><li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$5"><a href="javascript:void(0)" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$5.0"><i class="iconfont left-nav-iconfont if-exit-login" data-reactid=".0.0.0.0.0.1.$5.0.0"></i><span data-reactid=".0.0.0.0.0.1.$5.0.1">退出登录</span></a></li></ul></div></div></div><div class="layout-col-10 iwjw-right" data-reactid=".0.0.1"><div class="mod-order-list" data-reactid=".0.0.1.0"><div class="order-list-wrap" data-reactid=".0.0.1.0.0"><div data-reactid=".0.0.1.0.0.0"><div class="message-box message-empty" data-reactid=".0.0.1.0.0.0.1"><div class="message-in" data-reactid=".0.0.1.0.0.0.1.0"><i class="iconfont message-icon" data-reactid=".0.0.1.0.0.0.1.0.0">퐉</i><p class="message-sub" data-reactid=".0.0.1.0.0.0.1.0.1"></p><p class="message" data-reactid=".0.0.1.0.0.0.1.0.2">当前没有任何订单</p></div></div></div></div></div></div></div></div></div>
+        <div class="mod-payorder" id="mod-payorder">
+            <div class="layout-wrap layout-ucenter" data-reactid=".0">
+                <div class="layout-row" data-reactid=".0.0">
+                    <div class="layout-col-2" data-reactid=".0.0.0">
+                        <div id="js-nav-wrap" data-reactid=".0.0.0.0">
+                            <div class="wrap-nav" data-reactid=".0.0.0.0.0">
+                                <div class="j-nav-label" style="top:276px;" data-reactid=".0.0.0.0.0.0"></div>
+                                <ul class="nav-menus" data-reactid=".0.0.0.0.0.1">
+                                    <li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$0">
+                                        <a href="${pageContext.request.contextPath}/userInfo/order" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$0.0">
+                                            <i class="iconfont left-nav-iconfont if-pay-order" data-reactid=".0.0.0.0.0.1.$0.0.0"></i>
+                                            <span data-reactid=".0.0.0.0.0.1.$0.0.1">合同订单</span></a></li>
+                                    <li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$1">
+                                        <a href="${pageContext.request.contextPath}/userInfo/agent" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$1.0">
+                                            <i class="iconfont left-nav-iconfont if-house-consultant" data-reactid=".0.0.0.0.0.1.$1.0.0"></i>
+                                            <span data-reactid=".0.0.0.0.0.1.$1.0.1">我的经纪人</span></a></li>
+                                    <li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$2">
+                                        <a href="${pageContext.request.contextPath}/userInfo/orders" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$2.0">
+                                            <i class="iconfont left-nav-iconfont if-entrust-mgmt" data-reactid=".0.0.0.0.0.1.$2.0.0"></i>
+                                            <span data-reactid=".0.0.0.0.0.1.$2.0.1">我的委托</span></a></li>
+                                    <li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$3">
+                                        <a href="${pageContext.request.contextPath}/userInfo/complaints" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$3.0">
+                                            <i class="iconfont left-nav-iconfont if-complaints" data-reactid=".0.0.0.0.0.1.$3.0.0"></i>
+                                            <span data-reactid=".0.0.0.0.0.1.$3.0.1">我的投诉</span></a></li>
+                                    <li class="left-menus-item active" data-reactid=".0.0.0.0.0.1.$4">
+                                        <a href="${pageContext.request.contextPath}/userInfo/account" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$4.0">
+                                            <i class="iconfont left-nav-iconfont if-login-register" data-reactid=".0.0.0.0.0.1.$4.0.0"></i>
+                                            <span data-reactid=".0.0.0.0.0.1.$4.0.1">我的账户</span></a></li>
+                                    <li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$5">
+                                        <a href="${pageContext.request.contextPath}/userInfo/logout" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$5.0">
+                                            <i class="iconfont left-nav-iconfont if-exit-login" data-reactid=".0.0.0.0.0.1.$5.0.0"></i>
+                                            <span data-reactid=".0.0.0.0.0.1.$5.0.1">退出登录</span></a></li>
+                                </ul></div></div></div><div class="layout-col-10 iwjw-right" data-reactid=".0.0.1"><div class="userinfo-container" data-reactid=".0.0.1.0"><div id="wxlogin" data-reactid=".0.0.1.0.0"></div><div class="mod-w" data-reactid=".0.0.1.0.1"><div class="userinfo" data-reactid=".0.0.1.0.1.0"><h3 class="my-account-title" data-reactid=".0.0.1.0.1.0.0">我的账户</h3><dl class="" data-reactid=".0.0.1.0.1.0.1"><dt data-reactid=".0.0.1.0.1.0.1.0"><i class="left" data-reactid=".0.0.1.0.1.0.1.0.0">姓名</i><span class="info" data-reactid=".0.0.1.0.1.0.1.0.1"><i class="no-username" data-reactid=".0.0.1.0.1.0.1.0.1.0">未填写</i><div class="userinfo-input" data-reactid=".0.0.1.0.1.0.1.0.1.1"><input type="text" placeholder="请输入姓名" class="realName" maxlength="20" name="realName" data-reactid=".0.0.1.0.1.0.1.0.1.1.0"></div></span></dt><dd data-reactid=".0.0.1.0.1.0.1.1"><i class="save-btn" data-reactid=".0.0.1.0.1.0.1.1.0">保存</i><i class="cancel-btn" data-reactid=".0.0.1.0.1.0.1.1.1">取消</i><i class="edit edit-name" data-reactid=".0.0.1.0.1.0.1.1.2">修改</i></dd></dl><dl data-reactid=".0.0.1.0.1.0.2"><dt data-reactid=".0.0.1.0.1.0.2.0"><i class="left" data-reactid=".0.0.1.0.1.0.2.0.0">性别</i><span class="info" data-reactid=".0.0.1.0.1.0.2.0.1"><label class="mod-check-box" value="1" data-reactid=".0.0.1.0.1.0.2.0.1.0"><em class="iconfont if-checked" data-reactid=".0.0.1.0.1.0.2.0.1.0.0"></em><input type="radio" name="gender" value="1" data-reactid=".0.0.1.0.1.0.2.0.1.0.1"><span data-reactid=".0.0.1.0.1.0.2.0.1.0.2">先生</span></label><label class="mod-check-box" value="2" data-reactid=".0.0.1.0.1.0.2.0.1.1"><em class="iconfont if-uncheck" data-reactid=".0.0.1.0.1.0.2.0.1.1.0"></em><input type="radio" name="gender" value="2" data-reactid=".0.0.1.0.1.0.2.0.1.1.1"><span data-reactid=".0.0.1.0.1.0.2.0.1.1.2">女士</span></label></span></dt></dl><dl data-reactid=".0.0.1.0.1.0.3"><dt data-reactid=".0.0.1.0.1.0.3.0"><i class="left" data-reactid=".0.0.1.0.1.0.3.0.0">电话</i><i data-reactid=".0.0.1.0.1.0.3.0.1">135****0667</i></dt><dd data-reactid=".0.0.1.0.1.0.3.1"><i class="edit sendCode" data-reactid=".0.0.1.0.1.0.3.1.0">修改</i></dd></dl><dl data-reactid=".0.0.1.0.1.0.4"><dt data-reactid=".0.0.1.0.1.0.4.0"><i class="left" data-reactid=".0.0.1.0.1.0.4.0.0"><span data-reactid=".0.0.1.0.1.0.4.0.0.0">社交账号 </span><i class="ucenter-point" data-reactid=".0.0.1.0.1.0.4.0.0.1"></i></i><span class="info" data-reactid=".0.0.1.0.1.0.4.0.1"><span class="account-item not-bind-account" data-reactid=".0.0.1.0.1.0.4.0.1.0"><i class="iconfont if-weixin" data-reactid=".0.0.1.0.1.0.4.0.1.0.0"></i></span></span></dt><dd data-reactid=".0.0.1.0.1.0.4.1"><i class="edit bind-btn" data-reactid=".0.0.1.0.1.0.4.1.0">绑定</i></dd></dl></div></div></div></div></div></div>        </div>
         <div class="suspend-wrap">
 
             <!-- feedback -->

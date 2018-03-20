@@ -116,7 +116,7 @@
                     <div class="city nav-item">
                         <a class="province" provinceid="40000" provincepy="guangzhou">广州<i class="iconfont">혟</i></a>
                     </div>
-                    <div class="nav-item" data-log="homepage"><a href="https://www.iwjw.com/" class="nav-item-a active">首页</a>
+                    <div class="nav-item" data-log="homepage"><a href="${pageContext.request.contextPath}/main/home" class="nav-item-a active">首页</a>
                     </div>
                     <div class="nav-item" data-log="secondhouse">
                         <a href="${pageContext.request.contextPath}/map/goMap" class="nav-item-a ">二手房</a></div>
@@ -155,9 +155,9 @@
                     <c:if test="${vistor != null}">
                 <dd class="header-right clearfix">
                     <div class="nav-item"><a data-url="/userinfo/" class="login  nav-item-a login-require "
-                                             target="_blank"><em class="iconfont if-menu"></em><i class="nav-item-txt">135****0667
+                                             target="_blank"><em class="iconfont if-menu"></em><i class="nav-item-txt">${vistor.uPhone}
                         <span class="shape-circle"></span></i></a>
-                        <div class="user-down-wrap arrow-top nav-down-wrap"><a class="user-item" href="/userinfo/"
+                        <div class="user-down-wrap arrow-top nav-down-wrap"><a class="user-item" href="${pageContext.request.contextPath}/userInfo/account"
                                                                                id="username"><span
                                 class="iconfont">핰</span>我的账户
 
@@ -168,16 +168,16 @@
 
    </a> --><a class="user-item house-schedule" href="/appointmentList/" id="Showings"><span class="iconfont">혤</span>看房日程
 
-                        </a><a class="user-item user-item-payorder" href="/order/"><span class="iconfont">퐀</span>合同订单
+                        </a><a class="user-item user-item-payorder" href="${pageContext.request.contextPath}/userInfo/orders"><span class="iconfont">퐀</span>合同订单
 
-                        </a><a class="user-item user-item-delegate_mng" href="/delegateManage/"><span
+                        </a><a class="user-item user-item-delegate_mng" href="${pageContext.request.contextPath}/userInfo/delegate"><span
                                 class="iconfont">퐁</span>我的委托
 
-                        </a><a class="user-item user-item-agent" href="/agent/"><span class="iconfont">퐄</span>我的经纪人
+                        </a><a class="user-item user-item-agent" href="${pageContext.request.contextPath}/userInfo/agent"><span class="iconfont">퐄</span>我的经纪人
 
-                        </a><a class="user-item user-item-complains" href="/complains/"><span class="iconfont">퐐</span>我的投诉
+                        </a><a class="user-item user-item-complains" href="${pageContext.request.contextPath}/userInfo/complaints"><span class="iconfont">퐐</span>我的投诉
 
-                        </a><a class="user-item user-item-logout"><span class="iconfont">퐅</span>退出
+                        </a><a class="user-item user-item-logout" href="${pageContext.request.contextPath}/userInfo/logout"><span class="iconfont">퐅</span>退出
                         </a></div><!--  --></div>
                     <div class="nav-item message-nav" <%--id="message-nav"--%>>
                         <div class="nav-message-wrap" data-reactid=".0"><a class="nav-item-a message show-msg-down"
@@ -436,13 +436,13 @@
                             <div class="cc-section-l">
 
 
-                                <a href="https://www.iwjw.com/baike/2110/" data-cid="2110" data-pos="1" target="_blank"
+                                <a href="${pageContext.request.contextPath}/baikePage/goInfo?id=${newst.id}" data-cid="2110" data-pos="1" target="_blank"
                                    class="title fs-nowrap point-link-gf">${newst.title}</a>
                                 <p class="des">${newst.describeInfo}</p>
-                                <p class="time">${newst.createDate}发布</p>
+                                <p class="time"><fmt:formatDate value="${newst.createDate}" pattern="yyyy-MM-dd"/>发布</p>
                             </div>
                             <div class="cc-section-r">
-                                <a href="https://www.iwjw.com/baike/2110/" data-cid="2110" data-pos="1"
+                                <a href="${pageContext.request.contextPath}/baikePage/goInfo?id=${newst.id}" data-cid="2110" data-pos="1"
                                    class="point-link-gf" target="_blank">
                                     <img src="../../statics/images/link_img/${newst.imgUrl}.jpg" alt="">
                                 </a>
@@ -450,24 +450,24 @@
                         </div>
                         <div class="cc-section last clearfix">
                             <div class="cc-section-l">
-                                <a href="https://www.iwjw.com/baike/2109/" data-cid="2109" data-pos="2" target="_blank"
+                                <a href="${pageContext.request.contextPath}/baikePage/goInfo?id=${second.id}" data-cid="2109" data-pos="2" target="_blank"
                                    class="title fs-nowrap point-link-gf">${second.title}</a>
                                 <p class="des">${second.describeInfo}</p>
-                                <p class="time">${second.createDate}发布</p>
+                                <p class="time"><fmt:formatDate value="${second.createDate}" pattern="yyyy-MM-dd"/>发布</p>
                             </div>
                             <div class="cc-section-r">
-                                <a href="https://www.iwjw.com/baike/2109/" data-cid="2109" data-pos="2" target="_blank"
+                                <a href="${pageContext.request.contextPath}/baikePage/goInfo?id=${second.id}" data-cid="2109" data-pos="2" target="_blank"
                                    class="point-link-gf">
                                     <img src="../../statics/images/link_img/${second.imgUrl}.jpg" alt="">
                                 </a>
                             </div>
                         </div>
                         <div class="cc-section-b clearfix">
-                            <a href="https://www.iwjw.com/baike/2108/" data-cid="2108" data-pos="3" target="_blank"
+                            <a href="${pageContext.request.contextPath}/baikePage/goInfo?id=${third.id}" data-cid="2108" data-pos="3" target="_blank"
                                class="title fs-nowrap point-link-gf">${third.title}</a>
                             <span class="time"><fmt:formatDate value="${third.createDate}"
                                                                pattern="yyyy-MM-dd"/>发布</span>
-                            <a href="https://www.iwjw.com/baike/guangzhou/" data-cid="" data-pos="4" target="_blank"
+                            <a href="${pageContext.request.contextPath}/baikePage/gfgl" data-cid="" data-pos="4" target="_blank"
                                class="all point-link-gf">查看全部&#155</a>
                         </div>
                     </div>
