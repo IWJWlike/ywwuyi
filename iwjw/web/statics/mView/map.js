@@ -169,23 +169,23 @@ $(".modal-body").on("click", ".city-item", function () {
         $(this).addClass("active");
     }
 });
-
+var busline = new BMap.BusLineSearch(indexmap, {
+    renderOptions: {map: indexmap},
+    onGetBusListComplete: function (result) {
+        if (result) {
+            var fstLine = result.getBusListItem(0);//获取第一个公交列表显示到map上
+            busline.getBusLine(fstLine);
+        }
+    }
+});
 //查询公交地铁线路
 $(".surround-item").click(function () {
-    var busName = 985;
-    var busline = new BMap.BusLineSearch(indexmap, {
-        renderOptions: {map: indexmap},
-        onGetBusListComplete: function (result) {
-            if (result) {
-                var fstLine = result.getBusListItem(0);//获取第一个公交列表显示到map上
-                busline.getBusLine(fstLine);
-            }
-        }
-    });
-    busline.getBusList(busName);
-
+    searchBus("985");
 });
-
+function  searchBus(bn) {
+    var busName = bn;
+    busline.getBusList(busName);
+}
 
 //绑定清空输入框事件
 $(".form-kw").on("input", "input", function () {

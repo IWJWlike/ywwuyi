@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iwjw.dao.WeituoMapper">
+
+    <insert id="createWeituo">
+    INSERT INTO weituo (town_city,town,address,money,owner_name,phone_num)
+    VALUE(#{town_city},#{town},#{address},#{money},#{owner_name},#{phone_num});
+</insert>
+
+    <select id="getWeituo" resultType="Weituo">
+        SELECT * FROM weituo;
+    </select>
+
+
+</mapper>
+

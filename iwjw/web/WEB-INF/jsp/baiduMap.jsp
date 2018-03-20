@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../../statics/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../statics/fontawesome-5.0.8/fontawesome-all.css">
     <link rel="stylesheet" href="../../statics/mapCss/mapIndex.css">
-    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../../statics/js/jquery-2.1.1.min.js"></script>
     <script src="../../statics/js/jQueryRotateCompressed.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=vGIMmDBGvKlKoQ5l8lXIckDPtkh0UtHa"></script>
     <script type="text/javascript" src="../../statics/mView/zoom.js"></script>
