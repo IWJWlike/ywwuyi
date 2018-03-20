@@ -383,8 +383,7 @@
         <div class="nav">
             <ul>
                 <li><a href="javascropt:scroll(0,0)" class="active">我要卖房</a></li>
-                <li><a href="javascript:void(0)">我要估价</a></li>
-                <li><a href="javascript:void(0)">我要出租</a></li>
+                <li><a href="${pageContext.request.contextPath}/lease/test">我要出租</a></li>
             </ul>
         </div>
         <a href="javascript:void(0)" target="_blank" class="app"><span
