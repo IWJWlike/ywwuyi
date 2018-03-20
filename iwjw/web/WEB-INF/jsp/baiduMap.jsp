@@ -28,8 +28,8 @@
                 <dt class="header-left clearfix">
                 <a class="logo" href="#"><img src="../../statics/images/iwjwlog.png" alt="爱屋吉屋"
                                               class="logo-img"></a>
-                <div class="city nav-item">
-                    <a class="province" provinceid="40000" provincepy="guangzhou">广州<i class="iconfont">혟</i></a>
+                <div class="city nav-item" data-toggle="modal" data-target="#myModal">
+                    <a class="province" provinceid="40000" provincepy="guangzhou">广州<i class="iconfont fas fa-angle-down"></i></a>
                 </div>
                 <div class="nav-item" data-log="homepage"><a href="https://www.iwjw.com/" class="nav-item-a active">首页</a>
                 </div>
