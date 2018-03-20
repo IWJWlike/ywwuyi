@@ -25,45 +25,39 @@
         <!-- Header Start -->
         <div class="mod-header map-header" id="Top">
             <dl class="header-wrap">
-                <dt class="header-left">
-                    <a class="logo" href="/">
-                        <img src="../../statics/images/logo.png" alt="" class="logo-img">
-                    </a>
-                    <div class="city nav-item" data-toggle="modal" data-target="#myModal">
-                        <a class="province" provinceid="40000" provincepy="guangzhou">广州
-                            <i class="fas fa-angle-down iconfont"></i>
-                        </a>
-                    </div>
-                    <div class="nav-item" data-log="homepage">
-                        <a href="javascript:void(0)" class="nav-item-a ">首页</a>
-                    </div>
-                    <div class="nav-item" data-log="secondhouse">
-                        <a href="javascript:void(0)" class="nav-item-a ">二手房</a>
-                    </div>
-                    <div class="nav-item active" data-log="rent">
-                        <a href="javascript:void(0)" class="nav-item-a">租房</a>
-                    </div>
+                <dt class="header-left clearfix">
+                <a class="logo" href="#"><img src="../../statics/images/iwjwlog.png" alt="爱屋吉屋"
+                                              class="logo-img"></a>
+                <div class="city nav-item">
+                    <a class="province" provinceid="40000" provincepy="guangzhou">广州<i class="iconfont">혟</i></a>
+                </div>
+                <div class="nav-item" data-log="homepage"><a href="https://www.iwjw.com/" class="nav-item-a active">首页</a>
+                </div>
+                <div class="nav-item" data-log="secondhouse">
+                    <a href="${pageContext.request.contextPath}/map/goMap" class="nav-item-a ">二手房</a></div>
+                <div class="nav-item" data-log="rent">
+                    <a href="${pageContext.request.contextPath}/map/goMap" class="nav-item-a ">租房</a></div>
 
 
-                    <div class="nav-item nav-item-server" data-log="entrust">
-                        <a href="javascript:void(0)" rel="nofollow" class="nav-item-a ">业主委托</a>
-                    </div>
+                <div class="nav-item nav-item-server" data-log="entrust">
+                    <a href="${pageContext.request.contextPath}/sell/goSell" rel="nofollow" class="nav-item-a ">业主委托</a>
+                </div>
 
-                    <div class="nav-item" data-log="baike">
-                        <a class="nav-item-a " href="javascript:void(0)">购房攻略 </a>
-                    </div>
-                    <div class="nav-item" data-log="ailicai">
-                        <a href="javascript:void(0)" target="_blank" class="nav-item-a ailicai ">吉爱财</a>
-                        <div class="header-new"></div>
-                    </div>
-                    <div class="nav-item" data-log="dzg">
-                        <a href="javascript:void(0)" class="nav-item-a  ">贷总管</a>
-                    </div>
-                    <div class="nav-item" data-log="appDownload">
-                        <a href="javascript:void(0)" class="nav-item-a ">
-                            <i class="iconfont if-mobile"></i>APP</a>
-                    </div>
-                </dt>
+                <div class="nav-item" data-log="baike">
+                    <a class="nav-item-a " href="${pageContext.request.contextPath}/baikePage/gfgl" target="_blank">购房攻略 </a>
+                </div>
+                <div class="nav-item" data-log="ailicai">
+                    <a href="#" target="_blank" class="nav-item-a ailicai ">吉爱财</a>
+                    <div class="header-new"></div>
+                </div>
+                <div class="nav-item" data-log="dzg">
+                    <a href="#" class="nav-item-a  ">贷总管</a>
+                </div>
+                <div class="nav-item" data-log="appDownload">
+                    <a href="#" class="nav-item-a "><i
+                            class="iconfont if-mobile"></i>APP</a>
+                </div>
+            </dt>
                 <c:if test="${vistor==null}">
                 <dd class="header-right clearfix"><div  class="nav-item"><a id="one" href="javascript:showBox()" class="login none nav-item-a login-require " target="_blank"><i class="nav-item-txt">登录<span class="slash">/</span>注册</i></a></div><div class="nav-item message-nav" id="message-nav"><div class="nav-message-wrap" data-reactid=".0"></div></div>
                     </c:if>
