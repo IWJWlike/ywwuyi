@@ -35,4 +35,7 @@ public interface BaikeListMapper {
 
     //获取文章
     BaikeList getArticle(int id);
+
+    //分页显示文章
+    List<BaikeList> getByPage();
 }

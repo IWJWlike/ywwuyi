@@ -436,13 +436,13 @@
                             <div class="cc-section-l">
 
 
-                                <a href="https://www.iwjw.com/baike/2110/" data-cid="2110" data-pos="1" target="_blank"
+                                <a href="${pageContext.request.contextPath}/baikePage/goInfo?id=${newst.id}" data-cid="2110" data-pos="1" target="_blank"
                                    class="title fs-nowrap point-link-gf">${newst.title}</a>
                                 <p class="des">${newst.describeInfo}</p>
                                 <p class="time"><fmt:formatDate value="${newst.createDate}" pattern="yyyy-MM-dd"/>发布</p>
                             </div>
                             <div class="cc-section-r">
-                                <a href="https://www.iwjw.com/baike/2110/" data-cid="2110" data-pos="1"
+                                <a href="${pageContext.request.contextPath}/baikePage/goInfo?id=${newst.id}" data-cid="2110" data-pos="1"
                                    class="point-link-gf" target="_blank">
                                     <img src="../../statics/images/link_img/${newst.imgUrl}.jpg" alt="">
                                 </a>
@@ -450,24 +450,24 @@
                         </div>
                         <div class="cc-section last clearfix">
                             <div class="cc-section-l">
-                                <a href="https://www.iwjw.com/baike/2109/" data-cid="2109" data-pos="2" target="_blank"
+                                <a href="${pageContext.request.contextPath}/baikePage/goInfo?id=${second.id}" data-cid="2109" data-pos="2" target="_blank"
                                    class="title fs-nowrap point-link-gf">${second.title}</a>
                                 <p class="des">${second.describeInfo}</p>
                                 <p class="time"><fmt:formatDate value="${second.createDate}" pattern="yyyy-MM-dd"/>发布</p>
                             </div>
                             <div class="cc-section-r">
-                                <a href="https://www.iwjw.com/baike/2109/" data-cid="2109" data-pos="2" target="_blank"
+                                <a href="${pageContext.request.contextPath}/baikePage/goInfo?id=${second.id}" data-cid="2109" data-pos="2" target="_blank"
                                    class="point-link-gf">
                                     <img src="../../statics/images/link_img/${second.imgUrl}.jpg" alt="">
                                 </a>
                             </div>
                         </div>
                         <div class="cc-section-b clearfix">
-                            <a href="https://www.iwjw.com/baike/2108/" data-cid="2108" data-pos="3" target="_blank"
+                            <a href="${pageContext.request.contextPath}/baikePage/goInfo?id=${third.id}" data-cid="2108" data-pos="3" target="_blank"
                                class="title fs-nowrap point-link-gf">${third.title}</a>
                             <span class="time"><fmt:formatDate value="${third.createDate}"
                                                                pattern="yyyy-MM-dd"/>发布</span>
-                            <a href="${pageContext.request.contextPath}/main/goGfgl" data-cid="" data-pos="4" target="_blank"
+                            <a href="${pageContext.request.contextPath}/baikePage/gfgl" data-cid="" data-pos="4" target="_blank"
                                class="all point-link-gf">查看全部&#155</a>
                         </div>
                     </div>

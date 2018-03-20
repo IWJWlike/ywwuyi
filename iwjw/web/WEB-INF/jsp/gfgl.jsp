@@ -476,7 +476,7 @@
                 </script>
 
                 <%--分页页码块--%>
-<%--                <div class="page-container">
+               <%--<div class="page-container">
                     <div class="mod-page">
                         <i class="page-item stateful if-triangle-left">上一页</i>
                         <c:forEach items="${pages}" var="page">
@@ -485,6 +485,7 @@
                         <i class="page-item stateful if-triangle-right">下一页</i>
                     </div>
                 </div>--%>
+
                 <div class="right f-l">
                     <a id="ccs-topic-content" class="ccs-topic-content" href="/caichan/" target="_blank"></a>
                     <a class="special" href="javascript:void(0)" target="_blank" data-logid="8"
@@ -597,11 +598,13 @@
                     <span class="footer-t-m-item">邮箱：cs@iwjw.com</span>
                     <a class="footer-t-m-item" href="javascript:void(0)" rel="nofollow"
                        target="_blank">
-                        <i class="iconfont if-weibo"></i>
+                        <%--<i class="iconfont if-weibo"></i>--%>
+                            <img src="../../statics/images/background_img/if-weibo.PNG" alt="">
                         <span>官方微博</span>
                     </a>
                     <a class="footer-t-m-item last footer-wechat" class="wx iconfont">
-                        <i class="iconfont if-weixin"></i>
+                        <%--<i class="iconfont if-weixin"></i>--%>
+                            <img src="../../statics/images/background_img/if-weixin.PNG" alt="">
                         <span>微信公众号</span>
                         <b><img src="../../statics/images/picture/wxcode_1.png"></b>
                     </a>

@@ -12,7 +12,7 @@ import java.util.List;
 
 public class PageUtils {
 	//页量
-	private int pageSize=2;
+	private int pageSize=8;
 	//当前页
 	private int indexPage=1;
 	//总页数

@@ -59,4 +59,9 @@ public class BaikeListServiceImpl implements BaikeListService {
     public Integer getCount(String plateId) {
         return baikeListMapper.getCount(plateId);
     }
+
+    @Override
+    public List<BaikeList> getByPage() {
+        return baikeListMapper.getByPage();
+    }
 }
