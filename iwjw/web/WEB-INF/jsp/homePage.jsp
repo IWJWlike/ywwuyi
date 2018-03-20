@@ -467,7 +467,7 @@
                                class="title fs-nowrap point-link-gf">${third.title}</a>
                             <span class="time"><fmt:formatDate value="${third.createDate}"
                                                                pattern="yyyy-MM-dd"/>发布</span>
-                            <a href="https://www.iwjw.com/baike/guangzhou/" data-cid="" data-pos="4" target="_blank"
+                            <a href="${pageContext.request.contextPath}/main/goGfgl" data-cid="" data-pos="4" target="_blank"
                                class="all point-link-gf">查看全部&#155</a>
                         </div>
                     </div>
