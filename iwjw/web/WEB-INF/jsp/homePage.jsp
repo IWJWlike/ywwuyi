@@ -492,54 +492,78 @@
 
                     <div class="container">
                         <div id="full" class="carousel slide" data-ride="carousel"
-                             style="background-color: greenyellow;width: 1190px;height: 270px">
-                            <div class="carousel-inner" style="width: 1190px;height: 265px;border: blue solid 1px">
-                                <ul class="row item active" style="border: red solid 1px">
-                                   <%-- <c:forEach items="${homeImgLists}" var="img" varStatus="status">
-                                        <li class="col-xs-4">
-                                        <img src="${img.imgUrl}" class="img-responsive">
-                                        </li>
-                                    </c:forEach>--%>
+                             style="width: 1190px;height: 270px">
+                            <div class="carousel-inner" style="width: 1190px;height: 265px">
+                                <ul class="row item active" <%--style="border: red solid 1px"--%>>
+                                    <%-- <c:forEach items="${homeImgLists}" var="img" varStatus="status">
+                                         <li class="col-xs-4">
+                                         <img src="${img.imgUrl}" class="img-responsive">
+                                         </li>
+                                     </c:forEach>--%>
 
-                                    <li class="col-xs-4" id="gosale">
-                                        <img   src="${pageContext.request.contextPath}/statics/images/house_images/dfd1_1_thumb.jpg" class="img-responsive">
+                                    <li class="col-xs-4">
+                                        <img  src="${pageContext.request.contextPath}/statics/images/house_images/dfd1_1_thumb.jpg" class="img-responsive">
+                                        <p>东风广场</p>
+                                        <em>413万      70m²</em>
                                     </li>
                                     <li class="col-xs-4">
                                         <img src="${pageContext.request.contextPath}/statics/images/house_images/bl1_1_thumb.jpg" class="img-responsive">
+                                        <p>白兰花园</p>
+                                        <em>373万      70m²</em>
                                     </li>
                                     <li class="col-xs-4">
                                         <img src="${pageContext.request.contextPath}/statics/images/house_images/qianxi1_1_thumb.jpg" class="img-responsive">
+                                        <p>白兰花园</p>
+                                        <em>373万      70m²</em>
                                     </li>
                                     <li class="col-xs-4">
                                         <img src="${pageContext.request.contextPath}/statics/images/house_images/yx1_1_thumb.jpg" class="img-responsive">
+                                        <p>云西小区</p>
+                                        <em>473万      80m²</em>
                                     </li>
                                 </ul>
                                 <ul class="row item ">
                                     <li class="col-xs-4">
-                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/zsg1_1_thumb.jpg" class="img-responsive">
+                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/qianxiGround.jpg" class="img-responsive">
+                                        <p>富丽千禧花园</p>
+                                        <em>483万      90m²</em>
                                     </li>
                                     <li class="col-xs-4">
-                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/zsg1_1_thumb.jpg" class="img-responsive">
+                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/mdl2_1_thumb.jpg" class="img-responsive">
+                                        <p>梅东路</p>
+                                        <em>303万     60m²</em>
                                     </li>
                                     <li class="col-xs-4">
-                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/bl1_1_thumb.jpg" class="img-responsive">
+                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/hnbgy_6_thumb.jpg" class="img-responsive">
+                                        <p>竹丝岗大马路</p>
+                                        <em>270万      70m²</em>
                                     </li>
                                     <li class="col-xs-4">
-                                        <img src="http://placehold.it/200/6dc066/ffffff&text=8" class="img-responsive">
+                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/gzbgy_1_thumb.jpg" class="img-responsive">
+                                        <p>碧桂园假日半岛</p>
+                                        <em>800万      250m²</em>
                                     </li>
                                 </ul>
                                 <ul class="row item">
                                     <li class="col-xs-4">
-                                        <img src="http://placehold.it/200/6dc066/ffffff&text=9" class="img-responsive">
+                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/hnbgy_1_thumb.jpg" class="img-responsive">
+                                        <p>广州碧桂园</p>
+                                        <em>900万      300m²</em>
                                     </li>
                                     <li class="col-xs-4">
-                                        <img src="http://placehold.it/200/6dc066/ffffff&text=10" class="img-responsive">
+                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/zsg1_3_thumb.jpg" class="img-responsive">
+                                        <p>顺德碧桂园</p>
+                                        <em>500万      100m²</em>
                                     </li>
                                     <li class="col-xs-4">
-                                        <img src="http://placehold.it/200/6dc066/ffffff&text=11" class="img-responsive">
+                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/ns_1_thumb.jpg" class="img-responsive">
+                                        <p>碧桂园假日半岛</p>
+                                        <em>800万      200m²</em>
                                     </li>
                                     <li class="col-xs-4">
-                                        <img src="http://placehold.it/200/6dc066/ffffff&text=12" class="img-responsive">
+                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/fyy_5_thumb.jpg" class="img-responsive">
+                                        <p>顺德碧桂园东苑</p>
+                                        <em>700万      180m²</em>
                                     </li>
                                 </ul>
                             </div>
@@ -549,8 +573,15 @@
                         </div>
                     </div>
                     <script>
-                        $(".col-xs-4").on("click","img",function () {
-                            window.location="${pageContext.request.contextPath}/saleController/goSale";
+                        $(".col-xs-4").on("click","p",function () {
+                            alert("1111111")
+                            var estateName=$(this).html();
+                            alert(estateName)
+                            $.post("${pageContext.request.contextPath}/houseTest/test","estateName="+estateName,function (houseid) {
+                                alert(houseid);
+                                window.location="${pageContext.request.contextPath}/saleController/goSale?houseid="+houseid;
+                            })
+
                         })
                     </script>
                 </div>
