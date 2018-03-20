@@ -476,7 +476,7 @@
                 </script>
 
                 <%--分页页码块--%>
-<%--                <div class="page-container">
+               <%--<div class="page-container">
                     <div class="mod-page">
                         <i class="page-item stateful if-triangle-left">上一页</i>
                         <c:forEach items="${pages}" var="page">
@@ -485,6 +485,7 @@
                         <i class="page-item stateful if-triangle-right">下一页</i>
                     </div>
                 </div>--%>
+
                 <div class="right f-l">
                     <a id="ccs-topic-content" class="ccs-topic-content" href="/caichan/" target="_blank"></a>
                     <a class="special" href="javascript:void(0)" target="_blank" data-logid="8"

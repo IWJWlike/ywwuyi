@@ -31,4 +31,7 @@ public interface BaikeListService {
     BaikeList getArticle(int id);
     //获取条数
     Integer getCount(String plateId);
+
+    //分页显示文章
+    List<BaikeList> getByPage();
 }
