@@ -195,13 +195,15 @@
                     <span class="footer-t-m-item">热线：400-700-6622</span>
                     <span class="footer-t-m-item">邮箱：cs@iwjw.com</span>
                     <a class="footer-t-m-item" href="http://weibo.com/u/5132568692/home?wvr=5" rel="nofollow" target="_blank">
-                        <i class="iconfont if-weibo"></i>
+                        <%--<i class="iconfont if-weibo"></i>--%>
+                            <img src="../../statics/images/background_img/if-weibo.PNG" alt="">
                         <span>官方微博</span>
                     </a>
                     <a class="footer-t-m-item last footer-wechat" class="wx iconfont">
-                        <i class="iconfont if-weixin"></i>
+                        <%--<i class="iconfont if-weixin"></i>--%>
+                            <img src="../../statics/images/background_img/if-weixin.PNG" alt="">
                         <span>微信公众号</span>
-                        <b><img src="picture/wxcode.png"></b>
+                        <b><img src="../../statics/images/WXcode.png"></b>
                     </a>
                 </div>
                 <div class="footer-t-bot">
