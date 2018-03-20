@@ -306,7 +306,8 @@
         }
     };
 
-    ;;(function () {
+    ;
+    ;(function () {
         var isW3c = !!document.addEventListener;
 
         LjUserTrack.send({
@@ -383,7 +384,7 @@
         <div class="nav">
             <ul>
                 <li><a href="javascropt:scroll(0,0)" class="active">我要卖房</a></li>
-                <li><a href="javascript:void(0)">我要估价</a></li>
+                <%--<li><a href="javascript:void(0)">我要估价</a></li>--%>
                 <li><a href="javascript:void(0)">我要出租</a></li>
             </ul>
         </div>
@@ -415,17 +416,17 @@
             </dl>
             <dl>
                 <dt>房屋地址</dt>
-                <dd>
+                <dd class="address-select">
                     <div class="u-select u-select-build" name="building">
-                        <input placeholder="楼栋号" class="u-select-selected" type="text" value="">
+                        <input class="ldh" placeholder="楼栋号" class="u-select-selected" type="text" value="">
                         <ul class="u-select-options hide"></ul>
                     </div>
                     <div class="u-select u-select-build" name="unit">
-                        <input placeholder="单元号" class="u-select-selected" type="text" value="">
+                        <input class="dyh" placeholder="单元号" class="u-select-selected" type="text" value="">
                         <ul class="u-select-options hide"></ul>
                     </div>
                     <div class="u-select u-select-build" name="house">
-                        <input placeholder="门牌号" class="u-select-selected" type="text" value="">
+                        <input class="mph" placeholder="门牌号" class="u-select-selected" type="text" value="">
                         <ul class="u-select-options hide"></ul>
                     </div>
                 </dd>
@@ -450,7 +451,7 @@
                 <dt>手机号码</dt>
                 <dd>
                     <input name="owner_mobile" value="" type="text" placeholder="您的联系方式，方便我们及时与您联系" autoComplete="off"
-                           style="width: 250px;"/>
+                           maxlength="11" style="width: 250px;"/>
                 </dd>
             </dl>
             <dl>
@@ -460,7 +461,8 @@
                            style="width: 170px;"/>
                     <!-- <div class="btn-getcode-voice">获取语音验证码</div> -->
                     <!-- <div class="btn-getcode-sms">获取短信验证码</div> -->
-                    <div class="btn-getcode-sms"><img src="../../statics/images/Sell_img/GeneratePictureUpgrade.png"></div>
+                    <div class="btn-getcode-sms"><img src="../../statics/images/Sell_img/GeneratePictureUpgrade.png">
+                    </div>
                 </dd>
             </dl>
         </div>
@@ -486,7 +488,6 @@
                 </div>
             </div>
             <div id="tpl-r-relatedhouse">
-
 
 
                 <ul class="bd">
@@ -690,9 +691,10 @@
             <div style="width:300px;color: #888c8e;font-size: 12px;line-height: 20px;"><a target="_blank"
                                                                                           href="javascript:void(0)"
                                                                                           style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
-                    src="../../statics/images/Sell_img/beian.png" style="float:left;"><p
-                    style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;color: #888c8e;">京公网安备
-                11010802024019号</p></a></div>
+                    src="../../statics/images/Sell_img/beian.png" style="float:left;">
+                <p
+                        style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;color: #888c8e;">京公网安备
+                    11010802024019号</p></a></div>
         </div>
     </div>
 </div>
@@ -1009,5 +1011,33 @@ s.parentNode.insertBefore(mvl, s);
             i.src = n
         }
     })(window);
-})();</script><!--cookie mapping--><img src='../../statics/images/Sell_img/cm.fcg' alt="cookie_mapping_url" style="display: none;"></body>
+})();</script><!--cookie mapping--><img src='../../statics/images/Sell_img/cm.fcg' alt="cookie_mapping_url"
+                                        style="display: none;"></body>
+<script>
+
+
+    $(".btn-submit").click(function () {
+        var address = "" + $(".ldh").val() + $(".dyh").val() + $(".mph").val();
+
+        var code = $("input[name=verify_code]").val();
+        if (parseInt(code) != 12) {
+            alert("验证码错误");
+        } else {
+            var jsonObj = {
+                "town_city": "广州",
+                "town": $(".sugInput").val(),
+                "address": address,
+                "money": $("input[name=expect_price]").val(),
+                "owner_name": $("input[name=owner_name]").val(),
+                "phone_num": $("input[name=owner_mobile]").val(),
+            };
+            var json = JSON.stringify(jsonObj);
+            $.post("${pageContext.request.contextPath}/weituo/setWeituo", {"jsonObj": json}, function (d) {
+                    alert("post success");
+                }
+            );
+        }
+    });
+
+</script>
 </html>
