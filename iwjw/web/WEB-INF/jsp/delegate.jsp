@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!-- saved from url=(0035)https://www.iwjw.com/delegateManage -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -126,7 +127,40 @@
 
 
 
-        <div class="mod-delegate_mng" id="mod-delegate_mng"><div class="layout-wrap layout-ucenter" data-reactid=".0"><div class="layout-row" data-reactid=".0.0"><div class="layout-col-2" data-reactid=".0.0.0"><div id="js-nav-wrap" data-reactid=".0.0.0.0"><div class="wrap-nav" data-reactid=".0.0.0.0.0"><div class="j-nav-label" style="top:146px;" data-reactid=".0.0.0.0.0.0"></div><ul class="nav-menus" data-reactid=".0.0.0.0.0.1"><li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$0"><a href="https://www.iwjw.com/order" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$0.0"><i class="iconfont left-nav-iconfont if-pay-order" data-reactid=".0.0.0.0.0.1.$0.0.0"></i><span data-reactid=".0.0.0.0.0.1.$0.0.1">合同订单</span></a></li><li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$1"><a href="https://www.iwjw.com/agent" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$1.0"><i class="iconfont left-nav-iconfont if-house-consultant" data-reactid=".0.0.0.0.0.1.$1.0.0"></i><span data-reactid=".0.0.0.0.0.1.$1.0.1">我的经纪人</span></a></li><li class="left-menus-item active" data-reactid=".0.0.0.0.0.1.$2"><a href="https://www.iwjw.com/delegateManage" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$2.0"><i class="iconfont left-nav-iconfont if-entrust-mgmt" data-reactid=".0.0.0.0.0.1.$2.0.0"></i><span data-reactid=".0.0.0.0.0.1.$2.0.1">我的委托</span></a></li><li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$3"><a href="https://www.iwjw.com/complains" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$3.0"><i class="iconfont left-nav-iconfont if-complaints" data-reactid=".0.0.0.0.0.1.$3.0.0"></i><span data-reactid=".0.0.0.0.0.1.$3.0.1">我的投诉</span></a></li><li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$4"><a href="https://www.iwjw.com/userinfo" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$4.0"><i class="iconfont left-nav-iconfont if-login-register" data-reactid=".0.0.0.0.0.1.$4.0.0"></i><span data-reactid=".0.0.0.0.0.1.$4.0.1">我的账户</span></a></li><li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$5"><a href="javascript:void(0)" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$5.0"><i class="iconfont left-nav-iconfont if-exit-login" data-reactid=".0.0.0.0.0.1.$5.0.0"></i><span data-reactid=".0.0.0.0.0.1.$5.0.1">退出登录</span></a></li></ul></div></div></div><div class="layout-col-10 iwjw-right" data-reactid=".0.0.1"><div class="entrust-container" data-reactid=".0.0.1.0"><div class="entrust-banner" data-reactid=".0.0.1.0.0"><div class="banner-downapp" data-reactid=".0.0.1.0.0.0"><div class="downapp-container clearfix" data-reactid=".0.0.1.0.0.0.0"><div class="downapp-left f-l" data-reactid=".0.0.1.0.0.0.0.0"><img src="../../statics/images/getImage.png" alt="" class="qr-img" data-reactid=".0.0.1.0.0.0.0.0.0"></div><div class="downapp-right f-l" data-reactid=".0.0.1.0.0.0.0.1"><div class="right-text right-text-down" data-reactid=".0.0.1.0.0.0.0.1.0">下载APP发布房源</div><div class="right-text right-text-price" data-reactid=".0.0.1.0.0.0.0.1.1">随心调价 · 实时查看动态</div><div class="right-text right-text-phone" data-reactid=".0.0.1.0.0.0.0.1.2"><span data-reactid=".0.0.1.0.0.0.0.1.2.0">也可以拨打</span><span class="phone-number" data-reactid=".0.0.1.0.0.0.0.1.2.1">400-700-6622</span><span data-reactid=".0.0.1.0.0.0.0.1.2.2">委托</span></div></div></div></div></div><div class="entrust-content" data-reactid=".0.0.1.0.1"><div class="content-lookstep" data-reactid=".0.0.1.0.1.0"><div class="lookstep-container clearfix" data-reactid=".0.0.1.0.1.0.0"><div class="lookstep-item f-l" data-reactid=".0.0.1.0.1.0.0.0"><div class="lookstep-item-title" data-reactid=".0.0.1.0.1.0.0.0.0">1.发布房源</div><div class="lookstep-item-content" data-reactid=".0.0.1.0.1.0.0.0.1">线上提交房源信息，免费快速发布房源</div><div class="lookstep-item-bias lookstep-item-bias1" data-reactid=".0.0.1.0.1.0.0.0.2"></div><div class="lookstep-item-bias lookstep-item-bias2" data-reactid=".0.0.1.0.1.0.0.0.3"></div></div><div class="lookstep-item f-l" data-reactid=".0.0.1.0.1.0.0.1"><div class="lookstep-item-title" data-reactid=".0.0.1.0.1.0.0.1.0">2.客服审核</div><div class="lookstep-item-content" data-reactid=".0.0.1.0.1.0.0.1.1">发布后客服会回电与您联系，核实房源并确认上架</div><div class="lookstep-item-bias lookstep-item-bias1" data-reactid=".0.0.1.0.1.0.0.1.2"></div><div class="lookstep-item-bias lookstep-item-bias2" data-reactid=".0.0.1.0.1.0.0.1.3"></div></div><div class="lookstep-item f-l" data-reactid=".0.0.1.0.1.0.0.2"><div class="lookstep-item-title" data-reactid=".0.0.1.0.1.0.0.2.0">3.带客看房</div><div class="lookstep-item-content" data-reactid=".0.0.1.0.1.0.0.2.1">经纪人与您预约时间，带意向客户上门看房</div><div class="lookstep-item-bias lookstep-item-bias1" data-reactid=".0.0.1.0.1.0.0.2.2"></div><div class="lookstep-item-bias lookstep-item-bias2" data-reactid=".0.0.1.0.1.0.0.2.3"></div></div><div class="lookstep-item f-l" data-reactid=".0.0.1.0.1.0.0.3"><div class="lookstep-item-title" data-reactid=".0.0.1.0.1.0.0.3.0">4.签约出售</div><div class="lookstep-item-content" data-reactid=".0.0.1.0.1.0.0.3.1">业主顾问团队在签约过程中将全程为您提供服务</div></div></div></div></div></div></div></div></div></div>
+        <div class="mod-delegate_mng" id="mod-delegate_mng">
+            <div class="layout-wrap layout-ucenter" data-reactid=".0">
+                <div class="layout-row" data-reactid=".0.0">
+                    <div class="layout-col-2" data-reactid=".0.0.0">
+                        <div id="js-nav-wrap" data-reactid=".0.0.0.0">
+                            <div class="wrap-nav" data-reactid=".0.0.0.0.0">
+                                <div class="j-nav-label" style="top:276px;" data-reactid=".0.0.0.0.0.0"></div>
+                                <ul class="nav-menus" data-reactid=".0.0.0.0.0.1">
+                                    <li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$0">
+                                        <a href="${pageContext.request.contextPath}/userInfo/orders" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$0.0">
+                                            <i class="iconfont left-nav-iconfont if-pay-order" data-reactid=".0.0.0.0.0.1.$0.0.0"></i>
+                                            <span data-reactid=".0.0.0.0.0.1.$0.0.1">合同订单</span></a></li>
+                                    <li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$1">
+                                        <a href="${pageContext.request.contextPath}/userInfo/agent" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$1.0">
+                                            <i class="iconfont left-nav-iconfont if-house-consultant" data-reactid=".0.0.0.0.0.1.$1.0.0"></i>
+                                            <span data-reactid=".0.0.0.0.0.1.$1.0.1">我的经纪人</span></a></li>
+                                    <li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$2">
+                                        <a href="${pageContext.request.contextPath}/userInfo/orders" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$2.0">
+                                            <i class="iconfont left-nav-iconfont if-entrust-mgmt" data-reactid=".0.0.0.0.0.1.$2.0.0"></i>
+                                            <span data-reactid=".0.0.0.0.0.1.$2.0.1">我的委托</span></a></li>
+                                    <li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$3">
+                                        <a href="${pageContext.request.contextPath}/userInfo/complaints" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$3.0">
+                                            <i class="iconfont left-nav-iconfont if-complaints" data-reactid=".0.0.0.0.0.1.$3.0.0"></i>
+                                            <span data-reactid=".0.0.0.0.0.1.$3.0.1">我的投诉</span></a></li>
+                                    <li class="left-menus-item active" data-reactid=".0.0.0.0.0.1.$4">
+                                        <a href="${pageContext.request.contextPath}/userInfo/account" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$4.0">
+                                            <i class="iconfont left-nav-iconfont if-login-register" data-reactid=".0.0.0.0.0.1.$4.0.0"></i>
+                                            <span data-reactid=".0.0.0.0.0.1.$4.0.1">我的账户</span></a></li>
+                                    <li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$5">
+                                        <a href="${pageContext.request.contextPath}/userInfo/logout" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$5.0">
+                                            <i class="iconfont left-nav-iconfont if-exit-login" data-reactid=".0.0.0.0.0.1.$5.0.0"></i>
+                                            <span data-reactid=".0.0.0.0.0.1.$5.0.1">退出登录</span></a></li>
+                                </ul></div></div></div>
+</div></div>        </div>
         <div class="suspend-wrap" style="bottom: 80px;">
 
             <!-- feedback -->
@@ -219,7 +253,7 @@
         })();
     })();
 </script><!--[if IE 8]> <script src='../../statics/js/es5-shim-sham_5.5.js'></script><![endif]-->
-<script src="../../statics/js/common_72.js"></script>
+<%--<script src="../../statics/js/common_72.js"></script>--%>
 <script src="../../statics/js/delegate_mng_72.js"></script>
 <script src="https://www.iwjw.com/delegateManage" async=""></script>
 <div class="mod-footer short-shift">
