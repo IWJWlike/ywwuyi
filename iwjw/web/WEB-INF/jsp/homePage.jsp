@@ -439,7 +439,7 @@
                                 <a href="https://www.iwjw.com/baike/2110/" data-cid="2110" data-pos="1" target="_blank"
                                    class="title fs-nowrap point-link-gf">${newst.title}</a>
                                 <p class="des">${newst.describeInfo}</p>
-                                <p class="time">${newst.createDate}发布</p>
+                                <p class="time"><fmt:formatDate value="${newst.createDate}" pattern="yyyy-MM-dd"/>发布</p>
                             </div>
                             <div class="cc-section-r">
                                 <a href="https://www.iwjw.com/baike/2110/" data-cid="2110" data-pos="1"
@@ -453,7 +453,7 @@
                                 <a href="https://www.iwjw.com/baike/2109/" data-cid="2109" data-pos="2" target="_blank"
                                    class="title fs-nowrap point-link-gf">${second.title}</a>
                                 <p class="des">${second.describeInfo}</p>
-                                <p class="time">${second.createDate}发布</p>
+                                <p class="time"><fmt:formatDate value="${second.createDate}" pattern="yyyy-MM-dd"/>发布</p>
                             </div>
                             <div class="cc-section-r">
                                 <a href="https://www.iwjw.com/baike/2109/" data-cid="2109" data-pos="2" target="_blank"
