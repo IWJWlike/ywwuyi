@@ -196,10 +196,10 @@
                     <div class="detail-content" onselectstart="return false;">
                         <p class="detail-title bold"
                            data-id="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/10/13/fde82646dad344d78eecf400d79924c6">
-                            热点城市房价持续降温：很多人等降价</p>
+                            ${article.title}</p>
                         <p class="subtitle">
-                            <span class="block">热点楼市</span>
-                            <span class="date">2017-10-13</span>
+                            <span class="block">${article.plateId}</span>
+                            <span class="date"><fmt:formatDate value='${article.createDate}' pattern='yyyy.MM.dd'/></span>
                             <span class="from">来源：经济参考报</span>
                         </p>
                         <div class="content">
@@ -258,7 +258,7 @@
                     </div>
                     <div class="detail-dot">
                         <p class="dot-circle"><i class="dz iconfont if-spot"></i></p>
-                        <p class="dot-desc" data-count="22"><span class="dot-text" data-id="2110">22</span>人觉得有用</p>
+                        <p class="dot-desc" data-count="22"><span class="dot-text" data-id="2110">${article.likes}</span>人觉得有用</p>
                         <p class="plus-one hide">+1</p>
                     </div>
                     <div class="detail-share">

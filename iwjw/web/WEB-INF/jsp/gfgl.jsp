@@ -327,12 +327,12 @@
                                     <li class="list-li clearfix">
                                         <div class="list-left f-l">
                                             <h4>
-                                                <a class="list-title bold" href="https://www.iwjw.com/baike/2110/" target="_blank">${li.title}</a></h4>
+                                                <a class="list-title bold" href="${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}" target="_blank">${li.title}</a></h4>
                                             <div class="list-desc">${li.describeInfo}</div>
                                             <div class="classify-date">
                                                 <span class="classify" >${li.plateId}</span>
                                                 <span class="pub-date pad-left"><fmt:formatDate value="${li.createDate}" pattern="yyyy-MM-dd"/></span></div></div>
-                                        <a class="list-right f-l" href="https://www.iwjw.com/baike/2110/" target="_blank"><img src="../../statics/images/link_img/${li.imgUrl}.jpg" class="list-img"></a></li>
+                                        <a class="list-right f-l" href="${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}" target="_blank"><img src="../../statics/images/link_img/${li.imgUrl}.jpg" class="list-img"></a></li>
                                 </c:forEach>
                             </ul>
                                 <%--新闻预览模块结束--%>
@@ -353,12 +353,12 @@
                             $("#zixun").html(
                                 "<c:forEach items='${lists0}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
-                                +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
+                                +"<h4><a class='list-title bold' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'>${li.title}</a></h4>"
                                 +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
-                                +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
+                                +"<span class='pub-date pad-left'><fmt:formatDate value='${li.createDate}' pattern='yyyy.MM.dd'/></span></div></div>"
+                                +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -366,12 +366,12 @@
                             $("#zixun").html(
                                 "<c:forEach items='${lists1}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
-                                +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
+                                +"<h4><a class='list-title bold' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'>${li.title}</a></h4>"
                                 +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
-                                +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
+                                +"<span class='pub-date pad-left'><fmt:formatDate value='${li.createDate}' pattern='yyyy.MM.dd'/></span></div></div>"
+                                +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -379,12 +379,12 @@
                             $("#zixun").html(
                                 "<c:forEach items='${lists2}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
-                                +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
+                                +"<h4><a class='list-title bold' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'>${li.title}</a></h4>"
                                 +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
-                                +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
+                                +"<span class='pub-date pad-left'><fmt:formatDate value='${li.createDate}' pattern='yyyy.MM.dd'/></span></div></div>"
+                                +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -392,12 +392,12 @@
                             $("#zixun").html(
                                 "<c:forEach items='${lists3}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
-                                +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
+                                +"<h4><a class='list-title bold' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'>${li.title}</a></h4>"
                                 +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
-                                +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
+                                +"<span class='pub-date pad-left'><fmt:formatDate value='${li.createDate}' pattern='yyyy.MM.dd'/></span></div></div>"
+                                +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -405,12 +405,12 @@
                             $("#zixun").html(
                                 "<c:forEach items='${lists4}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
-                                +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
+                                +"<h4><a class='list-title bold' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'>${li.title}</a></h4>"
                                 +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
-                                +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
+                                +"<span class='pub-date pad-left'><fmt:formatDate value='${li.createDate}' pattern='yyyy.MM.dd'/></span></div></div>"
+                                +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -418,12 +418,12 @@
                             $("#zixun").html(
                                 "<c:forEach items='${lists5}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
-                                +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
+                                +"<h4><a class='list-title bold' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'>${li.title}</a></h4>"
                                 +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
-                                +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
+                                +"<span class='pub-date pad-left'><fmt:formatDate value='${li.createDate}' pattern='yyyy.MM.dd'/></span></div></div>"
+                                +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -431,12 +431,12 @@
                             $("#zixun").html(
                                 "<c:forEach items='${lists6}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
-                                +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
+                                +"<h4><a class='list-title bold' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'>${li.title}</a></h4>"
                                 +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
-                                +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
+                                +"<span class='pub-date pad-left'><fmt:formatDate value='${li.createDate}' pattern='yyyy.MM.dd'/></span></div></div>"
+                                +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -444,12 +444,12 @@
                             $("#zixun").html(
                                 "<c:forEach items='${lists7}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
-                                +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
+                                +"<h4><a class='list-title bold' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'>${li.title}</a></h4>"
                                 +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
-                                +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
+                                +"<span class='pub-date pad-left'><fmt:formatDate value='${li.createDate}' pattern='yyyy.MM.dd'/></span></div></div>"
+                                +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
@@ -457,12 +457,12 @@
                             $("#zixun").html(
                                 "<c:forEach items='${lists8}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
-                                +"<h4><a class='list-title bold' href='https://www.iwjw.com/baike/2110/' target='_blank'>${li.title}</a></h4>"
+                                +"<h4><a class='list-title bold' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'>${li.title}</a></h4>"
                                 +"<div class='list-desc'>${li.describeInfo}</div>"
                                 +"<div class='classify-date'>"
                                 +"<span class='classify' >${li.plateId}</span>"
-                                +"<span class='pub-date pad-left'>2017-10-13</span></div></div>"
-                                +"<a class='list-right f-l' href='https://www.iwjw.com/baike/2110/' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
+                                +"<span class='pub-date pad-left'><fmt:formatDate value='${li.createDate}' pattern='yyyy.MM.dd'/></span></div></div>"
+                                +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
                         }
