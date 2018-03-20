@@ -32,41 +32,36 @@
         <div class="mod-header " id="Top">
             <dl class="header-wrap clearfix">
                 <dt class="header-left clearfix">
-                    <a class="logo" href="/"
-                    ><img src="../../statics/images/picture/iwjwlog.png" alt="爱屋吉屋" class="logo-img"></a>
-                    <div class="city none nav-item">
-                        <a class="province"></a>
+                    <a class="logo" href="#"><img src="../../statics/images/iwjwlog.png" alt="爱屋吉屋"
+                                                  class="logo-img"></a>
+                    <div class="city nav-item">
+                        <a class="province" provinceid="40000" provincepy="guangzhou">广州<i class="iconfont">혟</i></a>
                     </div>
-                    <div class="nav-item" data-log="homepage"
-                    ><a href="/" class="nav-item-a ">首页</a></div>
+                    <div class="nav-item" data-log="homepage"><a href="https://www.iwjw.com/" class="nav-item-a active">首页</a>
+                    </div>
                     <div class="nav-item" data-log="secondhouse">
-                        <a href="/sale/map/"
-                           class="nav-item-a " >二手房</a></div>
+                        <a href="${pageContext.request.contextPath}/map/goMap" class="nav-item-a ">二手房</a></div>
                     <div class="nav-item" data-log="rent">
-                        <a href="/chuzu/map/"
-                           class="nav-item-a " >租房</a></div>
+                        <a href="${pageContext.request.contextPath}/map/goMap" class="nav-item-a ">租房</a></div>
 
 
-                    <div class="nav-item nav-item-server"  data-log="entrust">
-                        <a href="/delegation/" rel="nofollow"
-                           class="nav-item-a "
-                        >业主委托</a>
+                    <div class="nav-item nav-item-server" data-log="entrust">
+                        <a href="${pageContext.request.contextPath}/sell/goSell" rel="nofollow" class="nav-item-a ">业主委托</a>
                     </div>
 
                     <div class="nav-item" data-log="baike">
-                        <a class="nav-item-a "  href="/baike/guangzhou/">购房攻略            </a>
+                        <a class="nav-item-a " href="${pageContext.request.contextPath}/baikePage/gfgl" target="_blank">购房攻略 </a>
                     </div>
                     <div class="nav-item" data-log="ailicai">
-                        <a href="//www.iwlicai.com" target="_blank" class="nav-item-a ailicai ">吉爱财</a>
+                        <a href="#" target="_blank" class="nav-item-a ailicai ">吉爱财</a>
                         <div class="header-new"></div>
                     </div>
                     <div class="nav-item" data-log="dzg">
-                        <a href="/dzg/" class="nav-item-a  "
-                        >贷总管</a>
+                        <a href="#" class="nav-item-a  ">贷总管</a>
                     </div>
                     <div class="nav-item" data-log="appDownload">
-                        <a href="/appDownPage/" class="nav-item-a "
-                        ><i class="iconfont if-mobile"></i>APP</a>
+                        <a href="#" class="nav-item-a "><i
+                                class="iconfont if-mobile"></i>APP</a>
                     </div>
                 </dt>
                 <dd class="header-right clearfix">
