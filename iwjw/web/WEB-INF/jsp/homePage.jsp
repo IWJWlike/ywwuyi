@@ -155,9 +155,9 @@
                     <c:if test="${vistor != null}">
                 <dd class="header-right clearfix">
                     <div class="nav-item"><a data-url="/userinfo/" class="login  nav-item-a login-require "
-                                             target="_blank"><em class="iconfont if-menu"></em><i class="nav-item-txt">135****0667
+                                             target="_blank"><em class="iconfont if-menu"></em><i class="nav-item-txt">${vistor.uPhone}
                         <span class="shape-circle"></span></i></a>
-                        <div class="user-down-wrap arrow-top nav-down-wrap"><a class="user-item" href="/userinfo/"
+                        <div class="user-down-wrap arrow-top nav-down-wrap"><a class="user-item" href="${pageContext.request.contextPath}/userInfo/account"
                                                                                id="username"><span
                                 class="iconfont">핰</span>我的账户
 
@@ -168,16 +168,16 @@
 
    </a> --><a class="user-item house-schedule" href="/appointmentList/" id="Showings"><span class="iconfont">혤</span>看房日程
 
-                        </a><a class="user-item user-item-payorder" href="/order/"><span class="iconfont">퐀</span>合同订单
+                        </a><a class="user-item user-item-payorder" href="${pageContext.request.contextPath}/userInfo/orders"><span class="iconfont">퐀</span>合同订单
 
-                        </a><a class="user-item user-item-delegate_mng" href="/delegateManage/"><span
+                        </a><a class="user-item user-item-delegate_mng" href="${pageContext.request.contextPath}/userInfo/delegate"><span
                                 class="iconfont">퐁</span>我的委托
 
-                        </a><a class="user-item user-item-agent" href="/agent/"><span class="iconfont">퐄</span>我的经纪人
+                        </a><a class="user-item user-item-agent" href="${pageContext.request.contextPath}/userInfo/agent"><span class="iconfont">퐄</span>我的经纪人
 
-                        </a><a class="user-item user-item-complains" href="/complains/"><span class="iconfont">퐐</span>我的投诉
+                        </a><a class="user-item user-item-complains" href="${pageContext.request.contextPath}/userInfo/complaints"><span class="iconfont">퐐</span>我的投诉
 
-                        </a><a class="user-item user-item-logout"><span class="iconfont">퐅</span>退出
+                        </a><a class="user-item user-item-logout" href="${pageContext.request.contextPath}/userInfo/logout"><span class="iconfont">퐅</span>退出
                         </a></div><!--  --></div>
                     <div class="nav-item message-nav" <%--id="message-nav"--%>>
                         <div class="nav-message-wrap" data-reactid=".0"><a class="nav-item-a message show-msg-down"
