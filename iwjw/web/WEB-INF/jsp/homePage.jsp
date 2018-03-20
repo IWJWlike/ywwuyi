@@ -489,6 +489,7 @@
                     <%--class="pic-right unselectable iconfont">&#155</em>--%>
                     <%--<div class="pic-wrap" style="border: slateblue solid 1px;">--%>
 
+
                     <div class="container">
                         <div id="full" class="carousel slide" data-ride="carousel"
                              style="background-color: greenyellow;width: 1190px;height: 270px">
@@ -500,8 +501,8 @@
                                         </li>
                                     </c:forEach>--%>
 
-                                    <li class="col-xs-4">
-                                        <img src="${pageContext.request.contextPath}/statics/images/house_images/dfd1_1_thumb.jpg" class="img-responsive">
+                                    <li class="col-xs-4" id="gosale">
+                                        <img   src="${pageContext.request.contextPath}/statics/images/house_images/dfd1_1_thumb.jpg" class="img-responsive">
                                     </li>
                                     <li class="col-xs-4">
                                         <img src="${pageContext.request.contextPath}/statics/images/house_images/bl1_1_thumb.jpg" class="img-responsive">
@@ -547,7 +548,11 @@
                                data-slide="next">&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </div>
                     </div>
-
+                    <script>
+                        $(".col-xs-4").on("click","img",function () {
+                            window.location="${pageContext.request.contextPath}/saleController/goSale";
+                        })
+                    </script>
                 </div>
             </div>
                     <%--
