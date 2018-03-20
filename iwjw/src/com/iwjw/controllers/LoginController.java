@@ -45,7 +45,7 @@ public class LoginController extends HttpServlet{
 //    public String goLogin(HttpServletRequest request, HttpServletResponse response, @RequestParam("uPhone")String uPhone, Model model,@RequestParam("textCode")String textCode ) {
     public String goLogin(HttpServletRequest request, HttpServletResponse response, @RequestParam("uPhone")String uPhone,@RequestParam("textCode")String textCode, Model model) throws IOException {
         String code = (String) request.getSession().getAttribute(uPhone);
-        if (textCode.equals("1111")) {
+        if (textCode.equals(code)) {
             if (userService.selectUser(uPhone) == (null)) {
                 userService.createUser(uPhone);
             }
