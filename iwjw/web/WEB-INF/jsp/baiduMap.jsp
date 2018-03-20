@@ -112,7 +112,7 @@
                             </div>
                             <h2 class="list-summary">
                                 共找到
-                                <b class="fo-red">71</b> 个小区, 在租
+                                <b class="fo-red">71</b> 个行政区, 在租
                                 <b class="fo-red find-num" data-num="720">720</b> 套
                             </h2>
                             <div class="list-result">
@@ -125,14 +125,14 @@
                                     <div class="viewport">
                                         <div class="overview list-wrap" style="top: 0px;">
                                             <ul class="list-estate">
-                                                <li class="list-item-wrap" data-id="53136" data-index="0" data-g="3">
-                                                    <i class="item-name need-cut">又一居花园</i>
-                                                    <div class="t-r">
-                                                        <i class="item-total">
-                                                            <i class="total-num">47</i>套</i>
-                                                        <em class="fas fa-angle-right iconfont"></em>
-                                                    </div>
-                                                </li>
+                                                <%--<li class="list-item-wrap" data-id="53136" data-index="0" data-g="3">--%>
+                                                    <%--<i class="item-name need-cut">又一居花园</i>--%>
+                                                    <%--<div class="t-r">--%>
+                                                        <%--<i class="item-total">--%>
+                                                            <%--<i class="total-num">47</i>套</i>--%>
+                                                        <%--<em class="fas fa-angle-right iconfont"></em>--%>
+                                                    <%--</div>--%>
+                                                <%--</li>--%>
 
                                             </ul>
                                         </div>

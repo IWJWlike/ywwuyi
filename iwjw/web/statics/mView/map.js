@@ -18,6 +18,8 @@ localCity.get(function (result) {
 $.getJSON("../../statics/json/obj.js", function (result) {
     var obj = result.obj;
     console.log(obj);
+    //城市名
+    $(".attr-name").text(obj.firstJson.data.province.text);
     var point = new BMap.Point(obj.firstJson.data.lon, obj.firstJson.data.lat); // 创建点坐标
     //创建比例尺
     var tontrol = new BMap.ScaleControl({
@@ -30,7 +32,8 @@ $.getJSON("../../statics/json/obj.js", function (result) {
     indexmap.addControl(tontrol); //添加控制器
     indexmap.centerAndZoom(point, 12); //设置中心点和缩放级别
     indexmap.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
-    var zb = ""; //周边的行政区域名称
+    let zb = ""; //周边的行政区域名称
+    let areaSize=0, houseTotalNum=0;
     obj.json.data.markList.forEach(element => {
         obj.json2.data.markList.forEach(element1 => {
             if (element.name == "周边") {
@@ -39,6 +42,8 @@ $.getJSON("../../statics/json/obj.js", function (result) {
                 }
             }
         });
+        areaSize++;
+        houseTotalNum += parseInt(element.houseNum);
         var point1 = new BMap.Point(element.lon, element.lat);
         //创建覆盖物对象，参数1 为经纬度，2 为文本，3 为鼠标移上去的样式
         var myCompOverlay = new ComplexCustomOverlay(point1, element.name, element.houseNum + "套", getBoundary(
@@ -47,8 +52,12 @@ $.getJSON("../../statics/json/obj.js", function (result) {
         });
         //将覆盖物添加到地图
         indexmap.addOverlay(myCompOverlay);
+        $(".list-estate").append('<li class="list-item-wrap" data-id="40001" data-index="0" data-g="1"><i class="item-name need-cut">'+element.name+'</i><div class="t-r"><i class="item-total"><i class="total-num">'+element.houseNum+'</i>套</i><em class="fas fa-angle-right iconfont"></em></div></li>');
     });
-
+    //设置总套数和行政区个数
+    const listSum = $(".list-summary");
+    listSum.children("b").text(areaSize);
+    listSum.children(".find-num").text(houseTotalNum);
     //监听鼠标滚轮缩放事件
     indexmap.onzoomend = function (type, target) {
         var key = indexmap.getZoom();
