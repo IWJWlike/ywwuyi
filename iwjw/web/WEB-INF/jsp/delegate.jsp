@@ -9,7 +9,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!-- saved from url=(0035)https://www.iwjw.com/delegateManage -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>我的委托-爱屋吉屋</title>
@@ -19,28 +21,53 @@
     <link rel="apple-touch-icon-precomposed" href="../../statics/images/logo_wx.png">
     <link rel="shortcut icon" href="https://files.iwjw.com/icon/favicon.ico">
     <meta name="baidu-site-verification" content="rO1Bqg66kn">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../../statics/css/common_72.css">
     <link rel="stylesheet" href="../../statics/css/delegate_mng_67.css">
-    <script charset="utf-8" src="../../statics/js/v.js"></script><script src="../../statics/js/hm.js" async=""></script><script type="text/javascript" async="" src="../../statics/js/vds.js"></script><script>
+    <script charset="utf-8" src="../../statics/js/v.js"></script>
+    <script src="../../statics/js/hm.js" async=""></script>
+    <script type="text/javascript" async="" src="../../statics/js/vds.js"></script>
+    <script type="text/javascript" async="" src="../../statics/js/jquery-2.1.1.min.js"></script>
+    <script>
         ;(function () {
-            if(location.hostname.indexOf('iwjw.com') != -1 && location.hostname.indexOf('pcbeta') == -1 && location.protocol == 'http:'){
-                location.href = location.href.replace('http://','https://')
+            if (location.hostname.indexOf('iwjw.com') != -1 && location.hostname.indexOf('pcbeta') == -1 && location.protocol == 'http:') {
+                location.href = location.href.replace('http://', 'https://')
             }
         })()
         window.pageConfig = {
             siteUrl: "//www.iwjw.com",
             mobileSiteUrl: '//m.iwjw.com',
             mobileSiteUrlHasProtocol: 'https://m.iwjw.com',
-            selectCity : false,
-            map :{
-                province:[{"pname":"上海","pid":2,"pinyin":"shanghai"},{"pname":"北京","pid":12438,"pinyin":"beijing"},{"pname":"广州","pid":40000,"pinyin":"guangzhou"},{"pname":"深圳","pid":56000,"pinyin":"shenzhen"},{"pname":"杭州","pid":71049,"pinyin":"hangzhou"},{"pname":"天津","pid":71099,"pinyin":"tianjin"},{"pname":"南京","pid":86724,"pinyin":"nanjing"},{"pname":"武汉","pid":86725,"pinyin":"wuhan"},{"pname":"成都","pid":98289,"pinyin":"chengdu"},{"pname":"重庆","pid":98290,"pinyin":"chongqing"}]
-            } ,
-            datacollectUrl:'//plog.iwjw.com/dataCollect/',
+            selectCity: false,
+            map: {
+                province: [{"pname": "上海", "pid": 2, "pinyin": "shanghai"}, {
+                    "pname": "北京",
+                    "pid": 12438,
+                    "pinyin": "beijing"
+                }, {"pname": "广州", "pid": 40000, "pinyin": "guangzhou"}, {
+                    "pname": "深圳",
+                    "pid": 56000,
+                    "pinyin": "shenzhen"
+                }, {"pname": "杭州", "pid": 71049, "pinyin": "hangzhou"}, {
+                    "pname": "天津",
+                    "pid": 71099,
+                    "pinyin": "tianjin"
+                }, {"pname": "南京", "pid": 86724, "pinyin": "nanjing"}, {
+                    "pname": "武汉",
+                    "pid": 86725,
+                    "pinyin": "wuhan"
+                }, {"pname": "成都", "pid": 98289, "pinyin": "chengdu"}, {
+                    "pname": "重庆",
+                    "pid": 98290,
+                    "pinyin": "chongqing"
+                }]
+            },
+            datacollectUrl: '//plog.iwjw.com/dataCollect/',
             staticUrl: '' || '//resource.iwjw.com/iwjw-pc/',
             staticTag: 'delegate_mng',
-            recommendUrl:'//recommend.iwjw.com',
-            videoSerUrl:'//video.iwjw.com/prev/pc/play.html',
+            recommendUrl: '//recommend.iwjw.com',
+            videoSerUrl: '//video.iwjw.com/prev/pc/play.html',
             flag: '24',
             provinceId: '40000',
             ht: '',
@@ -54,6 +81,36 @@
         };
         var _hmt = _hmt || [];
     </script>
+
+    <style>
+        .content-list {
+            /*margin: 0 auto;*/
+            width: 850px;
+            height: 425px;
+        }
+
+        .text-wrap {
+            display: inline-block;
+            width: 15%;
+            line-height: 50px;
+            height: 50px;
+            font-size: 18px;
+        }
+
+        .hint-item {
+            padding: 10px 10px;
+
+        }
+
+        table th {
+            text-align: center !important;
+        }
+
+        .content-list-ul {
+            text-align: center !important;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -70,7 +127,8 @@
                     <div class="city nav-item">
                         <a class="province" provinceid="40000" provincepy="guangzhou">广州<i class="iconfont">혟</i></a>
                     </div>
-                    <div class="nav-item" data-log="homepage"><a href="${pageContext.request.contextPath}/main/home" class="nav-item-a active">首页</a>
+                    <div class="nav-item" data-log="homepage"><a href="${pageContext.request.contextPath}/main/home"
+                                                                 class="nav-item-a active">首页</a>
                     </div>
                     <div class="nav-item" data-log="secondhouse">
                         <a href="${pageContext.request.contextPath}/map/goMap" class="nav-item-a ">二手房</a></div>
@@ -79,7 +137,8 @@
 
 
                     <div class="nav-item nav-item-server" data-log="entrust">
-                        <a href="${pageContext.request.contextPath}/sell/goSell" rel="nofollow" class="nav-item-a ">业主委托</a>
+                        <a href="${pageContext.request.contextPath}/sell/goSell" rel="nofollow"
+                           class="nav-item-a ">业主委托</a>
                     </div>
 
                     <div class="nav-item" data-log="baike">
@@ -97,34 +156,62 @@
                                 class="iconfont if-mobile"></i>APP</a>
                     </div>
                 </dt>
-                <dd class="header-right clearfix"><div class="nav-item"><a data-url="/userinfo/" class="login  nav-item-a login-require active" target="_blank"><em class="iconfont if-menu"></em><i class="nav-item-txt">135****0667
-                    <span class="shape-circle"></span></i></a><div class="user-down-wrap arrow-top nav-down-wrap"><a class="user-item" href="https://www.iwjw.com/userinfo/" id="username"><span class="iconfont">핰</span>我的账户
+                <dd class="header-right clearfix">
+                    <div class="nav-item"><a data-url="/userinfo/" class="login  nav-item-a login-require active"
+                                             target="_blank"><em class="iconfont if-menu"></em><i class="nav-item-txt">135****0667
+                        <span class="shape-circle"></span></i></a>
+                        <div class="user-down-wrap arrow-top nav-down-wrap"><a class="user-item"
+                                                                               href="https://www.iwjw.com/userinfo/"
+                                                                               id="username"><span
+                                class="iconfont">핰</span>我的账户
 
-                    <i class="follow-point"></i></a><a class="user-item" href="https://www.iwjw.com/collectHouseList/" id="FollowDynamic"><span class="iconfont">홄</span>关注列表
+                            <i class="follow-point"></i></a><a class="user-item"
+                                                               href="https://www.iwjw.com/collectHouseList/"
+                                                               id="FollowDynamic"><span class="iconfont">홄</span>关注列表
 
-                </a><!-- web 6.9 已下线 --><!-- <a class="user-item appoint-list" href="/seeHouseList/" id = "Itinerary"><span class="iconfont">&#xd571;</span>约看清单
+                        </a><!-- web 6.9 已下线 --><!-- <a class="user-item appoint-list" href="/seeHouseList/" id = "Itinerary"><span class="iconfont">&#xd571;</span>约看清单
 
-   </a> --><a class="user-item house-schedule" href="https://www.iwjw.com/appointmentList/" id="Showings"><span class="iconfont">혤</span>看房日程
+   </a> --><a class="user-item house-schedule" href="https://www.iwjw.com/appointmentList/" id="Showings"><span
+                                class="iconfont">혤</span>看房日程
 
-                </a><a class="user-item user-item-payorder" href="https://www.iwjw.com/order/"><span class="iconfont">퐀</span>合同订单
+                        </a><a class="user-item user-item-payorder" href="https://www.iwjw.com/order/"><span
+                                class="iconfont">퐀</span>合同订单
 
-                </a><a class="user-item user-item-delegate_mng" href="https://www.iwjw.com/delegateManage/"><span class="iconfont">퐁</span>我的委托
+                        </a><a class="user-item user-item-delegate_mng"
+                               href="https://www.iwjw.com/delegateManage/"><span class="iconfont">퐁</span>我的委托
 
-                </a><a class="user-item user-item-agent" href="https://www.iwjw.com/agent/"><span class="iconfont">퐄</span>我的经纪人
+                        </a><a class="user-item user-item-agent" href="https://www.iwjw.com/agent/"><span
+                                class="iconfont">퐄</span>我的经纪人
 
-                </a><a class="user-item user-item-complains" href="https://www.iwjw.com/complains/"><span class="iconfont">퐐</span>我的投诉
+                        </a><a class="user-item user-item-complains" href="https://www.iwjw.com/complains/"><span
+                                class="iconfont">퐐</span>我的投诉
 
-                </a><a class="user-item user-item-logout"><span class="iconfont">퐅</span>退出
-                </a></div><!--  --></div><div class="nav-item message-nav" id="message-nav"><div class="nav-message-wrap" data-reactid=".1"><a class="nav-item-a message show-msg-down" data-reactid=".1.$1"><i class="nav-item-txt line" data-reactid=".1.$1.0"><i data-reactid=".1.$1.0.0">消息</i></i></a><div id="message-down-wrap" class="message-down-wrap nav-down-wrap arrow-top " data-reactid=".1.$2"><div class="message-list-wrap" data-reactid=".1.$2.0"><div class="msg-center-wrap" data-reactid=".1.$2.0.0"><a class="msg-center-a clearfix" href="https://www.iwjw.com/message/activity/" data-reactid=".1.$2.0.0.0"><div class="bell-bg f-l" data-reactid=".1.$2.0.0.0.0"><i class="iconfont if-bell" data-reactid=".1.$2.0.0.0.0.0"></i></div><p class="msg-center-tt f-l bold" data-reactid=".1.$2.0.0.0.1">消息中心</p></a></div><ul class="iwjwim-body" data-reactid=".1.$2.0.1"></ul></div></div></div></div>
-
-
+                        </a><a class="user-item user-item-logout"><span class="iconfont">퐅</span>退出
+                        </a></div><!--  --></div>
+                    <div class="nav-item message-nav" id="message-nav">
+                        <div class="nav-message-wrap" data-reactid=".1"><a class="nav-item-a message show-msg-down"
+                                                                           data-reactid=".1.$1"><i
+                                class="nav-item-txt line" data-reactid=".1.$1.0"><i data-reactid=".1.$1.0.0">消息</i></i></a>
+                            <div id="message-down-wrap" class="message-down-wrap nav-down-wrap arrow-top "
+                                 data-reactid=".1.$2">
+                                <div class="message-list-wrap" data-reactid=".1.$2.0">
+                                    <div class="msg-center-wrap" data-reactid=".1.$2.0.0"><a
+                                            class="msg-center-a clearfix" href="https://www.iwjw.com/message/activity/"
+                                            data-reactid=".1.$2.0.0.0">
+                                        <div class="bell-bg f-l" data-reactid=".1.$2.0.0.0.0"><i
+                                                class="iconfont if-bell" data-reactid=".1.$2.0.0.0.0.0"></i></div>
+                                        <p class="msg-center-tt f-l bold" data-reactid=".1.$2.0.0.0.1">消息中心</p></a>
+                                    </div>
+                                    <ul class="iwjwim-body" data-reactid=".1.$2.0.1"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                 </dd>
             </dl>
         </div>
-
-
 
 
         <div class="mod-delegate_mng" id="mod-delegate_mng">
@@ -136,35 +223,66 @@
                                 <div class="j-nav-label" style="top:276px;" data-reactid=".0.0.0.0.0.0"></div>
                                 <ul class="nav-menus" data-reactid=".0.0.0.0.0.1">
                                     <li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$0">
-                                        <a href="${pageContext.request.contextPath}/userInfo/orders" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$0.0">
-                                            <i class="iconfont left-nav-iconfont if-pay-order" data-reactid=".0.0.0.0.0.1.$0.0.0"></i>
+                                        <a href="${pageContext.request.contextPath}/userInfo/orders"
+                                           class="left-nav-link" data-reactid=".0.0.0.0.0.1.$0.0">
+                                            <i class="iconfont left-nav-iconfont if-pay-order"
+                                               data-reactid=".0.0.0.0.0.1.$0.0.0"></i>
                                             <span data-reactid=".0.0.0.0.0.1.$0.0.1">合同订单</span></a></li>
                                     <li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$1">
-                                        <a href="${pageContext.request.contextPath}/userInfo/agent" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$1.0">
-                                            <i class="iconfont left-nav-iconfont if-house-consultant" data-reactid=".0.0.0.0.0.1.$1.0.0"></i>
+                                        <a href="${pageContext.request.contextPath}/userInfo/agent"
+                                           class="left-nav-link" data-reactid=".0.0.0.0.0.1.$1.0">
+                                            <i class="iconfont left-nav-iconfont if-house-consultant"
+                                               data-reactid=".0.0.0.0.0.1.$1.0.0"></i>
                                             <span data-reactid=".0.0.0.0.0.1.$1.0.1">我的经纪人</span></a></li>
                                     <li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$2">
-                                        <a href="${pageContext.request.contextPath}/userInfo/orders" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$2.0">
-                                            <i class="iconfont left-nav-iconfont if-entrust-mgmt" data-reactid=".0.0.0.0.0.1.$2.0.0"></i>
+                                        <a href="${pageContext.request.contextPath}/userInfo/orders"
+                                           class="left-nav-link" data-reactid=".0.0.0.0.0.1.$2.0">
+                                            <i class="iconfont left-nav-iconfont if-entrust-mgmt"
+                                               data-reactid=".0.0.0.0.0.1.$2.0.0"></i>
                                             <span data-reactid=".0.0.0.0.0.1.$2.0.1">我的委托</span></a></li>
                                     <li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$3">
-                                        <a href="${pageContext.request.contextPath}/userInfo/complaints" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$3.0">
-                                            <i class="iconfont left-nav-iconfont if-complaints" data-reactid=".0.0.0.0.0.1.$3.0.0"></i>
+                                        <a href="${pageContext.request.contextPath}/userInfo/complaints"
+                                           class="left-nav-link" data-reactid=".0.0.0.0.0.1.$3.0">
+                                            <i class="iconfont left-nav-iconfont if-complaints"
+                                               data-reactid=".0.0.0.0.0.1.$3.0.0"></i>
                                             <span data-reactid=".0.0.0.0.0.1.$3.0.1">我的投诉</span></a></li>
                                     <li class="left-menus-item active" data-reactid=".0.0.0.0.0.1.$4">
-                                        <a href="${pageContext.request.contextPath}/userInfo/account" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$4.0">
-                                            <i class="iconfont left-nav-iconfont if-login-register" data-reactid=".0.0.0.0.0.1.$4.0.0"></i>
+                                        <a href="${pageContext.request.contextPath}/userInfo/account"
+                                           class="left-nav-link" data-reactid=".0.0.0.0.0.1.$4.0">
+                                            <i class="iconfont left-nav-iconfont if-login-register"
+                                               data-reactid=".0.0.0.0.0.1.$4.0.0"></i>
                                             <span data-reactid=".0.0.0.0.0.1.$4.0.1">我的账户</span></a></li>
                                     <li class="left-menus-item" data-reactid=".0.0.0.0.0.1.$5">
-                                        <a href="${pageContext.request.contextPath}/userInfo/logout" class="left-nav-link" data-reactid=".0.0.0.0.0.1.$5.0">
-                                            <i class="iconfont left-nav-iconfont if-exit-login" data-reactid=".0.0.0.0.0.1.$5.0.0"></i>
+                                        <a href="${pageContext.request.contextPath}/userInfo/logout"
+                                           class="left-nav-link" data-reactid=".0.0.0.0.0.1.$5.0">
+                                            <i class="iconfont left-nav-iconfont if-exit-login"
+                                               data-reactid=".0.0.0.0.0.1.$5.0.0"></i>
                                             <span data-reactid=".0.0.0.0.0.1.$5.0.1">退出登录</span></a></li>
-                                </ul></div></div></div>
-</div></div>        </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <%--<div class="content-list">--%>
+                                <table class="content-list content-list-ul" border="1" style="padding: 10px 0;">
+                                    <tr class="hint-item">
+                                        <th class="text-wrap">城市</th>
+                                        <th class="text-wrap">小区</th>
+                                        <th class="text-wrap">地址</th>
+                                        <th class="text-wrap">卖出金额</th>
+                                        <th class="text-wrap">业主</th>
+                                        <th class="text-wrap">手机</th>
+                                    </tr>
+                                </table>
+                    <%--</div>--%>
+                </div>
+            </div>
+        </div>
         <div class="suspend-wrap" style="bottom: 80px;">
 
             <!-- feedback -->
-            <a href="https://www.iwjw.com/gofeedback#https%3A%2F%2Fwww.iwjw.com%2FdelegateManage" class="suspend-div suspend-report j-feedback" target="_blank">
+            <a href="https://www.iwjw.com/gofeedback#https%3A%2F%2Fwww.iwjw.com%2FdelegateManage"
+               class="suspend-div suspend-report j-feedback" target="_blank">
                 <em class="opinion iconfont"></em>
                 <em class="text">
                     意见反馈
@@ -204,7 +322,7 @@
 <script src="../../statics/js/gt.js"></script>
 
 <script type="text/javascript">
-    ;!function(){
+    ;!function () {
         var popTpl = '<div class="ie-pop-wrap">' +
             '<div class="ie-pop-wrap-mask"></div>' +
             '<div class="ie-pop-layer-wrap">' +
@@ -235,26 +353,29 @@
             document.body.appendChild(container.children[0]);
         }
     }();
-</script><script type="text/javascript">
+</script>
+<script type="text/javascript">
     var _vds = _vds || [];
     window._vds = _vds;
-    (function(){
+    (function () {
         _vds.push(['setAccountId', '9f6117ba867d4d36']);
-        (function() {
-            try{
+        (function () {
+            try {
                 var vds = document.createElement('script');
-                vds.type='text/javascript';
+                vds.type = 'text/javascript';
                 vds.async = true;
                 vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
                 var s = document.getElementsByTagName('script')[0];
                 s.parentNode.insertBefore(vds, s);
-            }catch(error){
+            } catch (error) {
             }
         })();
     })();
-</script><!--[if IE 8]> <script src='../../statics/js/es5-shim-sham_5.5.js'></script><![endif]-->
+</script>
+<!--[if IE 8]>
+<script src='../../statics/js/es5-shim-sham_5.5.js'></script><![endif]-->
 <%--<script src="../../statics/js/common_72.js"></script>--%>
-<script src="../../statics/js/delegate_mng_72.js"></script>
+<%--<script src="../../statics/js/delegate_mng_72.js"></script>--%>
 <script src="https://www.iwjw.com/delegateManage" async=""></script>
 <div class="mod-footer short-shift">
     <div class="footer-inner">
@@ -309,7 +430,8 @@
                     <span class="footer-t-m-item footer-t-m-item-copy"><i class="footer-copy">©</i>2014-2017  满懿 (上海) 房地产咨询有限公司</span>
                     <span class="footer-t-m-item">热线：400-700-6622</span>
                     <span class="footer-t-m-item">邮箱：cs@iwjw.com</span>
-                    <a class="footer-t-m-item" href="http://weibo.com/u/5132568692/home?wvr=5" rel="nofollow" target="_blank">
+                    <a class="footer-t-m-item" href="http://weibo.com/u/5132568692/home?wvr=5" rel="nofollow"
+                       target="_blank">
                         <i class="iconfont if-weibo"></i>
                         <span>官方微博</span>
                     </a>
@@ -321,8 +443,12 @@
                 </div>
                 <div class="footer-t-bot">
                     <span class="footer-t-b-item"><a href="http://www.miitbeian.gov.cn/" rel="nofollow" target="_blank">沪ICP备14020180</a></span>
-                    <span class="footer-t-b-item">增值电信业务经营许可证：<a href="http://www.miit.cc/" target="_blank">沪B2-20160026</a></span>
-                    <span class="footer-t-b-item last"><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010702001120"><img class="v-middle record-img" src="../../statics/images/ghs.png"> 沪公网安备 31010702001120号</a></span>
+                    <span class="footer-t-b-item">增值电信业务经营许可证：<a href="http://www.miit.cc/"
+                                                                 target="_blank">沪B2-20160026</a></span>
+                    <span class="footer-t-b-item last"><a target="_blank"
+                                                          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010702001120"><img
+                            class="v-middle record-img"
+                            src="../../statics/images/ghs.png"> 沪公网安备 31010702001120号</a></span>
                 </div>
             </div>
             <div class="footer-t-r">
@@ -334,7 +460,7 @@
 <div style="display:none">
     <script>
         var _hmt = _hmt || [];
-        (function() {
+        (function () {
             var hm = document.createElement("script");
             hm.src = "//hm.baidu.com/hm.js?3a10bbf8b4afa9e5ab91d66b6944e813";
             hm.async = 1;
@@ -344,51 +470,74 @@
 
         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
         document.write(unescape("%3Cscript async src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd3a10bbf8b4afa9e5ab91d66b6944e813' type='text/javascript'%3E%3C/script%3E"));
-    </script><script async="" src="../../statics/js/h.js" type="text/javascript"></script>    <script type="text/javascript">
-    //<!-- 其他统计 -->
-    // var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000539121'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1000539121' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script async="" src="../../statics/js/h.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //
+        <!-- 其他统计 -->
+        // var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000539121'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1000539121' type='text/javascript'%3E%3C/script%3E"));
 
-    //注册成功
-    if(''=='1'){
-        _hmt.push(['_trackPageview', '/singup']);
-    }
-    //登录成功
-    if(''=='1'){
-        _hmt.push(['_trackPageview', '/login']);
-    }
-    //立即约看
-    // if('' > 0){
-    //     var ht = '';
-    //     if(ht=='1'){//出租
-    //         _hmt.push(['_trackEvent', 'Look_house', 'apply_now','zufang']);//百度统计
-    //     }else if(ht=='2'){//出售
-    //         _hmt.push(['_trackEvent', 'Look_house', 'apply_now','esf']);//百度统计
-    //     }
-    // }
-    //预约看房
-    // if('' > 0){
-    //     var ht = '';
-    //     if(ht=='1'){//出租
-    //         _hmt.push(['_trackEvent', 'Look_house', 'choose_time','zufang']);//百度统计
-    //     }else if(ht=='2'){//出售
-    //         _hmt.push(['_trackEvent', 'Look_house', 'choose_time','esf']);//百度统计
-    //     }
-    // }
+        //注册成功
+        if ('' == '1') {
+            _hmt.push(['_trackPageview', '/singup']);
+        }
+        //登录成功
+        if ('' == '1') {
+            _hmt.push(['_trackPageview', '/login']);
+        }
+        //立即约看
+        // if('' > 0){
+        //     var ht = '';
+        //     if(ht=='1'){//出租
+        //         _hmt.push(['_trackEvent', 'Look_house', 'apply_now','zufang']);//百度统计
+        //     }else if(ht=='2'){//出售
+        //         _hmt.push(['_trackEvent', 'Look_house', 'apply_now','esf']);//百度统计
+        //     }
+        // }
+        //预约看房
+        // if('' > 0){
+        //     var ht = '';
+        //     if(ht=='1'){//出租
+        //         _hmt.push(['_trackEvent', 'Look_house', 'choose_time','zufang']);//百度统计
+        //     }else if(ht=='2'){//出售
+        //         _hmt.push(['_trackEvent', 'Look_house', 'choose_time','esf']);//百度统计
+        //     }
+        // }
 
-    // //约看完成
-    // if(''=='1'){
-    //     if(''=='1'){//出租
-    //         _hmt.push(['_trackEvent', 'Look_house', 'submit_apply','zufang']);//百度统计
-    //     }else if(''=='2'){//出售
-    //         _hmt.push(['_trackEvent', 'Look_house', 'submit_apply','esf']);//百度统计
-    //     }
-    //     _hmt.push(['_trackOrder', { "orderId": "", "orderTotal": "", "item": JSON.stringify()} ]);
-    // }
-</script>
+        // //约看完成
+        // if(''=='1'){
+        //     if(''=='1'){//出租
+        //         _hmt.push(['_trackEvent', 'Look_house', 'submit_apply','zufang']);//百度统计
+        //     }else if(''=='2'){//出售
+        //         _hmt.push(['_trackEvent', 'Look_house', 'submit_apply','esf']);//百度统计
+        //     }
+        //     _hmt.push(['_trackOrder', { "orderId": "", "orderTotal": "", "item": JSON.stringify()} ]);
+        // }
+    </script>
 
 </div>
 <!-- 百度统计 -->
 
+<script>
 
-
-</body></html>
+    $.get("${pageContext.request.contextPath}/weituo/getWeituo", "", function (data) {
+        var moddiv = $(".content-list-ul");
+        console.log(data);
+        var result = JSON.parse(data);
+        if (result !== null && result.length !== 0) {
+            result.forEach(element => {
+                var dd = '<tr class="hint-item">' +
+                    '<td class="text-wrap">' + element.town_city + '</>' +
+                    '<td class="text-wrap">' + element.town + '</>' +
+                    '<td class="text-wrap">' + element.address + '</>' +
+                    '<td class="text-wrap">' + element.money + '</>' +
+                    '<td class="text-wrap">' + element.owner_name + '</>' +
+                    '<td class="text-wrap">' + element.phone_num + '</>' +
+                    '</tr>';
+                moddiv.append(dd);
+            });
+        }
+    });
+</script>
+</body>
+</html>

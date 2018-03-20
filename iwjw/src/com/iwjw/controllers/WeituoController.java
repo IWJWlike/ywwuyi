@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 /**
@@ -27,9 +29,15 @@ public class WeituoController {
     private WeituoService weituoService;
 
     @RequestMapping("/getWeituo")
-    public String getWeituo() {
+    public void getWeituo(HttpServletResponse response) {
+        PrintWriter out =null;
+        try {
+            out = response.getWriter();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         List<Weituo> list = weituoService.getWeituo();
-        return "";
+        out.print(list);
     }
 
     @RequestMapping("/setWeituo")

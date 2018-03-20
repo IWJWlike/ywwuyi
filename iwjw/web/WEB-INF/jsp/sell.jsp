@@ -1185,7 +1185,7 @@ s.parentNode.insertBefore(mvl, s);
             };
             var json = JSON.stringify(jsonObj);
             $.post("${pageContext.request.contextPath}/weituo/setWeituo", {"jsonObj": json}, function (d) {
-                    alert("post success");
+                    window.location="${pageContext.request.contextPath}/userInfo/delegate";
                 }
             );
         }
