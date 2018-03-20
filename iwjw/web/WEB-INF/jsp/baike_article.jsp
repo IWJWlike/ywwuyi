@@ -98,7 +98,7 @@
                     <div class="city nav-item">
                         <a class="province" provinceid="40000" provincepy="guangzhou">广州<i class="iconfont">혟</i></a>
                     </div>
-                    <div class="nav-item" data-log="homepage"><a href="https://www.iwjw.com/" class="nav-item-a active">首页</a>
+                    <div class="nav-item" data-log="homepage"><a href="${pageContext.request.contextPath}/main/home" class="nav-item-a active">首页</a>
                     </div>
                     <div class="nav-item" data-log="secondhouse">
                         <a href="${pageContext.request.contextPath}/map/goMap" class="nav-item-a ">二手房</a></div>
