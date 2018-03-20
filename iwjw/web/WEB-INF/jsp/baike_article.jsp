@@ -93,35 +93,35 @@
         <div class="mod-header " id="Top">
             <dl class="header-wrap clearfix">
                 <dt class="header-left clearfix">
-                    <a class="logo" href="https://www.iwjw.com/"><img src="../../statics/images/iwjwlog.png"
-                                                                      alt="爱屋吉屋" class="logo-img"></a>
+                    <a class="logo" href="#"><img src="../../statics/images/iwjwlog.png" alt="爱屋吉屋"
+                                                  class="logo-img"></a>
                     <div class="city nav-item">
                         <a class="province" provinceid="40000" provincepy="guangzhou">广州<i class="iconfont">혟</i></a>
                     </div>
-                    <div class="nav-item" data-log="homepage"><a href="https://www.iwjw.com/" class="nav-item-a ">首页</a>
+                    <div class="nav-item" data-log="homepage"><a href="https://www.iwjw.com/" class="nav-item-a active">首页</a>
                     </div>
                     <div class="nav-item" data-log="secondhouse">
-                        <a href="https://www.iwjw.com/sale/map/" class="nav-item-a ">二手房</a></div>
+                        <a href="${pageContext.request.contextPath}/map/goMap" class="nav-item-a ">二手房</a></div>
                     <div class="nav-item" data-log="rent">
-                        <a href="https://www.iwjw.com/chuzu/map/" class="nav-item-a ">租房</a></div>
+                        <a href="${pageContext.request.contextPath}/map/goMap" class="nav-item-a ">租房</a></div>
 
 
                     <div class="nav-item nav-item-server" data-log="entrust">
-                        <a href="https://www.iwjw.com/delegation/" rel="nofollow" class="nav-item-a ">业主委托</a>
+                        <a href="${pageContext.request.contextPath}/sell/goSell" rel="nofollow" class="nav-item-a ">业主委托</a>
                     </div>
 
                     <div class="nav-item" data-log="baike">
-                        <a class="nav-item-a active" href="https://www.iwjw.com/baike/guangzhou/">购房攻略 </a>
+                        <a class="nav-item-a " href="${pageContext.request.contextPath}/baikePage/gfgl" target="_blank">购房攻略 </a>
                     </div>
                     <div class="nav-item" data-log="ailicai">
-                        <a href="https://www.iwlicai.com/" target="_blank" class="nav-item-a ailicai ">吉爱财</a>
+                        <a href="#" target="_blank" class="nav-item-a ailicai ">吉爱财</a>
                         <div class="header-new"></div>
                     </div>
                     <div class="nav-item" data-log="dzg">
-                        <a href="https://www.iwjw.com/dzg/" class="nav-item-a  ">贷总管</a>
+                        <a href="#" class="nav-item-a  ">贷总管</a>
                     </div>
                     <div class="nav-item" data-log="appDownload">
-                        <a href="https://www.iwjw.com/appDownPage/" class="nav-item-a "><i
+                        <a href="#" class="nav-item-a "><i
                                 class="iconfont if-mobile"></i>APP</a>
                     </div>
                 </dt>
@@ -196,10 +196,10 @@
                     <div class="detail-content" onselectstart="return false;">
                         <p class="detail-title bold"
                            data-id="http://files.iwjw.com/directwaterbucket/newPurchaseEncy/2017/10/13/fde82646dad344d78eecf400d79924c6">
-                            热点城市房价持续降温：很多人等降价</p>
+                            ${article.title}</p>
                         <p class="subtitle">
-                            <span class="block">热点楼市</span>
-                            <span class="date">2017-10-13</span>
+                            <span class="block">${article.plateId}</span>
+                            <span class="date"><fmt:formatDate value='${article.createDate}' pattern='yyyy.MM.dd'/></span>
                             <span class="from">来源：经济参考报</span>
                         </p>
                         <div class="content">
@@ -258,7 +258,7 @@
                     </div>
                     <div class="detail-dot">
                         <p class="dot-circle"><i class="dz iconfont if-spot"></i></p>
-                        <p class="dot-desc" data-count="22"><span class="dot-text" data-id="2110">22</span>人觉得有用</p>
+                        <p class="dot-desc" data-count="22"><span class="dot-text" data-id="2110">${article.likes}</span>人觉得有用</p>
                         <p class="plus-one hide">+1</p>
                     </div>
                     <div class="detail-share">
