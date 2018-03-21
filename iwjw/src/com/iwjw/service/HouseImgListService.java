@@ -35,4 +35,6 @@ public interface HouseImgListService {
     List<Estate>getALLHouseByTownLike(@Param("liket")String liket);
     //11.模糊查询所有小区
     List<Estate>getALLHouseByEstateLike(@Param("likee")String likee);
+    //根据房子名字查询id
+    String getHouseIdByhouseName(@Param("estateName")String estateName);
 }

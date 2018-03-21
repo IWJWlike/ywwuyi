@@ -64,5 +64,10 @@ public class HouseImgListServiceImpl implements HouseImgListService{
     @Override
     public List<Estate>getALLHouseByEstateLike(String likee) { return houseImgListMapper.getALLHouseByEstateLike(likee); }
 
+    @Override
+    public String getHouseIdByhouseName(String estateName) {
+        return houseImgListMapper.getHouseIdByhouseName(estateName);
+    }
+
 
 }

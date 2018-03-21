@@ -65,6 +65,9 @@
         <if test="likee != null">  e.estateName like  concat( '%' , #{likee}, '%')  </if>
     </trim>
     </select>
+    <select id="getHouseIdByhouseName" resultType="String">
+       SELECT s.houseid FROM secondary s ,estate e WHERE e.`estateName`=#{estateName} AND e.`estateId`=s.`estateId`
+    </select>
 
 
 

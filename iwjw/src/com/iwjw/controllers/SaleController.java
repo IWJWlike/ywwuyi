@@ -3,14 +3,17 @@ package com.iwjw.controllers;
 import com.iwjw.entity.*;
 import com.iwjw.service.BaikeListService;
 import com.iwjw.service.HouseImgListService;
-import org.jboss.logging.Param;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,29 +27,31 @@ public class SaleController {
 
     //去详情页
     @RequestMapping("goSale")
-    public String goSale(Model model, HttpServletResponse response, HttpServletRequest request) {
+    public String goSale(Model model, HttpServletRequest request,HttpServletResponse response,@Param("houseid")String houseid) {
+
+        System.out.println(houseid);
         //获取房子信息
-        List<HouseImage> lists = houseImgListService.getHouseImgList("1");
+        List<HouseImage> lists = houseImgListService.getHouseImgList(houseid);
         System.out.println(lists.size()+"###############################");
         //获取房子户型信息
-        List<HouseImage> lists2 = houseImgListService.getHouseImgList2("1");
+        List<HouseImage> lists2 = houseImgListService.getHouseImgList2(houseid);
         System.out.println(lists.size()+"###############################");
         //房子图片放入会话
-        request.getSession().setAttribute("imgLists", lists);
+        model.addAttribute("imgLists", lists);
         //房子户型图片放入会话
-        request.getSession().setAttribute("imgLists2", lists2);
+        model.addAttribute("imgLists2", lists2);
         //根据房id获取房屋信息
-        Secondary secondary = houseImgListService.getHouseById("1");
+        Secondary secondary = houseImgListService.getHouseById(houseid);
         //根据房id获取房子所在小区信息
-        Estate estate = houseImgListService.getEstateByHouseId("1");
+        Estate estate = houseImgListService.getEstateByHouseId(houseid);
         //房子朝向
-        String houseFace = houseImgListService.getHouseFaceByHouseId("1");
+        String houseFace = houseImgListService.getHouseFaceByHouseId(houseid);
         //把房信息放进当前会话
-        request.getSession().setAttribute("secondary", secondary);
+        model.addAttribute("secondary", secondary);
         //把小区信息放进当前会话
-        request.getSession().setAttribute("estate", estate);
+        model.addAttribute("estate", estate);
         //当前房子朝向
-        request.getSession().setAttribute("houseFace", houseFace);
+        model.addAttribute("houseFace", houseFace);
         return "sale";
     }
 
