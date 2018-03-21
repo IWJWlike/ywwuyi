@@ -574,11 +574,8 @@
                     </div>
                     <script>
                         $(".col-xs-4").on("click","p",function () {
-                            alert("1111111")
                             var estateName=$(this).html();
-                            alert(estateName)
                             $.post("${pageContext.request.contextPath}/houseTest/test","estateName="+estateName,function (houseid) {
-                                alert(houseid);
                                 window.location="${pageContext.request.contextPath}/saleController/goSale?houseid="+houseid;
                             })
 

@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -630,14 +631,14 @@
                                                         data-reactid=".0.0.0.0.1.0.0.0.1.1.1">%，</span></span><span
                                                         data-reactid=".0.0.0.0.1.0.0.0.1.2">需首付</span><span
                                                         class="number"
-                                                        data-reactid=".0.0.0.0.1.0.0.0.1.3">24</span><span
-                                                        data-reactid=".0.0.0.0.1.0.0.0.1.4">万，</span><span
+                                                        data-reactid=".0.0.0.0.1.0.0.0.1.3"><fmt:formatNumber value="${secondary.housePrice*secondary.houseMiles*0.3}" pattern="####" minFractionDigits="2" ></fmt:formatNumber></span><span
+                                                        data-reactid=".0.0.0.0.1.0.0.0.1.4">万，</span><%--<span
                                                         data-reactid=".0.0.0.0.1.0.0.0.1.5">20</span><span
                                                         data-reactid=".0.0.0.0.1.0.0.0.1.6">年按揭月供 </span><span
                                                         data-reactid=".0.0.0.0.1.0.0.0.1.7">3176</span><span
-                                                        data-reactid=".0.0.0.0.1.0.0.0.1.8">元</span></div>
+                                                        data-reactid=".0.0.0.0.1.0.0.0.1.8">元</span>--%></div>
                                                 <a class="calc-right text-underline-hover"
-                                                   href="https://www.iwjw.com/calculator?price=80" target="_blank"
+                                                   href="${pageContext.request.contextPath}/cal/cal?price=${secondary.housePrice*secondary.houseMiles}" target="_blank"
                                                    data-reactid=".0.0.0.0.1.0.0.0.2"><span
                                                         data-reactid=".0.0.0.0.1.0.0.0.2.0">去算算</span><span
                                                         class="point" data-reactid=".0.0.0.0.1.0.0.0.2.1"><i
@@ -1223,14 +1224,14 @@
                                                 <ul class="same-houses-list clearfix" data-reactid=".0.0.0.0.1.0.5.0.1">
                                                     <li class="f-l frist-line"
                                                         data-reactid=".0.0.0.0.1.0.5.0.1.$FQRp19vYsgI"><a
-                                                            href="https://www.iwjw.com/sale/FQRp19vYsgI/?from=040205&amp;p=40000"
+                                                            href="../../statics/images/house_images/_1_thumb.jpg"
                                                             target="_blank" class="same-house-item clearfix"
                                                             data-code="FQRp19vYsgI"
                                                             data-reactid=".0.0.0.0.1.0.5.0.1.$FQRp19vYsgI.0">
                                                         <div class="f-l item-img"
                                                              data-reactid=".0.0.0.0.1.0.5.0.1.$FQRp19vYsgI.0.0"><img
                                                                 class="need-replace-img"
-                                                                src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/b7959ea357794251990b2b18376d4dd6.t"
+                                                                src="../../statics/images/house_images/bl1_1_thumb.jpg"
                                                                 data-need-resize="auto" data-has-webp="1"
                                                                 data-reactid=".0.0.0.0.1.0.5.0.1.$FQRp19vYsgI.0.0.0"
                                                                 style="width: 100%; height: auto; margin-top: -7.5px;">
@@ -1273,13 +1274,13 @@
                                                         <div class="f-l item-img"
                                                              data-reactid=".0.0.0.0.1.0.5.0.1.$3ZWylrDO_rc.0.0"><img
                                                                 class="need-replace-img"
-                                                                src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/7cd3a4a505e24e699cb4752bb294d160.t"
+                                                                src="../../statics/images/house_images/bl1_6_thumb.jpg"
                                                                 data-need-resize="auto" data-has-webp="1"
                                                                 data-reactid=".0.0.0.0.1.0.5.0.1.$3ZWylrDO_rc.0.0.0"
                                                                 style="width: 100%; height: auto; margin-top: -7.5px;"><i
                                                                 class="video-play-icon-sm"
                                                                 data-reactid=".0.0.0.0.1.0.5.0.1.$3ZWylrDO_rc.0.0.1"><img
-                                                                src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/videoBtn_2XpCc54.png"
+                                                                src="../../statics/images/house_images/dy_6_thumb.jpg"
                                                                 data-reactid=".0.0.0.0.1.0.5.0.1.$3ZWylrDO_rc.0.0.1.0"></i>
                                                         </div>
                                                         <div class="f-l same-house-detail"
@@ -1835,29 +1836,29 @@
                                                     </div>
                                                     <div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 1;">
                                                         <div style="position: absolute; overflow: visible; z-index: -100; left: 600px; top: 210px; display: block; transform: translate3d(0px, 0px, 0px);">
-                                                            <img src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/saved_resource"
+                                                            <img src="../../statics/iamges/house_images/hnbgy_4_thumb.jpg"
                                                                  style="position: absolute; border: none; width: 256px; height: 256px; left: -284px; top: -239px; max-width: none; opacity: 1;"><img
-                                                                src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/saved_resource(1)"
+                                                                src="../../statics/iamges/house_images/fxy_1_thumb.jpg"
                                                                 style="position: absolute; border: none; width: 256px; height: 256px; left: -540px; top: -239px; max-width: none; opacity: 1;"><img
-                                                                src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/saved_resource(2)"
+                                                                src="../../statics/iamges/house_images/hyg_4_thumb.jpg"
                                                                 style="position: absolute; border: none; width: 256px; height: 256px; left: -28px; top: -239px; max-width: none; opacity: 1;"><img
-                                                                src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/saved_resource(3)"
+                                                                src="../../statics/iamges/house_images/mdl1_1_thumb.jpg"
                                                                 style="position: absolute; border: none; width: 256px; height: 256px; left: -284px; top: 17px; max-width: none; opacity: 1;"><img
-                                                                src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/saved_resource(4)"
+                                                                src="../../statics/iamges/house_images/ns_1_thumb.jpg"
                                                                 style="position: absolute; border: none; width: 256px; height: 256px; left: -796px; top: -239px; max-width: none; opacity: 1;"><img
-                                                                src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/saved_resource(5)"
+                                                                src="../../statics/iamges/house_images/qianxi1_1_thumb.jpg"
                                                                 style="position: absolute; border: none; width: 256px; height: 256px; left: 228px; top: -239px; max-width: none; opacity: 1;"><img
-                                                                src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/saved_resource(6)"
+                                                                src="../../statics/iamges/house_images/ty_4_thumb.jpg"
                                                                 style="position: absolute; border: none; width: 256px; height: 256px; left: -28px; top: 17px; max-width: none; opacity: 1;"><img
-                                                                src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/saved_resource(7)"
+                                                                src="../../statics/iamges/house_images/yx1_4_thumb.jpg"
                                                                 style="position: absolute; border: none; width: 256px; height: 256px; left: -540px; top: 17px; max-width: none; opacity: 1;"><img
-                                                                src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/saved_resource(8)"
+                                                                src="../../statics/iamges/house_images/fxy_4_thumb.jpg"
                                                                 style="position: absolute; border: none; width: 256px; height: 256px; left: -796px; top: 17px; max-width: none; opacity: 1;"><img
-                                                                src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/saved_resource(9)"
+                                                                src="../../statics/iamges/house_images/fxy_4_thumb.jpg"
                                                                 style="position: absolute; border: none; width: 256px; height: 256px; left: 228px; top: 17px; max-width: none; opacity: 1;"><img
-                                                                src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/saved_resource(10)"
+                                                                src="../../statics/iamges/house_images/fxy_4_thumb.jpg"
                                                                 style="position: absolute; border: none; width: 256px; height: 256px; left: 484px; top: -239px; max-width: none; opacity: 1;"><img
-                                                                src="./白兰花园二手房_1室1厅1卫_46m²_80万-爱屋吉屋_files/saved_resource(11)"
+                                                                src="../../statics/iamges/house_images/fxy_4_thumb.jpg"
                                                                 style="position: absolute; border: none; width: 256px; height: 256px; left: 484px; top: 17px; max-width: none; opacity: 1;">
                                                         </div>
                                                     </div>
