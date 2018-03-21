@@ -25,7 +25,8 @@ public class BaikeController {
     public String goBaike(Model model, @RequestParam(value = "plateId",required = false)String plateId,@RequestParam(value = "indexPage",required = false)String indexPage){
 
 
-        List<BaikeList> lists0 = baikeListService.getBaikeList();
+        List<BaikeList> lists0_1 = baikeListService.getBaikeList(1);
+        List<BaikeList> lists0_2 = baikeListService.getBaikeList(2);
         List<BaikeList> lists1 = baikeListService.getBaikeListByPlate("热点楼市");
         List<BaikeList> lists2 = baikeListService.getBaikeListByPlate("最新政策");
         List<BaikeList> lists3 = baikeListService.getBaikeListByPlate("购房须知");
@@ -36,7 +37,8 @@ public class BaikeController {
         List<BaikeList> lists8 = baikeListService.getBaikeListByPlate("典型案例");
         List<BaikeList> likes = baikeListService.getLikes();
 
-        model.addAttribute("lists0", lists0);
+        model.addAttribute("lists0_1", lists0_1);
+        model.addAttribute("lists0_2", lists0_2);
         model.addAttribute("lists1", lists1);
         model.addAttribute("lists2", lists2);
         model.addAttribute("lists3", lists3);

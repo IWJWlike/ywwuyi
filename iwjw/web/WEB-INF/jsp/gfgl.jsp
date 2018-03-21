@@ -323,7 +323,7 @@
                                 <%--新闻类型end--%>
                                 <%--新闻预览模块--%>
                             <ul id="zixun" class="baike-list" data-reactid=".0.1">
-                                <c:forEach items="${lists0}" var="li">
+                                <c:forEach items="${lists0_1}" var="li">
                                     <li class="list-li clearfix">
                                         <div class="list-left f-l">
                                             <h4>
@@ -336,6 +336,9 @@
                                 </c:forEach>
                             </ul>
                                 <%--新闻预览模块结束--%>
+                                <div class="page-container" data-reactid=".0.2">
+                                    <div class="mod-page" data-reactid=".0.2.0">
+                                        <i class="act" data-reactid=".0.2.0.0:$1-0">1</i><a class="page-item stateful" data-reactid=".0.2.0.1:$1">2</a></div></div>
                         </div>
                     </div>
                 </div>
@@ -350,7 +353,7 @@
                     function callBack(title) {
                         if (title==0){
                             $("#zixun").html(
-                                "<c:forEach items='${lists0}' var='li'>"
+                                "<c:forEach items='${lists0_1}' var='li'>"
                                 +"<li class='list-li clearfix'> <div class='list-left f-l'>"
                                 +"<h4><a class='list-title bold' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'>${li.title}</a></h4>"
                                 +"<div class='list-desc'>${li.describeInfo}</div>"
@@ -359,6 +362,9 @@
                                 +"<span class='pub-date pad-left'><fmt:formatDate value='${li.createDate}' pattern='yyyy.MM.dd'/></span></div></div>"
                                 +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
+                            )
+                            $(".mod-page").html(
+                                "<i class=\"act\" data-reactid=\".0.2.0.0:$1-0\">1</i><a class=\"page-item stateful\" data-reactid=\".0.2.0.1:$1\">2</a>"
                             )
                         }
                         if (title==1){
@@ -373,6 +379,9 @@
                                 +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
+                            $(".mod-page").html(
+                                "<i class=\"act\" data-reactid=\".0.2.0.0:$1-0\">1</i>"
+                            )
                         }
                         if (title==2){
                             $("#zixun").html(
@@ -385,6 +394,9 @@
                                 +"<span class='pub-date pad-left'><fmt:formatDate value='${li.createDate}' pattern='yyyy.MM.dd'/></span></div></div>"
                                 +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
+                            )
+                            $(".mod-page").html(
+                                "<i class=\"act\" data-reactid=\".0.2.0.0:$1-0\">1</i>"
                             )
                         }
                         if (title==3){
@@ -399,6 +411,9 @@
                                 +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
+                            $(".mod-page").html(
+                                "<i class=\"act\" data-reactid=\".0.2.0.0:$1-0\">1</i>"
+                            )
                         }
                         if (title==4){
                             $("#zixun").html(
@@ -411,6 +426,9 @@
                                 +"<span class='pub-date pad-left'><fmt:formatDate value='${li.createDate}' pattern='yyyy.MM.dd'/></span></div></div>"
                                 +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
+                            )
+                            $(".mod-page").html(
+                                "<i class=\"act\" data-reactid=\".0.2.0.0:$1-0\">1</i>"
                             )
                         }
                         if (title==5){
@@ -425,6 +443,9 @@
                                 +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
+                            $(".mod-page").html(
+                                "<i class=\"act\" data-reactid=\".0.2.0.0:$1-0\">1</i>"
+                            )
                         }
                         if (title==6){
                             $("#zixun").html(
@@ -437,6 +458,9 @@
                                 +"<span class='pub-date pad-left'><fmt:formatDate value='${li.createDate}' pattern='yyyy.MM.dd'/></span></div></div>"
                                 +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
+                            )
+                            $(".mod-page").html(
+                                "<i class=\"act\" data-reactid=\".0.2.0.0:$1-0\">1</i>"
                             )
                         }
                         if (title==7){
@@ -451,6 +475,9 @@
                                 +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
                             )
+                            $(".mod-page").html(
+                                "<i class=\"act\" data-reactid=\".0.2.0.0:$1-0\">1</i>"
+                            )
                         }
                         if (title==8){
                             $("#zixun").html(
@@ -463,6 +490,9 @@
                                 +"<span class='pub-date pad-left'><fmt:formatDate value='${li.createDate}' pattern='yyyy.MM.dd'/></span></div></div>"
                                 +"<a class='list-right f-l' href='${pageContext.request.contextPath}/baikePage/goInfo?id=${li.id}' target='_blank'><img src='../../statics/images/link_img/${li.imgUrl}.jpg' class='list-img'></a></li>"
                                 +"</c:forEach>"
+                            )
+                            $(".mod-page").html(
+                                "<i class=\"act\" data-reactid=\".0.2.0.0:$1-0\">1</i>"
                             )
                         }
 

@@ -5,7 +5,7 @@
 <mapper namespace="com.iwjw.dao.BaikeListMapper">
 
     <select id="getBaikeList" resultType="BaikeList">
-        SELECT * FROM baikelist;
+        SELECT * FROM baikelist limit 1,8;
     </select>
 
     <select id="getBaikeListByPlate" resultType="BaikeList">

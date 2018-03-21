@@ -16,8 +16,8 @@ public class BaikeListServiceImpl implements BaikeListService {
     BaikeListMapper baikeListMapper;
 
     @Override
-    public List<BaikeList> getBaikeList() {
-        return baikeListMapper.getBaikeList();
+    public List<BaikeList> getBaikeList(int index) {
+        return baikeListMapper.getBaikeList(index);
     }
 
     @Override
